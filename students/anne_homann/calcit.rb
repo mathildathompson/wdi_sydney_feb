@@ -27,8 +27,8 @@ def basic_calculator
 	puts "Please select your operation"
 	puts "(a) - additions"
 	puts "(s) - subtraction"
-    puts "(d) - division"
-    puts "(m) - multiplication"
+  puts "(d) - division"
+  puts "(m) - multiplication"
 
     operation = gets.chomp
     puts "Enter your first number"
@@ -63,7 +63,7 @@ def advanced_calculator
     when 's'
     	puts "Enter your first number"
     	num1 = gets.chomp.to_f
-    	Math.sqrt num1
+    	square_root num1
     when 'e'
     	puts "Enter your first number"
     	num1 = gets.chomp.to_f
@@ -89,8 +89,8 @@ def divide(x, y)
 	puts "#{ x } / #{ y } = #{x / y }"
 end
 
-def Math.sqrt(x)
-	puts "#{ x } = #{ x }"
+def square_root(x)
+	puts "#{Math.sqrt(x)}"
 end
 
 def exp(x, y)
