@@ -88,7 +88,7 @@ while response != 'q'
 
         puts "Here is a list of clients"
 
-            shelter.clients.each do |foo|
+            shelter.clients.keys.each do |foo|
                     
                 puts foo
                
@@ -102,7 +102,7 @@ while response != 'q'
             puts "------------------------------------------"
             puts "Here is a list of animals"
 
-            shelter.animals.each do |foo|
+            shelter.animals.keys.each do |foo|
                     
                 puts foo
                 
@@ -122,16 +122,24 @@ while response != 'q'
 
                 
                 adoptionChoicenew = shelter.animals.delete(adoptionAnimal)
-                puts "#{adoptionChoicenew}"
-               
+                               
                    #now we are going to add the adoptionAnimal to the list of pets
                    #of adoption client
 
                 shelter.clients[adoptingClient].pets << adoptionAnimal 
 
                 puts "#{adoptingClient} has adopted #{adoptionAnimal}"
+                # puts "#{adoptingClient}'s pets are now:"
 
-                binding.pry
+                # shelter.clients.pets.keys.each do |key,values|
+                    
+                # puts 
+                
+                # end
+
+                #{adoptingClient.pets.keys}"
+
+                # binding.pry
 
                 #   adoptingClient.each do |x,y|
 
@@ -152,18 +160,48 @@ while response != 'q'
                 puts "I don't recognise that animal. Please type again"
 
             end
+
         elsif response == 's'
 
             puts "We are going to delete your animal"
             puts "And add it into our database"
 
+             puts "Here is a list of clients"
+
+            shelter.clients.keys.each do |foo|
+                    
+                puts foo
+               
+
+            end
+
             puts "Which client wants to surrender a pet?"
             surrenderClient = gets.chomp
 
+            puts "Here is a list of animals they own"
             
+            shelter.clients[surrenderClient].pets.keys.each do |foo|
+                    
+                puts foo
+               
 
-            shelter.clients
+            end
 
+            puts "Which animal would they like to surrender?"
+            surrenderAnimal = gets.chomp
+
+            #now we delete the animal from the array and put it
+            #into the main animals array. 
+
+            surrender_animal = shelter.clients[surrenderClient].pets.delete(surrenderAnimal)
+              
+            puts "Thanks #{surrenderClient} for giving us #{surrenderAnimal}"
+            shelter.animals[surrender_animal.name] = surrender_animal
+
+            puts "The animals in the shelter now are #{shelter.animals.keys}"
+
+            
+          
             
 
 

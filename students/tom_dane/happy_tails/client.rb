@@ -5,7 +5,11 @@ class Client
         @name = name
         @age = age
         @children = children
-        @pets = []
+        @pets = {}
+        
+        pets.each do |pet|
+            @pets[pet] = Animal.new(pet, nil, nil, nil, nil)
+        end
     end
 
     def to_s
