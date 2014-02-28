@@ -5,16 +5,17 @@ require_relative 'Shelter'
 require_relative 'relationship'
 
 shelter = Shelter.new
-
-#Clients already in database
-shelter.clients["Bla"] = Client.new("Bla",2, 35, "Dog")
-shelter.clients["Patrick"] = Client.new("Patrick",2, 46, "Bird")
-shelter.clients["John"] = Client.new("John",2, 52, "Cat")
-
 #Animals already in database
 shelter.animals["Fred"] = Animal.new("Fred", 2, "male", "Dog", "lol")
 shelter.animals["Pat"] = Animal.new("Pat", 2, "male", "Dog", "lol")
 shelter.animals["Boog"] = Animal.new("Boog", 2, "male", "Dog", "lol")
+
+#Clients already in database
+shelter.clients["Bla"] = Client.new("Bla",2, 35, "Dobby")
+shelter.clients["Bla"].num_pets << shelter.animals["Fred"]
+binding.pry
+shelter.clients["Patrick"] = Client.new("Patrick",2, 46, "Jasper")
+shelter.clients["John"] = Client.new("John",2, 52, "Lilly")
 
 
 #Menu
@@ -82,10 +83,12 @@ elsif response == 'd'
   age = gets.chomp.to_i
       
   print "What are the pets you already own? "
-  num_pets = gets.chomp.split( )
-  
+  num_pets = gets.chomp
+
   #Adds the client to the database  
   shelter.clients[name] = Client.new(name, num_children, age, num_pets)
+
+  shelter.clients[name].num_pets << num_pets
 
   puts shelter.clients
 
@@ -101,35 +104,37 @@ elsif response == "e"
 
   adopted = gets.chomp
 
-#Trying to associate the client with the dog adopted but doesn't seem to work
-  @relationship = Relationship.new( adopter, adopted )
-
   puts "-----------------------------"
   puts "#{adopter} adopted #{adopted}"
   puts '-----------------------------'
 
-  #Tried to add the adopted animal to the values of the client.
-  #shelter.clients[adopter].push(adopted)
-
-#Removes the animal from the database
+#Removes the animal from the database of animals available
     shelter.animals.delete(adopted.to_s)
+
+#Adds the animal to the client
+    shelter.clients[adopter].num_pets << adopted
 
     puts shelter.animals
 
 
-#I am not sure how this part is supposed to work
-#Is the client returning the adopted pet?
-#Or is a brand new client putting a pet for adoption?
-#In that case it would be the same as option 'c': create an animal
-
 elsif response == "f"
   puts "What is your name?"
+
+  puts shelter.clients.keys
  
-  name_client = gets.chomp
+  name = gets.chomp
+
+  binding.pry
 
   puts "What are the animals you would like to put for adoption?"
+
+  puts shelter.clients[name].num_pets
   
   animals_adoption = gets.chomp.to_s
+
+  adoption = shelter.clients[name].num_pets.delete(animals_adoption.to_s)
+
+  shelter.animals[animals_adoption] << adoption
 
 #Remove the dog from the client's info
 # if shelter.clients[name_client].include?animals_adoption
