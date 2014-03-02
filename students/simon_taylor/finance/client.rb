@@ -79,4 +79,47 @@ class Client
     puts "Client now has a balance of #{ @balance }"
 
   end
+
+  def sell_stock(code, quantity, portfolio)
+
+    #check portfolio exists
+    unless @portfolios.has_key? portfolio
+      #print error message
+      puts "Transaction Failed: Portfolio name is invalid for this client"
+      #exit this method returning nil
+      return "Error"
+    end
+
+    #check the specified code exits in this portfolio
+    unless @portfolios[portfolio].stocks.has_key? code
+      #print error message
+      puts "Transaction Failed: This stock code cannot be found in this portfolio"
+      #exit this method returning nil
+      return "Error"
+    end
+
+    #fetch the desired stock object
+    stock = portfolios[portfolio].stocks[code]
+
+    #check that the quantity <= the stock quantity
+    if stock.quantity >= quantity
+      #value the stock
+      stock_value = stock.get_price * quantity
+      #reduce clients stock holding
+      stock.quantity -= quantity
+      #increase the client's account balance accordingly
+      @balance += stock_value
+      #delete the stock if balance now = 0
+      @portfolios[portfolio].stocks.delete(code) if stock.quantity == 0
+      #print success message
+      puts "Transaction Successful: This sale earned $XXX" # is costed #{ cost } for #{ quantity } of #{ name } stock"
+        #puts "Client now has a balance of #{ @balance }"
+      #return success
+      return "Success"
+    else
+      puts "Transaction Failed: Quantity exceeds clients holdings in this portfolio"
+      return "Error"
+    end
+    #perform the sale
+  end
 end

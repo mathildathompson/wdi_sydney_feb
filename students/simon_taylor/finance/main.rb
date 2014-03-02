@@ -143,14 +143,14 @@ until exit
   #Purchase stock for a client
   when 3
     portfolio_name = ""
-    code = ""
+    #code = ""
 
     #prompt user to select a client and provide list to select from. Error check for a valid name
     name = app.select_client
 
     #prompt user for portfolio name, check this name does not already exist
     loop do
-      puts "Please enter a name for this new portfolio"
+      puts "Please enter a portfolio name to store this stock purchase (this is case sensitive)"
       puts "Existing portfolios for #{name} are: \"#{ app.clients[name].portfolios.keys.sort.join("\", \"") }\""
       portfolio_name = gets.chomp
 
@@ -162,13 +162,16 @@ until exit
       end
     end
 
+    #get stock code
+    puts "Please input the code of the stock you wish to buy"
+    code = gets.chomp
+
     #get quantity
     puts "Please input the quantity you wish to purchase"
     quantity = gets.to_i
 
-    
-    #check funds available is sufficient
-    #check stock code is valid
+    #attempt to purchase stock, invalid stock code or insufficient funds will error
+    app.clients[name].buy_stock(code,quantity,portfolio_name)
 
   #------------------------------------------------------------
   #Sell stock for a client
