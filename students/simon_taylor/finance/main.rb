@@ -10,8 +10,8 @@ require_relative 'stock'
 app = ClientBase.new
 
 #to test extracting stock data via gem (use lastTrade for price and name for the name)
-def get_stock_data(stock)
-  data = YahooFinance::get_quotes(YahooFinance::StandardQuote, stock.upcase)[stock]
+def get_stock_data(code)
+  data = YahooFinance::get_quotes(YahooFinance::StandardQuote, code.upcase)[code]
 
   #check if this stock code actually exists
   if (data.name == "" || data.name == code) && data.price == 0
@@ -21,7 +21,7 @@ def get_stock_data(stock)
   data
 end
 
-#testing data
+#-=-=-=- TEST DATA -=-=-=-
 c1 = Client.new("Simon",1_000_000)
 c2 = Client.new("Erik",10_000_000)
 
@@ -45,20 +45,29 @@ p1.stocks[s1.code] = s1
 p1.stocks[s2.code] = s2
 p2.stocks[s3.code] = s3
 p3.stocks[s4.code] = s4
-#end of test data
 
+c1.buy_stock('MQG.AX',99,'Good Stocks')
+#-=-=-=- END OF TEST -=-=-=-
+
+#used to print horizontal lines when needed
+hline = "-------------------------------------------------"
+
+#start main program
 exit = false
 
 until exit
+  puts hline
   puts "1 - Add a client"
   puts "2 - Create a new portfolio for a client"
   puts "3 - Purchase stock for a client"
-  puts "4 - Sell stock for a client - NOT YET IMPLEMENTED"
-  puts "5 - Exit the program"
-  puts "------------------------------------------------"
-  print "Please select an option (1 - 5): "
+  puts "4 - Sell stock for a client"
+  puts "5 - Print Snapshot"
+  puts "6 - Exit the program"
+  puts hline
+  print "Please select an option (1 - 6): "
   
   response = gets.to_i
+  puts hline
 
   case response
 
@@ -69,17 +78,20 @@ until exit
     name = ""
     balance = 0.0
 
+    #prompt for client name input and check name does NOT already exist
     loop do
       puts "Please enter the client's name"
       name = gets.chomp
 
       if app.clients.has_key? name
         puts "This name already exists in the database"
+        puts hline
       else
         break
       end
     end
 
+    #prompt for opening balance and check balance is > 0 (and therefore is also not a string)
     loop do
       puts "Please enter the client's opening deposit (must be greater than $0)"
       balance = gets.to_f
@@ -89,6 +101,7 @@ until exit
         break
       else
         puts "Please input a valid balance"
+        puts hline
       end
     end
 
@@ -102,28 +115,100 @@ until exit
   #Create a new portfolio for a client
   when 2
 
-    # name = ""
-    # portfolio_name = 0.0
+    portfolio_name = 0.0
 
-    # loop do
-    #   puts "Please enter the client's name"
-    #   name = gets.chomp
+    #prompt user to select a client and provide list to select from. Error check for a valid name
+    name = app.select_client
 
-    #   if app.clients.has_key? name
-    #     puts "This name already exists in the database"
-    #   else
-    #     break
-    #   end
-    # end
+    #prompt user for portfolio name, check this name does not already exist
+    loop do
+      puts "Please enter a name for this new portfolio"
+      portfolio_name = gets.chomp
 
+      if app.clients[name].portfolios.has_key? portfolio_name
+        puts "This portfolio already exists for client #{name}, please re-enter"
+        puts hline
+      else
+        break
+      end
+    end
+
+    #create the portfolio object
+    portfolio = Portfolio.new(portfolio_name)
+
+    #add the portoflio to the client within the app
+    app.clients[name].portfolios[portfolio_name] = portfolio    
+
+  #------------------------------------------------------------
+  #Purchase stock for a client
   when 3
+    portfolio_name = ""
+    code = ""
+
+    #prompt user to select a client and provide list to select from. Error check for a valid name
+    name = app.select_client
+
+    #prompt user for portfolio name, check this name does not already exist
+    loop do
+      puts "Please enter a name for this new portfolio"
+      puts "Existing portfolios for #{name} are: \"#{ app.clients[name].portfolios.keys.sort.join("\", \"") }\""
+      portfolio_name = gets.chomp
+
+      if app.clients[name].portfolios.has_key? portfolio_name
+        break
+      else
+        puts "Please input a valid portfolio name"
+        puts hline
+      end
+    end
+
+    #get quantity
+    puts "Please input the quantity you wish to purchase"
+    quantity = gets.to_i
+
+    
+    #check funds available is sufficient
+    #check stock code is valid
+
+  #------------------------------------------------------------
+  #Sell stock for a client
   when 4
+  #------------------------------------------------------------
+  #Print Snapshot
   when 5
+    #loop through clients
+    app.clients.each_value do |c|
+      #print client name
+      puts c.to_s
+      #loop through client's portfolios
+      c.portfolios.each_value do |p|
+        #print portfolio name
+        puts "└── #{ p.to_s }"
+        #loop through this portfolio's stock
+        p.stocks.each_value do |s|
+          #print stock details
+          puts "    └── #{ s.to_s }"
+        end
+
+      end
+
+      #puts hline
+    end
+
+  #------------------------------------------------------------
+  #Exit the program
+  when 6
     #tell the user we're exiting
     puts "Exiting the program..."
     #set program to exit
     exit = true
+  #------------------------------------------------------------
+  #ERROR: When the user inputs a string or 0
   when 0
+    puts "Invalid input, please re-enter"
+  #------------------------------------------------------------
+  #ERROR: When the user inputs a number that doesn't exist in the menu
+  else
     puts "Invalid input, please re-enter"
   end
 end

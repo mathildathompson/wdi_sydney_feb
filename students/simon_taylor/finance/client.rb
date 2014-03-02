@@ -26,7 +26,7 @@ class Client
 
   def buy_stock(code, quantity, portfolio)
     #check portfolio exists
-    unless puts @portfolios.has_key? portfolio
+    unless @portfolios.has_key? portfolio
       puts "Transaction Failed: Portfolio name is invalid for this client"
       #exit this method returning nil
       return
@@ -49,9 +49,6 @@ class Client
 
     #calculate total cost of purchase
     cost = price * quantity
-
-    #STILL TO FIX
-    #check the portfolio specified exists
 
     #check the client has sufficient funds
     if @balance > cost
@@ -80,5 +77,6 @@ class Client
     #transaction was a success
     puts "Transaction Successful: This purchase is costed #{ cost } for #{ quantity } of #{ name } stock"
     puts "Client now has a balance of #{ @balance }"
+
   end
 end
