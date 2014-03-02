@@ -176,6 +176,7 @@ until exit
   #------------------------------------------------------------
   #Sell stock for a client
   when 4
+    puts "feature not yet implemented"
   #------------------------------------------------------------
   #Print Snapshot
   when 5

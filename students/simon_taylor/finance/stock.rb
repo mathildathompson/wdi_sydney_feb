@@ -21,7 +21,7 @@ class Stock
 
   def get_price
     begin
-      YahooFinance::get_quotes(YahooFinance::StandardQuote, @code.upcase)[@code].lastTrade
+      YahooFinance::get_quotes(YahooFinance::StandardQuote, @code.upcase)[@code].lastTrade.round(2)
     rescue
       0
     end
@@ -29,7 +29,7 @@ class Stock
 
   def value
     begin
-      value = YahooFinance::get_quotes(YahooFinance::StandardQuote, @code.upcase)[@code].lastTrade
+      value = YahooFinance::get_quotes(YahooFinance::StandardQuote, @code.upcase)[@code].lastTrade.round(2)
       value * quantity
     rescue
       0
