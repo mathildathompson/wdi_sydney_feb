@@ -6,6 +6,10 @@ class Portfolio
     @stocks = {}
   end
 
+  def to_s
+    "Portfolio - #{name}, contains #{ @stocks.size } distinct stocks"
+  end
+
   def value
     #set total variable
     total = 0

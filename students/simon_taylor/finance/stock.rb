@@ -1,11 +1,17 @@
 class Stock
-  attr_accessor :name, :code, :quantity
+  attr_accessor :code, :quantity, :name
 
-  def initialize(name, code, quantity)
+  def initialize(code, quantity)
     #name should be pulled from the web
-    @name = name
     @code = code
     @quantity = quantity
+
+    #attempt to fetch name from the web
+    begin
+      @name = YahooFinance::get_quotes(YahooFinance::StandardQuote, code.upcase)[code].name
+    rescue
+      @name = "Unknown"
+    end
   end
 
   def to_s

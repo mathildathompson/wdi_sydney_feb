@@ -1,0 +1,3 @@
+BUGS TO ADDRESS
+
+1. When creating a client it considers different case as different clients
