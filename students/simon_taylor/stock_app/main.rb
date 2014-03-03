@@ -75,20 +75,15 @@ until exit
   #Add a client
   when 1
     #instantiate variables so they are not lost after loop exit
-    name = ""
     balance = 0.0
 
     #prompt for client name input and check name does NOT already exist
-    loop do
-      puts "Please enter the client's name"
-      name = gets.chomp
+    puts "Please enter the client's name"
+    name = gets.chomp
 
-      if app.clients.has_key? name
-        puts "This name already exists in the database"
-        puts hline
-      else
-        break
-      end
+    while app.clients.has_key? name
+      puts "This name already exists in the database, enter the clients name again"
+      name = gets.chomp
     end
 
     #prompt for opening balance and check balance is > 0 (and therefore is also not a string)
@@ -115,7 +110,7 @@ until exit
   #Create a new portfolio for a client
   when 2
 
-    portfolio_name = 0.0
+    portfolio_name = ""
 
     #prompt user to select a client and provide list to select from. Error check for a valid name
     name = app.select_client
@@ -142,25 +137,13 @@ until exit
   #------------------------------------------------------------
   #Purchase stock for a client
   when 3
-    portfolio_name = ""
-    #code = ""
 
-    #prompt user to select a client and provide list to select from. Error check for a valid name
+    #prompt user to select a client and provide a list to select from.
     name = app.select_client
 
-    #prompt user for portfolio name, check this name does not already exist
-    loop do
-      puts "Please enter a portfolio name to store this stock purchase (this is case sensitive)"
-      puts "Existing portfolios for #{name} are: \"#{ app.clients[name].portfolios.keys.sort.join("\", \"") }\""
-      portfolio_name = gets.chomp
-
-      if app.clients[name].portfolios.has_key? portfolio_name
-        break
-      else
-        puts "Please input a valid portfolio name"
-        puts hline
-      end
-    end
+    #prompt user to select a portfolio for this client and provide a list to select from.
+    puts "Please enter a portfolio name to store this stock purchase (this is case sensitive)"
+    portfolio_name = app.clients[name].select_portfolio
 
     #get stock code
     puts "Please input the code of the stock you wish to buy"
@@ -177,6 +160,27 @@ until exit
   #Sell stock for a client
   when 4
     puts "feature not yet implemented"
+
+    #prompt user to select a client and provide a list to select from.
+    name = app.select_client
+
+    #prompt user to select a portfolio for this client and provide a list to select from.
+    puts "Please enter a portfolio name which contains the stock you wish to sell (this is case sensitive)"
+    portfolio_name = app.clients[name].select_portfolio
+
+    #get stock code
+    puts "Please input the code of the stock you wish to sell"
+    #NEED TO LIST STOCKS AVAILABLE IN THE PORTFOLIO
+    #NEED TO CHECK THE SPECIFIED STOCK EXISTS
+    code = gets.chomp
+
+    #get quantity
+    puts "Please input the quantity you wish to sell"
+    #NEED TO CHECK THE QUANTITY DOES NOT EXCEED THE QUANTITY OF STOCK THEY HAVE AND IS > 1
+    quantity = gets.to_i
+
+    #perform the sale
+    app.clients[name].sell_stock(code,quantity,portfolio_name)
   #------------------------------------------------------------
   #Print Snapshot
   when 5

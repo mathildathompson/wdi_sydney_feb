@@ -24,6 +24,27 @@ class Client
     total
   end
 
+  def select_portfolio
+    #to store portfolio selected
+    portfolio_name = ""
+
+    loop do
+      #prompt the user to select a portfolio
+      puts "Existing portfolios for #{@name} are: \"#{ @portfolios.keys.sort.join("\", \"") }\""
+      portfolio_name = gets.chomp
+
+      if @portfolios.has_key? portfolio_name
+        break
+      else
+        puts "Please input a valid portfolio name"
+        puts "--------------------------------"
+      end
+    end
+
+    #return the portfolio name
+    portfolio_name
+  end
+
   def buy_stock(code, quantity, portfolio)
     #check portfolio exists
     unless @portfolios.has_key? portfolio
