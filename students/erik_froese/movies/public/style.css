@@ -1,0 +1,42 @@
+header {
+  background: url('http://www.rheababla.co.uk/wp-content/uploads/2013/02/header.jpg');
+  background-size: cover;
+  color: white;
+  padding: 30px;
+}
+body {
+  color: black;
+  background-color: white;
+  font-family: "Courier"
+}
+h1 {
+  font-family: "Courier"
+}
+
+img {
+  float: left;
+  margin: 10px 50px 10px 10px;
+}
+div {
+  padding: 10px 30px 10px 10px;
+}
+input[type=text]
+{
+    font-family: "Courier";
+    background-color: white;
+    border:solid 1px black;
+    color: #979797;
+    height: 28px;
+    padding-left:10px;
+    width: 191px;
+}
+input[type=submit]
+{
+    font-family: "Courier";
+    background-color: black;
+    color: white;
+    height: 24px;
+    width: 103px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
