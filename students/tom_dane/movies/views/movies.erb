@@ -1,0 +1,31 @@
+
+<% if @movie_error %>
+
+   <p>The movie you entered does not exist.</p>
+   <p>Please check the spelling and try again</p>
+
+   <% else %>
+
+        <% if @title %>
+            
+            <h1><%= @movie['Title'] %></h1>
+            <p>The IMDB rating is: <%= @movie['imdbRating'] %></p>
+            <img src="<%= @movie['Poster'] %>">
+
+        <% end %>
+
+<% end %>
+
+
+<p>Please enter the name of a movie:</p>
+<form action="/movies" method="get">
+<input name="movie_name" type="text" placeholder= "Movie name e.g. The Matrix">
+<input type="submit" value="Get data">
+</form>
+
+
+
+
+
+
+
