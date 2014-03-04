@@ -1,0 +1,31 @@
+<% if params[:movie_title].present? %>
+
+	<h2>THE MOVIE DATABASE</h2>
+
+	<form action="/movie" method="get" class="search">
+		<input name="movie_title" type="text" placeholder="Enter a movie title">
+
+		<input type="submit" value="Search">
+	</form>
+
+	<img src="<%= @movie_poster %>" class="posters">
+	<h1><%= @movie_title %></h1>
+	<p><strong>Actors:</strong> <%= @movie_cast %></p>
+	<p><strong>Plot:</strong> <%= @movie_plot %></p>
+	<p><strong>Time:</strong> <%= @movie_time %></p>
+	<p><strong>Director:</strong> <%= @movie_director %></p>
+	<p><strong>Genre:</strong> <%= @movie_genre %></p>
+	<p><strong>Year:</strong> <%= @movie_year %></p>
+	<p><strong>Awards:</strong> <%= @movie_awards %></p>
+
+<% elsif params[:movie_title].blank? %>
+
+	<h2>THE MOVIE DATABASE</h2>
+
+	<form action="/movie" method="get" class="search">
+		<input name="movie_title" type="text" placeholder="Enter a movie title">
+
+		<input type="submit" value="Search">
+	</form>	
+
+<%end%>

@@ -1,0 +1,57 @@
+body {
+	color : #404040; /*#003366*/
+	width: auto;
+	margin: 30px 70px 30px 70px;
+  	/*Adding a light gradient to the backgroung*/
+  	/* Safari 4-5, Chrome 1-9 */
+  	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#ffffff), to(#f0f0f0));
+  	/* Safari 5.1+, Chrome 10+ */
+  	background: -webkit-radial-gradient(circle, #ffffff, #f0f0f0);
+  	/* Firefox 3.6+ */
+  	background: -moz-radial-gradient(circle, #ffffff, #f0f0f0);
+  	/* IE 10 */
+  	background: -ms-radial-gradient(circle, #ffffff, #f0f0f0);
+}
+
+
+h1{
+	font-size : 30px;
+	font-family: 'Century gothic';
+}
+
+h2{
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Impact'; /*'Josefin Sans' sans-serif*/
+}
+
+p{
+	display: block;
+	font-size: 17px;
+	width: 600;
+	font-family: 'Century Gothic';
+}
+
+.posters{
+	display: block;
+	width: 300px;
+	margin-right: 50px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.search{
+	display: block;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	margin-top: -20px;
+}
+
+
+
+
+
+
+
