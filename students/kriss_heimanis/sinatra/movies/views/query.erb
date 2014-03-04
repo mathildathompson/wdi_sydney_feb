@@ -1,0 +1,8 @@
+<% if @first %>
+<h1><%= @result %></h1>
+<% end %>
+
+<form action="/query" method="get">
+  <input name="first" type="text" placeholder="Enter Stock Code">
+  <input type="submit" value="Check">
+</form>
