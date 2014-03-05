@@ -1,8 +1,24 @@
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+img #contact_image {
+  display: block;
+  margin: 0 auto;
+}
 header {
   background: url('http://www.rheababla.co.uk/wp-content/uploads/2013/02/header.jpg');
   background-size: cover;
   color: white;
   padding: 30px;
+}
+nav {
+  background-color: black;
+padding: 10px 0 10px 25px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
 }
 body {
   color: black;
@@ -39,4 +55,9 @@ input[type=submit]
     width: 103px;
     border: 2px solid white;
     border-radius: 2px;
+}
+footer {
+  border: 2px   solid black;
+  color: black;
+  padding: 20px;
 }

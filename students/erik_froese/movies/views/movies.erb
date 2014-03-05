@@ -1,20 +1,15 @@
 
 
-<header>
-  <h1>Movie Madness</h1>
-  <form action='/movies' method="get"> 
-  <input name="movie_name" type="text" placeholder="Enter a movie name">
-  <input type="submit" value="Find movie">
-  </form>
-</header>
-<h2><%= @blank_page %> </h2>
-<img src="<%= @poster %>">
-<div>
-  <h2><%= @movie_title %> </h2>
-  <p><%= @movie_title %> <%= @released %></p>
-  <p><%= @director %></p>
-  <p><%= @writer %></p>
-  <p><%= @plot_header %></p>
-  <p><%= @plot %></p>
+<!-- <img src="<%= @poster %>"> -->
+<div id="container">
+  <h2><%= @blank_page %> </h2>
+  <% if @movies && @movies.length %> <!-- this says, if there's a variable @movies AND it has a length, run the code. Nil has no length, so it doesn't run if nothing's passed in. -->
+    <% @movies.each do |movie| %>
+      <p><a href="/titles/<%= movie["Title"]%>"><%= movie["Title"] %></a></p>
+    <% end %>
+  <% end %>
+<footer>
+  <p>Disclaimer: this site may cause you to be very impressed. Please refrain from driving heavy machinery after viewing it.</p>
+</footer>
 </div>
 
