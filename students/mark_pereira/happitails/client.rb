@@ -10,6 +10,6 @@ class Client
     
     def to_s
     "The client #{@name} who is #{@age} years young,
-    and has #{@children} Children with #{@pets} pets"
+    has #{@children} Children with #{@pets} pets"
     end
 end          

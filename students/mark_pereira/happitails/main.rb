@@ -7,9 +7,11 @@ require_relative 'animal'
 #----------------------------------------------------------------------------------
 # Test data set up for troubleshooting and testing.
 
+shelter = Shelter.new
+
 shelter.animals["Spot"] = Animal.new("Spot", 12, "male", "dog", ["bone", "frisbee"])
 shelter.animals["Missy"] = Animal.new("Missy", 4, "female", "cat", ["wool", "mouse"])
-shelter.animals["Fluff"] = Animal.new("Fluff", 4, "female", "hamster", ["wheel", "block"])
+shelter.animals["Fluffy"] = Animal.new("Fluffy", 4, "female", "hamster", ["wheel", "block"])
 
 shelter.clients["Bob"] = Client.new("Bob", 45, "2", ["Toby", "Henny"])
 shelter.clients["Bob"].pets['Spot'] =  shelter.animals["Spot"]
@@ -18,7 +20,6 @@ shelter.clients["Ann"] = Client.new("Ann", 29, "0", ["Fido"] )
 
 #-----------------------------------------------------------------------------------
 
-shelter = Shelter.new
   puts "1. Create animal"
   puts "2. Create client"
   puts "3. Display animals"
@@ -44,7 +45,6 @@ while response != 7
         species = gets.chomp
     print ' list toys :'
         toys = gets.chomp.split.to_a
-  end
     
     shelter.animals[name] = Animal.new(name, age, gender, species, toys)   
 
@@ -58,8 +58,7 @@ while response != 7
     print ' kids :'
       kids = gets.to_i
     print ' pets :'
-      pets = gets.chomp.split.to_a
-  end    
+      pets = gets.chomp.split.to_a   
     
     shelter.clients[name] = Client.new(name, age, kids, pets) 
 
@@ -68,8 +67,7 @@ while response != 7
   elsif response == 3 
     shelter.animals.each do |animal|
       puts animal
-    end 
-  end     
+    end     
 
 #-----------------------------------------------------------------------------------
 #Print a list of all clients 
@@ -77,7 +75,6 @@ while response != 7
     shelter.clients.each do |client|
       puts client
     end  
-  end
 
 #-----------------------------------------------------------------------------------
 #Adopting a pet
@@ -92,40 +89,39 @@ while response != 7
       puts value.name
     end
     
-    puts "choose a client"
+    puts "choose a client to adopt #{adopt}"
         adopter = gets.chomp
 
     shelter.clients[adopter].pets[adopt] = shelter.animals[adopt]
     shelter.animals.delete(adopt)       
 
-    puts "#{shelter.clients[adopter].name} your pets are now #{shelter.clients[adopter].pets}"
-  end  
+    puts "#{adopter} has adopted #{adopt}"
+    puts " " 
 
 #-----------------------------------------------------------------------------------
 #Surrending a pet
   elsif response == 6 
+    puts "This is a list of our clients"
     shelter.clients.each do |key, value|
       puts value.name
     end
-  end    
      
-    puts "choose a client to give up a pet"
+    puts "Choose a client to give up a pet"
       deserter = gets.chomp
+
+    puts "#{deserter} has these pets: "  
     
-    puts "Which animal would you like to give up?"
-      shelter.clients[deserter].pets.each do |key, value|
-        puts value.name
-      end
-        deserted = gets.chomp
+    shelter.clients[deserter].pets.each do |key, value|
+      puts value.name
+    end
+      
+    puts "Which pet does the #{deserter} want to give up"  
+      deserted = gets.chomp
 
     shelter.animals[deserted] = shelter.clients[deserter].pets[deserted]
     shelter.clients[deserter].pets.delete(deserted)
-        
- 
-      returning = shelter.clients[deserter].pets.find{|k,v| k == deserted }
-        # the value here needs to be re-added to the animals.class
-        puts "returning animal = #{returning}"
-      end    
+
+      puts "#{deserter} has given up #{deserted}"   
 end
 
     puts "1. Create animal"
@@ -137,13 +133,12 @@ end
     puts "7. Quit"
 
     response = gets.chomp.to_i
-
-#end
+end    
 
 #-----------------------------------------------------------------------------------
 # Exit application
 
-  else response == 7
-    Kernel.exit(true) 
-  end     
+  if response == 7
+    Kernel.exit(true)    
+  end       
 #-----------------------------------------------------------------------------------       
