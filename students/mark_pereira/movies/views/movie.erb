@@ -1,0 +1,29 @@
+
+ 
+   <h2>THE MOVIE DATABASE</h2>
+ 
+   <form action="/movie" method="get" class="search">
+     <input name="movie_title" type="text" placeholder="Enter a movie title">
+ 
+     <input type="submit" value="Search">
+   </form> 
+ 
+   <% if @movie %>
+
+    <% if @movie_error %>
+      <%= @movie_error %>
+    <% else %>
+
+      <h3><%= @movie_title %></h3>
+      <h3><%= @movie_cast %></h3>
+      <img src= <%= @movie_poster %>/>
+      <h3><%= @movie_plot %></h3>
+      <h3><%= @movie_time %></h3>
+      <h3><%= @movie_director %></h3>
+      <h3><%= @movie_genre %></h3>
+      <h3><%= @movie_year %></h3>
+      <h3><%= @movie_awards %></h3>
+      
+    <% end %>
+   <% end %>
+
