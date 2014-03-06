@@ -1,7 +1,5 @@
 body {
 	color : #404040; /*#003366*/
-	width: auto;
-	margin: 30px 70px 30px 70px;
   	/*Adding a light gradient to the backgroung*/
   	/* Safari 4-5, Chrome 1-9 */
   	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#ffffff), to(#f0f0f0));
@@ -11,42 +9,140 @@ body {
   	background: -moz-radial-gradient(circle, #ffffff, #f0f0f0);
   	/* IE 10 */
   	background: -ms-radial-gradient(circle, #ffffff, #f0f0f0);
+  	margin: 0;
 }
 
 
+/*-----------------------HOMEPAGE--------------------------*/
+
+#menu{
+	display: block;
+	background-color: white;
+	height: 40px;
+}
+
+#menu a{
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+	text-decoration: none;
+	font-family: "Lato", sans-serif;
+	color: #666;
+	-webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+
+a:hover {
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+}
+
 h1{
-	font-size : 30px;
-	font-family: 'Century gothic';
+	text-align: center;
+	font-size: 70px;
+	font-family: 'Lato', sans-serif; 
+	font-weight: 300;/*'Josefin Sans' sans-serif*/
+	margin: auto auto;
+	display: block;
+	width: 100%;
+}
+
+#container{
+	display: block;
+	width: auto;
+	margin: 170px auto 80px auto;
+	position: relative;
+}
+
+#container form{
+	margin: 50px auto 30px auto;
+	display: block;
+	width: 190px;
+}
+
+
+/*---------------SEARCH PAGE----------------*/
+
+#search{
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+	height: auto;
+	border: 2px solid #c6c6c6;
+	background-color: white;
+	opacity: 0.8;
+	margin-bottom: 50px;
+}
+
+
+#search  a{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 17px;
+	color: rgb(112,165,26);
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	text-align: justify;
+	margin: 10px auto;
+	padding-left: 50px;
+}
+
+
+/*------------------------MOVIE PAGE-------------------------*/
+
+#main{
+	display: block;
+	width: 950px;
+	margin: 30px auto 50px auto;
+	background-color: white;
+	padding-bottom: 20px;
+}
+
+#left{
+	display: inline-block;
+	width: 320px;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+#left img{
+	padding: 5px;
+	border: 3px solid black;
+}
+
+#right{
+	display: inline-block;
+	width: 500px;
+	vertical-align: top;
+	padding-left: 30px;
 }
 
 h2{
-	text-align: center;
-	font-size: 50px;
-	font-family: 'Impact'; /*'Josefin Sans' sans-serif*/
+	text-align: left;
+	font-size: 45px;
+	font-family: 'Lato', sans-serif; 
+	font-weight: 300;
+	display: block;
+	width: 100%;
 }
 
 p{
-	display: block;
-	font-size: 17px;
-	width: 600;
-	font-family: 'Century Gothic';
+	font-family: 'Lato', sans-serif; 
+	font-weight: 300;
 }
 
-.posters{
+#search2{
 	display: block;
-	width: 300px;
-	margin-right: 50px;
-	float: left;
-	margin-bottom: 20px;
-}
-
-.search{
-	display: block;
-	width: 200px;
+	width: 190px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 30px;
-	margin-top: -20px;
+	padding-top: 30px;
 }
 
 
