@@ -1,0 +1,10 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #F60;
+  color: #FFF;
+}
+h1,
+p{
+  margin: 10px ;
+}

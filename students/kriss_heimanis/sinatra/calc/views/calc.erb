@@ -1,0 +1,10 @@
+<% if @result %>
+<h1><%= @first %>  <%= params[:operator] %> <%= @second %> equals <%= @result %></h1>
+<% end %>
+
+<form action="/calc" method="get">
+  <input name="first" type="number" step="any" placeholder="first operand">
+  <input name="operator" placeholder="operator (+ or *)">
+  <input name="second" type="number" step="any" placeholder="second operand">
+  <input type="submit" value="calculate">
+</form>

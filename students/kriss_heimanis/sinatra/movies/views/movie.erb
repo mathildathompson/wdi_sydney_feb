@@ -1,0 +1,40 @@
+<% if @movie['Title'] %>
+  <% if @movie['Poster'] != "N/A" %>
+    <img src="<%= @movie['Poster'] %>">
+  <% end %>
+    <h1><%= @movie['Title'] %></h1>
+    <h4>Rating</h4>
+    <% if @movie['Metascore'] != "N/A" %>
+      <div class="rating">
+        <span>Metascore <%= @movie['Metascore'] %></span>
+        <div class ="bar" style="width:<%= @movie['Metascore']%>%;"></div>
+      </div>
+    <% end %>
+    <% if @movie['imdbRating'] != "N/A" %>
+      <div class="rating">
+        <span>IMDB Rating: <%= @movie['imdbRating'] %> from <%= @movie['imdbVotes'] %> IMDB votes</span>
+        <div class="bar" style="width:<%= @movie['imdbRating'].to_i * 10 %>%;"></div>
+      </div>
+    <% end %>
+    <ul class="left"> 
+      <li><span>Release Date:</span> <%= @movie['Released'] %></li>
+      <li><span>Language:</span> <%= @movie['Language'] %></li>
+      <li><span>Genre:</span> <%= @movie['Genre'] %></li>
+      <li><span>Rating:</span> <%= @movie['Rating'] %></li>
+    </ul>
+    <ul class="right">
+      <li><span>Country:</span> <%= @movie['Country'] %></li>
+      <li><span>Director:</span> <%= @movie['Director'] %></li>
+      <li><span>Writer:</span> <%= @movie['Writer'] %></li>
+      <li><span>Actors:</span> <%= @movie['Actors'] %></li>
+      <li><span>Awards:</span> <%= @movie['Awards'] %></li>
+    </ul>
+    <p><%= @movie['Plot'] %></p>
+<% end %>
+
+
+<form action="/movie" method="get">
+  <label for="title">Search for movies</label>
+  <input name="title" class="input" type="text" placeholder="movie name">
+  <input type="submit" class="button" value="GO!">
+</form>

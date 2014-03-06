@@ -1,0 +1,96 @@
+body {
+  padding: 20px;
+  margin: 0;
+  background: #000;
+  color: #FFF;
+  font-family: Verdana, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+  text-transform: uppercase;
+  margin: 10px 0 10px 0;
+}
+h1{
+  font-size: 32px;
+}
+h4{
+  font-size: 12px;
+}
+p{
+  margin: 10px 0 15px 0;
+  width: 50%;
+  clear: left;
+}
+img{
+  float: right;
+  padding: 20px;
+}
+.rating{
+  display: block;
+  width: 50%;
+  background: #444;
+  height: 14px;
+  position: relative;
+  margin-bottom: 5px;
+  border: solid 1px #444;
+}
+.rating span{
+  color: #FFF;
+  font-size: 10px;
+  line-height: 16px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+.rating .bar{
+  display: block;
+  height: 14px;
+  background: #F55;
+}
+ul{
+  list-style: none;
+  font-size: 10px;
+  margin: 20px 0;
+  padding: 0;
+  display: block;
+  float: left;
+  clear: none;
+}
+ul li{
+  margin-bottom: 5px;
+}
+ul.left{
+  width: 13%;
+  padding-right: 3%;
+}
+ul.right{
+  width: 30%;
+  border-left: dotted 1px #444;
+  padding-left: 3%;
+}
+li span{
+  color: #888;
+}
+form{
+  display: block;
+  width: 50%;
+  background: #444;
+  padding: 20px 0;
+}
+label{
+  padding-left: 20px;
+}
+input.input{
+  height: 20px;
+  font-size: 14px;
+  color: #FFF;
+  background: #222;
+  border: none;
+  padding: 5px;
+  line-height: 20px;
+}
+input.button{
+  background: #F55;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
