@@ -1,0 +1,17 @@
+<% if @movie %>
+  <p><h1><%= @movie_title %></h1></p>
+  <p><h3><em><%= @movie_year %></em></h3></p>
+  <p><%= @movie_director %></p>
+
+  <img src=<%=@movie_poster%> />
+  <p></p>
+<% end %>
+
+<form action="/movies" method="get">
+  <input name="movie_title" type="text" placeholder="Enter movie title">
+ 
+
+  <input type="submit" value="Go get 'em">
+
+</form>
+
