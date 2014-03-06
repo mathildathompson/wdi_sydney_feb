@@ -1,0 +1,14 @@
+<% if @result %>
+    <h2><%= @movie_title %></h2>
+    <img src="<%= @movie_poster %>">
+    <h3>Plot</h3>
+    <h3><%= @movie_plot %></h3>
+    <h3>Director : <%= @movie_director %></h3>
+<% end %>
+
+
+<form action="/movie_app" method="get">
+    <input name="title" type="text" step="any" placeholder="     Movie Title">
+
+    <input type="submit" value="Search">
+</form>
