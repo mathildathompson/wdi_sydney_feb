@@ -1,0 +1,23 @@
+body{
+	width: 940px;
+	margin: auto;
+	margin-top: 25px;
+	color: white;
+	background-color:redyellow;
+	padding-left: 30px;
+}
+
+#mainWrapper{
+	border: 5px solid #ccc;
+	padding: 20px;
+	color: #555555;
+}
+
+#content{
+	width: 620px;
+	float: right;
+}
+
+#content ul{
+	list-style: none;
+}
