@@ -79,14 +79,14 @@ get '/title/:id' do
     @movie = @@database.movies[imdbID]
 
     #puts a mesage that this movie has been retrieved (for debugging)
-    puts "---------------------------------------------------------"
+    puts "--------------------------------------------------------------"
     puts "Movie #{ @movie.title } exists in Database, loading..."
-    puts "---------------------------------------------------------"
+    puts "--------------------------------------------------------------"
     
   else
 
     #puts a mesage that this movie is new, and API call must be made
-    puts "---------------------------------------------------------"
+    puts "--------------------------------------------------------------"
     puts "New Movie Detected, fetching data using OMDbAPI..."
 
     #generate our entire url
@@ -121,7 +121,7 @@ get '/title/:id' do
 
     #puts a message that this movie has now been saved in the database
     puts "Movie #{ @movie.title } has been saved in the database"
-    puts "---------------------------------------------------------"
+    puts "--------------------------------------------------------------"
 
   end
 

@@ -14,6 +14,7 @@
   <div class="oscar">
     <img src="/images/Oscar.gif" alt="oscar">
   </div>
+
 <% when 'found results' %>
   <!-- When Search Performed and Results are Found -->
   <ul class="search-results">
@@ -22,6 +23,11 @@
       <li><a href="/title/<%= movie["imdbID"] %>"><%= movie["Title"] %></a></li>
     <% end %>
   </ul>
+  <!-- Display the Director picture -->
+  <div class="director">
+    <img src="/images/director.jpg" alt="director">
+  </div>
+
 <% when 'no results' %>
   <!-- When Search Performed but No Results Found -->
   <div class="error">
