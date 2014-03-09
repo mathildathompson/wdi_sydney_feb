@@ -48,14 +48,14 @@ h2 {
 }
 
 img {
-     width: 60%;
-     height: 60%;
+     max-width: 100%;
 }
 
 p {
      color: #000000;
      font-size: 12px;
      line-height: 20px;
+     margin: 0;
 }
 
 #container {
@@ -66,16 +66,15 @@ p {
 }
 
 #main {
-     position: relative;
-     left: 20px;
-     top: -35px;
+     display: inline-block;
+     width: 50%;
+     margin-left: 20px;
 }
 
 #sidebar {
-     position: absolute;
-     top: 310px;
-     left: 765px;
-     max-width: 312px;
+     display: inline-block;
+     max-width: 47%;
+     vertical-align: top;
 }
 
 a {

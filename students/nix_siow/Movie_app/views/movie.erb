@@ -2,7 +2,9 @@
 <% if @result %>
     <h2 id="movietitle"><%= @movie_title %></h2>
     <img id="movie_poster" src="<%= @movie_poster %>">
-    <h3 id="plot"><%= @movie_plot %></h3>
+    <% unless @movie_plot.nil? || @movie_plot == "N/A" %>
+        <h3 id="plot"><%= @movie_plot %></h3>
+    <% end %>
     <h3 id="plot">Director : <%= @movie_director %></h3>
 <% end %>
 
