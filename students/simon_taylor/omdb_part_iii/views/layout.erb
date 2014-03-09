@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>OMDB Search</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- google font -->
+    <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <div id="container">
+      <div class="reel"></div>
+        <h1>Open Movies Database Search App</h1>
+      <div class="reel"></div>
+
+      <!-- navigation -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <%= yield %>
+      
+      <div class="reel"></div>
+    </div> <!-- end of container -->
+
+  </body>
+</html>
