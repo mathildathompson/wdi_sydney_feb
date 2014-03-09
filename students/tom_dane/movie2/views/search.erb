@@ -1,0 +1,34 @@
+<h2>IMDB Rating Finder</h2>
+        <p>Use this to find the score of any movie</p>
+<p> Here you can search for a movie if you don't know the exact name: <p>
+
+<% if @movie_list_error %>
+
+   <p>The movie you entered does not exist.</p>
+   <p>Please check the spelling and try again</p>
+
+   <% else %>
+
+        <% if @search %>
+            <p>Here is your list of movies:</p>
+
+            <ul><% @movie_list.each do |x| %>
+
+                
+                    <li><a href="/movies/<%= x['imdbID'] %>"><%= x['Title'] %></a></li>
+
+                                               
+                <% end %></ul> 
+
+        <% end %>
+
+
+<% end %>
+
+
+
+<form action="/search" method="get">
+<input name="search_name" type="text" placeholder= "Movie name e.g. The Matrix">
+<input type="submit" value="Get data">
+</form>
+

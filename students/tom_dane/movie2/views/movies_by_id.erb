@@ -1,0 +1,6 @@
+<% if @imdb_id %>
+            
+            <h1><%= @movie['Title'] %></h1>
+            <p>The IMDB rating is: <%= @movie['imdbRating'] %></p>
+            <img src="<%= @movie['Poster'] %>">
+<% end %>
