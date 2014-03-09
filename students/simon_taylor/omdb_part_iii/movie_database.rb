@@ -61,9 +61,3 @@ class MovieDatabase
   end #end of method
 
 end
-
-# database = MovieDatabase.new
-# # database.load
-# binding.pry
-
-# binding.pry

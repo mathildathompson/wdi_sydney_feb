@@ -130,7 +130,7 @@ div.director {
 
 div.director img {
   margin: 10px;
-  width: 426px;
+  width: 430px;
 }
 
 /* TITLE PAGE - POSTER */
@@ -145,7 +145,7 @@ div.poster img {
   max-width: 300px;
 }
 
-/* TITLE PAGE - DISPLAY MOVIE DETAILS*/
+/* TITLE PAGE - DISPLAY MOVIE DETAILS */
 
 div.details {
   display: inline-block;
@@ -153,11 +153,16 @@ div.details {
   vertical-align: top;
 }
 
-div.details ul {
-  list-style-type: none;
-  padding: 10px 20px;
+div.details table {
+  margin: 10px;
 }
 
-div.details ul li {
-  padding: 5px 0;
+div.details td {
+  padding: 5px;
+}
+
+div.details td.row-heading {
+  vertical-align: top;
+  text-align: right;
+  font-weight: bold;
 }

@@ -129,7 +129,6 @@ get '/title/:id' do
 end
 
 # Features to add...
-#poster URL is not saved
 #Add 404 page
 #tidy up styling
-#filter out some crappy movie titles
+#Pass the previous search to the title page to enable a proper back button

@@ -36,42 +36,7 @@ class Movie
     f.close
   end
 
-  #checks to see if this movie has already been saved
-  # def saved?
-  #   saved = false
-
-  #   #reads the movies text file
-  #   File.open("movies.txt","r") do |f|
-  #     #loop through each line in our file
-  #     f.each_line do |l|
-
-  #       #remove line break
-  #       line = l.chomp
-
-  #       #check if this line in the file stores title and if the title matches this object
-  #       if line[0..10] == "imdb_id || " && line[11..l.size] == @imdb_id
-  #         #set saved == true as this title does exist in our file
-  #         saved = true
-  #       end
-  #     end
-  #   end
-
-  #   #return saved
-  #   saved
-  # end
-
-  def load(title)
-    "this doesn't work yet, shit..."
-  end
-
 end
-
-# movie_params = {:title => 'Rambo', :genre => 'Action', :imdb_rating => '9/10', :actors => 'Sylvester Stallone',
-#  :imdb_id => 'tt0462499'}
-# test = Movie.new(movie_params)
-# # test.saved?
-
-# binding.pry
 
 # <li><b>Title:</b> <%= @movie["Title"] %></li>
 # <li><b>Genre:</b> <%= @movie["Genre"] %></li>
