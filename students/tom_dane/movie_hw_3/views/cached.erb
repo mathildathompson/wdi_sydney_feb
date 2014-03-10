@@ -1,0 +1,21 @@
+<h2>IMDB Rating Finder</h2>
+<p>Lucky you! We already have that data in the text file: </p>
+<ul>
+  <% @links.each do |link| %>
+    <li>
+
+      <a href="<%= link[:movies_by_id] %>" target="_blank">
+        <%= link[:movie_name] %>     <%= link[:imdb_rating] %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+
+<form action="/search" method="get">
+<input name="search_name" type="text" placeholder= "Movie name e.g. The Matrix">
+<input type="submit" value="Get data">
+</form>
