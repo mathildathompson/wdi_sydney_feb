@@ -23,11 +23,22 @@ end
 
 get '/title/:id' do
   id_numb = params[:id]
+  f=File.open("movies.csv", 'r')
+  movies = {}
+  f.each do |line|
+    result = JSON(line)
+    movies[result["imdbID"]] = result
+  end
 
+  @film = movies[params["id"]]
+    if @film == nil
       url = "http://www.omdbapi.com/?i=#{ id_numb }"
       response = HTTParty.get(url)
-      @movie = JSON(response)
-
+      @film = JSON(response)
+      f=File.open("movies.csv", 'a+')
+      f.puts(response)
+      f.close
+    end
 
       erb :title
 end

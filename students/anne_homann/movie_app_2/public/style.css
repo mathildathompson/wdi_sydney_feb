@@ -4,13 +4,19 @@
   position: relative;
 }
 
+#box {
+  margin: 0 auto;
+  background-color: black;
+  padding: 100 0 100 0;
+}
+
 body {
   color: blue;
-  background-color: #FFA68E;
+  background-image: url("/images/patt.jpg");
 }
 
 nav {
-  background-image: url("/images/bg.jpg");
+  background-color: black;
   color: blue;  
   padding: 2em;
   border-radius: 0.3em;
@@ -33,3 +39,5 @@ nav a:hover {
 #movies {
   background-color: #FFA68E;
 }
+
+
