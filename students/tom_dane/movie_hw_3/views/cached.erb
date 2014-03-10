@@ -4,13 +4,12 @@
   <% @links.each do |link| %>
     <li>
 
-      <a href="<%= link[:movies_by_id] %>" target="_blank">
+      <a href="/movies" target="_blank">
         <%= link[:movie_name] %>     <%= link[:imdb_rating] %>
       </a>
     </li>
   <% end %>
 </ul>
-
 
 
 
