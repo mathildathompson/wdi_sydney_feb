@@ -23,7 +23,8 @@ end
 get '/titles/:title' do
 
   db = SQLite3::Database.open('movies.db')
-  @movie = db("SELECT * FROM movies WHERE movie_title=#{params[:title]}")
+  binding.pry
+  @movie = db("SELECT * FROM movies WHERE movie_title='#{params[:title]}';")
   #the below is what's returned for "Alien". Somehow, I have to manipulate it into useable variables.
   #2|Won 1 Oscar. Another 12 wins & 18 nominations.|Director: Ridley Scott|Alien|The commercial vessel Nostromo receives a distress call from an unexplored planet. After searching for survivors, the crew heads home only to realize that a deadly bioform has joined them.|http://ia.media-imdb.com/images/M/MV5BMTk3NzkwMjA3OV5BMl5BanBnXkFtZTYwMTIwOTk2._V1_SX300.jpg|was released on 22 Jun 1979.|Writers: Dan O Bannon (story), Ronald Shusett (story), Dan O Bannon (screenplay)
   @movie.split("|") do |x|
