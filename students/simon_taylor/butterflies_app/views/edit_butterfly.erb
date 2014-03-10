@@ -1,0 +1,21 @@
+<h2>Edit your butterfly...</h2>
+
+<form action="/butterflies/update" method="post">
+  <input type="hidden" name="id" value="<%= @butterfly["id"] %>">
+
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" required value="<%= @butterfly["name"] %>">
+  </p>
+
+  <p>
+    <label for="family">Family: </label>
+    <input type="text" name="family" id="family" required value="<%= @butterfly["family"] %>">
+  </p>
+  <p>
+    <label for="photo">Photo: </label>
+    <input type="url" name="photo" id="photo" required value="<%= @butterfly["photo"] %>">
+  </p>
+
+  <button>Update Butterfly!</button>
+</form>
