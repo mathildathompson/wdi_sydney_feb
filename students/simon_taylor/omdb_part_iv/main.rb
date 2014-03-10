@@ -1,15 +1,24 @@
+# Features to add...
+# Add 404 page
+# Pass the previous search to the title page to enable a proper back button
+# Add Creation Date to the movies table and use this to show last ten movies viewed
+# monkey patch hash so it can replace single quote with double quote
+
 require 'pry'
 
+#required to run the web server
 require 'sinatra'
 require 'sinatra/reloader'
 
 require 'active_support/all' #allows the .present? method
 
+#required to fetch data from OMDbAPI
 require 'httparty'
 require 'JSON'
 
 require 'uri' #allows conversion to url friendly string
 
+#required for database connection and executing SQL
 require 'sqlite3'
 
 #----------------------
@@ -71,19 +80,20 @@ get '/title/:id' do
   @movie = query_db("SELECT * FROM movies WHERE imdb_id = '#{movie_id}';").first
 
   #check if query result was found?
-  if @movie.nil?
+  if @movie.nil? #result was not found, so we need to fetch the data
 
-        #puts a mesage that this movie is new, and API call must be made
+    #puts a mesage that this movie is new, and API call must be made
     puts "--------------------------------------------------------------"
     puts "New Movie Detected, fetching data using OMDbAPI..."
 
-    #generate our entire url
+    #generate our url to fetch the movie data from OMDbAPI
     url = "http://www.omdbapi.com/?i=#{ movie_id }" 
 
     #reformat to JSON format
     response = HTTParty.get(url)
     movie_json = JSON(response)
 
+    #generate an @movie hash in the same format as retrieved from our database
     @movie = {
       "imdb_id" => movie_json["imdbID"],
       "title" => movie_json["Title"],
@@ -97,27 +107,30 @@ get '/title/:id' do
       "poster" => movie_json["Poster"]
     }
 
-    #create a copy of @movie hash, so this can be altered to be SQL friendly to save in the database
+    #create a copy of @movie hash to use to 'save' the movie in our database, this can be altered without affecting the view (.erb)
     movie_save = @movie.clone
 
+    #swap out apostrophes with double apostrophe so SQL OK
     movie_save.each_value do |v|
       v.gsub!("'","''")
     end
 
+    #generate the sql statement to insert this movie to the database
     sql = "INSERT INTO movies ('imdb_id','title','genre','imdb_rating','director','writer','actors','plot','awards','poster')
       VALUES('#{movie_save["imdb_id"]}','#{movie_save["title"]}','#{movie_save["genre"]}','#{movie_save["imdb_rating"]}','#{movie_save["director"]}',
       '#{movie_save["writer"]}','#{movie_save["actors"]}','#{movie_save["plot"]}','#{movie_save["awards"]}','#{movie_save["poster"]}');"
+
+    #tidy up line breaks in the query
     sql.gsub!("\n",'')
 
+    #execute the query to add this movie to our database
     query_db(sql)
-
-    # binding.pry
 
     #puts a message that this movie has now been saved in the database
     puts "Movie #{ @movie["title"] } has been saved in the database"
     puts "--------------------------------------------------------------"
 
-  else
+  else #result was found, so we can use the record already retrieved from the database (@movie)
 
     #puts a mesage that this movie has been retrieved (for debugging)
     puts "--------------------------------------------------------------"
@@ -129,17 +142,20 @@ get '/title/:id' do
   erb :title
 end
 
+#code to connect to the database
 def query_db(sql)
+  #specifies the path of our database file
   db = SQLite3::Database.open('movies.db')
+
+  #forces results returned to be hash format
   db.results_as_hash = true
+
+  #puts a message showing the SQL statement to be executed
   puts "----------------------------------------------------------------"
   puts "Executing SQL: #{ sql }"
   puts "----------------------------------------------------------------"
+
+  #execute the query and return the result
   db.execute(sql)
 end
 
-# Features to add...
-#Add 404 page
-#tidy up styling
-#Pass the previous search to the title page to enable a proper back button
-#monkey patch hash so it can replace single quote with double quote
