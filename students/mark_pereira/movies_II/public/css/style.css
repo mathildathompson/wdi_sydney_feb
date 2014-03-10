@@ -1,0 +1,191 @@
+@import url(http://fonts.googleapis.com/css?family=Averia+Sans+Libre:700,300italic);
+
+body {
+  background-color: #024A68;
+}
+
+#container {
+  background-color: white;
+  max-width: 960px;
+  border: 5px solid whitesmoke;
+  border-radius: 100%;
+  margin: 1em auto;  
+  height: 700px;
+  width: 700px;
+}
+
+h1 {
+  background-color: white;
+  padding: 0.37em;
+  text-align: center;
+  text-shadow: 5px 5px 10px #3BA3D0;
+  font-family: 'Averia Sans Libre', cursive;
+  font-size: 42px;
+  color: #024A68;
+  margin: 0;
+  margin-top: 150px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 20px;
+  border-color: #63AFD0;
+}
+
+.navigator {
+  background-color: white ;
+  color: #0772A1;
+  margin: 0;
+  text-align: center;
+  overflow: auto;
+  margin-left: 54px;
+  margin-right: 100px;
+
+}
+
+.navigator li {
+  display: inline-block;
+  font-family: 'Averia Sans Libre', cursive;
+  text-align: center;
+}
+
+.navigator a {
+  display: block;
+  color: #0772A1;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.navigator a:hover {
+  background-color: #63AFD0;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+div.search {
+  width: 381px;
+  height: 30px;
+  margin: 40px auto;
+
+}
+
+div.search .button {
+  background-color: #0772A1;
+  font-size: 18px;
+  color: white;
+  height:40px;
+  border-radius: 10px;
+}
+
+div.search .search-box {
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+div.hero img {
+width: 427px;
+height: 211px;
+margin-left: 138px;
+margin-top: -25px;
+border-radius: 5px;
+}
+
+div.error {
+  display: inline-block;
+  background-color: #63AFD0;
+  margin-left: 119px;
+  border-radius: 10px;
+}
+
+div.error h3 {
+  border: 5px solid whitesmoke; 
+  border-radius: 10px;
+  font-color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+ul.search-results li {
+  display: block;
+  list-style-type: none;
+  background-position: center;
+  background-color: white; 
+  color: black;
+  width: 350px;
+  margin-top: auto;
+  margin-left: 119px;
+}
+
+ul.search-results li a {
+  display: block;
+  text-decoration: none;
+  color: #0772A1;
+  margin-left: 119px;
+  font-size: 14px;
+}
+
+ul.search-results li a:hover {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #63AFD0;
+  color: white;
+  border-radius: 10px;
+}
+
+div.poster {
+  background-color: white;
+  display: inline-block;
+  margin-top: 43px;
+  margin-left: 137px;
+}
+
+div.poster img {
+  max-width: 170px;
+  margin-left: 135px;
+  border-radius: 5px;
+}
+
+div.details {
+  background: white;
+  max-width: 640px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 20px;
+  border-color: #024A68;
+  margin-top: 150px;
+  margin-left: 50px;
+  font-size: 14px;
+}
+
+div.details ul {
+  list-style-type: none;
+  padding: 10px 20px;
+}
+
+div.details ul li {
+  padding: 5px 0;
+}
+
+.search-box {
+  font-size: 10px;
+  color: #024A68;
+}
+
+#contact_h {
+  font-family: 'Averia Sans Libre', cursive;
+  text-align: center;
+  text-shadow: 2px 2px 2px #3BA3D0;
+}
+
+#contact_div ul {
+  font-family: 'Averia Sans Libre', cursive;
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#contact_div ul li {
+  display: inline-block ;
+  background-color: white;
+  list-style: none;
+}
