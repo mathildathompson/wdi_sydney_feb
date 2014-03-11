@@ -1,0 +1,16 @@
+
+<% if @result %>
+    <h2 id="movietitle"><%= @movie_title %></h2>
+    <img id="movie_poster" src="<%= @movie_poster %>">
+    <% unless @movie_plot.nil? || @movie_plot == "N/A" %>
+        <h3 id="plot"><%= @movie_plot %></h3>
+    <% end %>
+    <h3 id="plot">Director : <%= @movie_director %></h3>
+<% end %>
+
+
+<form action="/movie_app" method="get">
+    <input id="movie_title" name="title" type="text" step="any" placeholder=" Finds Movies ...(Keyword)">
+
+    <input class="uibutton" type="submit" value="Go Crazy!">
+</form>
