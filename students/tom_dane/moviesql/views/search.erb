@@ -1,0 +1,37 @@
+<div id="search">
+
+  <h2>IMDB Rating Finder</h2>
+  <p>Find the score of any movie: </p>
+ 
+</div>
+
+<% if @movie_list_error %>
+
+   <p>The movie you entered does not exist.</p>
+   <p>Please check the spelling and try again</p>
+
+   <% else %>
+
+        <% if @search %>
+            <p>Here is your list of movies:</p>
+
+            <ul><% @movie_list.each do |x| %>
+
+                
+                    <li><a href="/movies/<%= x['imdbID'] %>"><%= x['Title'] %></a></li>
+
+                                               
+                <% end %></ul> 
+
+        <% end %>
+
+
+<% end %>
+
+
+
+<form action="/search" method="get">
+<input name="search_name" type="text" placeholder= "The Matrix">
+<input type="submit" value="Get data">
+</form>
+
