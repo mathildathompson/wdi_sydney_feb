@@ -1,0 +1,12 @@
+<h1>In-Store items</h1>
+<ul>
+  <% @type.each do |product| %>
+    <li>
+      <a href="/store/<%= product['id'] %>">
+        <img class="thumb" src="<%= product["photo"] %>">
+        <%= product["name"].capitalize %>
+        <hr>
+      </a>
+    </li>
+  <% end %>
+</ul>

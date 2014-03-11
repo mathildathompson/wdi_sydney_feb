@@ -1,0 +1,30 @@
+<form action="/store/update" method="post">
+  <input type="hidden" name="id" value="<%= @product['id'] %>">
+
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" placeholder="  symbol sensitive :/'%$*@...   " required value="<%= @product['name'] %>">
+  </p>
+
+  <p>
+    <label for="type">Type: </label>
+    <input type="text" name="type" id="type" placeholder="  symbol sensitive :/'%$*@...   " required value="<%= @product['type'] %>">
+  </p>
+
+  <p>
+    <label for="photo">Product Image: </label>
+    <input type="url" name="photo" id="photo" placeholder="  eg: http://xxxxx.xxx/x/xx" required value="<%= @product['photo'] %>">
+  </p>
+
+  <p>
+    <label for="price">Price($): </label>
+    <input type="text" name="price" id="price" placeholder="  symbol sensitive :/'%$*@...   " required value="<%= @product['price'] %>">
+  </p>
+
+  <p>
+    <label for="box">On Sale: </label>
+    <input type="checkbox" name="box" id="price" required>
+  </p>
+
+  <button>Update Product!</button>
+</form>
