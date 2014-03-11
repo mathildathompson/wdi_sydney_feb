@@ -1,0 +1,8 @@
+<h1>Welcome to Butterflies Database</h1>
+
+<h2>Browse by family...</h2>
+<ul>
+  <% @families.each do |f| %>
+    <li><a href="/butterflies/family/<%= f["family"] %>"><%= f["family"] %></a></li>
+  <% end %>
+</ul>

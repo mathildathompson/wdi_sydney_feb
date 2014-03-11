@@ -1,0 +1,18 @@
+<div class="movie">
+  <div class="poster">
+    <img src="<%= @movie["poster"] %>" / >
+  </div><div class="details">
+    <table>
+      <tbody>
+        <tr><td class="row-heading">Title:</td><td><%= @movie["title"] %></td></tr>
+        <tr><td class="row-heading">Genre:</td><td><%= @movie["genre"] %></td></tr>
+        <tr><td class="row-heading">Rating:</td><td><%= @movie["imdb_rating"] %> / 10</td></tr>
+        <tr><td class="row-heading">Director:</td><td><%= @movie["director"] %></td></tr>
+        <tr><td class="row-heading">Writer:</td><td><%= @movie["writer"] %></td></tr>
+        <tr><td class="row-heading">Actors:</td><td><%= @movie["actors"] %></td></tr>
+        <tr><td class="row-heading">Plot:</td><td><%= @movie["plot"] %></td></tr>
+        <tr><td class="row-heading">Awards:</td><td><%= @movie["awards"] %></td></tr>
+      <tbody>
+    </table>
+  </div>
+</div>

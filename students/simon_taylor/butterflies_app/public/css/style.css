@@ -1,0 +1,23 @@
+body {
+  background-color: gray;
+  color: white;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+/* NEW AND EDIT FORM */
+
+label {
+  min-width: 52px;
+  display: inline-block;
+  text-align: right;
+}
+
+/* BUTTERFLY VIEW (SINGLE BUTTERFLY) */
+
+.butterfly-pic {
+  width: 500px;
+}

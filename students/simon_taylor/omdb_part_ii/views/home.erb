@@ -1,0 +1,35 @@
+
+<div class="search">
+
+  <form action="/" method="get">
+    <input name="search" type="text" placeholder="Search Term" class="search-box">
+    <input type="submit" value="Search for a Movie!" class="button">
+  </form><br>
+
+</div>
+
+<% case @status %>
+<% when 'no search' %>
+  <!-- No Search Performed -->
+  <div class="oscar">
+    <img src="/images/Oscar.gif" alt="oscar">
+  </div>
+<% when 'found results' %>
+  <!-- When Search Performed and Results are Found -->
+  <ul class="search-results">
+    <% @movies.each do |movie| %>
+      <!-- Generate a Unique Link for each Movie found -->
+      <li><a href="/title/<%= movie["imdbID"] %>"><%= movie["Title"] %></a></li>
+    <% end %>
+  </ul>
+<% when 'no results' %>
+  <!-- When Search Performed but No Results Found -->
+  <div class="error">
+    <h3>Whoa shit! What the fuck is <%= params[:search] %>!?!</h3>
+  </div>
+<% end %>
+
+<!-- ASSIGNMENT SPECS -->
+<!-- navigation -->
+<!-- layout 960px container -->
+<!-- search - partial titles -->
