@@ -1,0 +1,61 @@
+
+html {
+  font-family: "Courier"
+}
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: url(http://images1.fanpop.com/images/image_uploads/Camel-In-The-Sunset-egypt-1240440_1920_1440.jpg) no-repeat;
+  background-width: 960px;
+  border-radius: 30px;
+  min-height: 900px;
+}
+#body_content {
+  padding: 30px;
+}
+.mood {
+  color: white;
+}
+.copy {
+  width: auto;
+  height: auto;
+  background-color: white;
+}
+
+form {
+  padding-left: 30px;
+}
+
+li a {
+  text-decoration: none;
+  color: #FFD373;
+}
+li {
+  margin: 15px 0 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+}
+aside a {
+  color: #FFD373;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 15px 20px 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom: 10px solid black;
+  color: #FFD373;
+}
+nav a {
+  text-decoration: none;
+  color: #FFD373;
+}
+select {
+  color: red;
+}
