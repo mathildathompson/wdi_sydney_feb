@@ -1,0 +1,12 @@
+<h1>List of average blog posts</h1>
+<ul>
+  <% @blogs.each do |blog| %>
+    <div class="links">
+      <li>
+        <a href="/blogs/<%= blog.id %>">
+          <%= blog.title %>
+      </a>
+      </li>
+    </div>
+  <% end %>
+</ul>

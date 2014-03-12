@@ -1,0 +1,20 @@
+<form action="/blogs/update" method="post">
+  <input type="hidden" name="id" value="<%= @blog.id %>">
+
+  <p>
+    <label for="title">Title: </label>
+    <input type="text" name="title" id="title" required value="<%= @blog.title %>">
+  </p>
+
+  <p>
+    <label for="copy">Copy: </label>
+    <input type="text" name="copy" id="copy" required value="<%= @blog.copy %>">
+  </p>
+
+  <p>
+    <label for="author">Author: </label>
+    <input type="text" name="author" id="author" required value="<%= @blog.author %>">
+  </p>
+
+  <button>Update post!</button>
+</form>
