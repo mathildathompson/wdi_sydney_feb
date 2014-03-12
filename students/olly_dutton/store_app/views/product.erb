@@ -1,0 +1,15 @@
+<section class="product">
+  <h2><%= @product['name'] %></h2>
+  <p>Family: <%= @product['category'] %></p>
+        <img src="<%= @product['photo'] %>">
+        <div id="product-page-content">  
+            <p>Description:<br> <%= @product['description'] %></p>
+            <p>Price: $<%= @product['price'] %> </p> 
+            <%= @product['checkbox'] %>
+        </div>
+  <aside class="controls">
+    <a href="/products/<%= @product['id'] %>/edit">Edit</a>
+    |
+    <a href="/products/<%= @product['id'] %>/delete">Delete</a>
+  </aside>
+</section>
