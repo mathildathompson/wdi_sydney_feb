@@ -1,0 +1,22 @@
+<h2>IMDB Rating Finder</h2>
+<p>Lucky you! We already have that data in the text file: </p>
+
+
+<ul>
+  <% @films.each do |record| %>
+    <li class = "poster">
+         
+        <%= record["name"] %>
+        <%= record["imdb_rating"] %>
+          
+     
+    </li>
+    <li class = "poster"><img src="<%= record["poster"] %>"></li>
+  <% end %>
+</ul>
+
+
+<form action="/search" method="get">
+<input name="search_name" type="text" placeholder= "Movie name e.g. The Matrix">
+<input type="submit" value="Get data">
+</form>

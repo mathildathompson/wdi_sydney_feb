@@ -1,0 +1,51 @@
+/** {
+  border: 1px solid black;
+}*/
+
+body {
+  background-color: #66CCFF;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px ;
+  /*font-family: arial;*/
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+form {
+  width: 244px;
+  margin: 0 auto;
+  /*display: inline-block;*/
+}
+
+.container {
+  /*display: inline-block;*/
+  border: 5px solid;
+  background-color: white;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: yellow;*/
+}
+
+.heading {
+  border-bottom: 3px solid black;
+}
+
+
+.poster {
+  width: 300px;
+  margin: 10px;
+  display: inline-block;
+  /*float: left;*/
+}
+
+.details {
+  display: inline-block;
+  vertical-align: top;
+  width: 363px;
+  font-family: arial;
+  font-size: 14px;
+}
+

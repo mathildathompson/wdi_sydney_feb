@@ -1,0 +1,13 @@
+BUGS TO ADDRESS
+
+Adding a Client
+1. When creating a client it considers different case as different clients
+
+Adding a Portfolio
+1. Should not consider case when inputting a client name, can't use .has_key?
+
+Selling Stock
+1. UI is not implemented, function itself does work.
+
+Error handling for GEM
+1. Don't think I fully grasped exceptions so this is not yet implemented
