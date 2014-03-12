@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WDI Store</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <%= erb :partial_menu %>
+    </header>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <footer>
+      <nav>
+        <ul>
+           <li><a href="/">Home</a></li>
+           <li><a href="/products/new">Add new Product</a></li>
+         </ul> 
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

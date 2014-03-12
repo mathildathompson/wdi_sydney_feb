@@ -1,0 +1,18 @@
+<h1>
+  <% if @onsale == false %>
+    All
+  <% else %>
+    Sale
+  <% end %>
+  Products
+</h1>
+<ul class="products">
+  <% @products.each do |product| %>
+    <li>
+      <p><%= product["name"] %> $ <%= product["price"] %></p>
+      <a href="/products/<%= product['id'] %>">View</a>
+      <a href="/products/<%= product['id'] %>/edit">Edit</a>
+      <a href="/products/<%= product['id'] %>/destroy">Delete</a>
+    </li>
+  <% end %>
+</ul>

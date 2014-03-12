@@ -1,0 +1,26 @@
+<h1>Product - Edit</h1>
+<form action="/products/update" method="post">
+  <p>
+    <label for="name">name: </label>
+    <input type="text" name="name" id="name" required value="<%= @products['name'] %>">
+  </p>
+
+  <p>
+    <label for="price">price: </label>
+    <input type="text" name="price" id="price" required value="<%= @products['price'] %>">
+  </p>
+
+  <p>
+    <label for="salestatus">on sale? </label>
+    <input type="checkbox" name="salestatus" id="salestatus" checked=<%= @products['salestatus'] %>>
+  </p>
+
+  <p>
+    <label for="image">image: </label>
+    <input type="url" name="image" id="image" required value="<%= @products['image'] %>">
+  </p>
+  <input type="hidden" name="id" value="<%= @products['id'] %>">
+  <!--add hidden field with id-->
+
+  <button>Update Product</button>
+</form>

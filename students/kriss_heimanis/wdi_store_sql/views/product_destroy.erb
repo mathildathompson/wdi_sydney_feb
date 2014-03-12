@@ -1,0 +1,10 @@
+<h1>Product Deletion</h1>
+<h2>Are You Sure You Wish to Delete this Product?</h2>
+<p>Product name: <%= @products['name'] %></p>
+<p>Product price: $ <%= @products['price'] %></p>
+<p>Product image <%= @products['image'] %></p>
+
+<aside class="controls">
+  <a href="/products/<%= @products['id'] %>">No - Keep Product</a>
+  <a href="/products/<%= @products['id'] %>/delete">Yes - Delete Product</a>
+</aside>
