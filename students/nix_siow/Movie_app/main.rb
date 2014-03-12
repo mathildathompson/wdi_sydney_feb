@@ -9,6 +9,8 @@ get '/movie_app' do
     if @title
         url = "http://www.omdbapi.com/?i=&s=#{@title.gsub(' ', '+')}"
         response = HTTParty.get url
+
+        binding.pry
         @result = JSON(response)
     end
 
