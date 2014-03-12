@@ -1,0 +1,30 @@
+
+<div class="search">
+
+  <form action="/" method="get">
+    <input name="search" type="text" placeholder="Type in a movie title" class="search-box">
+    <input type="submit" value="Find my Movie!" class="button">
+  </form><br>
+
+</div>
+
+<% case @status %>
+<% when 'no search' %>
+ 
+  <div class="hero">
+    <img src="/images/Movie_Theater.jpg" alt="hero">
+  </div>
+<% when 'found results' %>
+ 
+  <ul class="search-results">
+    <% @movies.each do |movie| %>
+
+      <li><a href="/title/<%= movie["imdbID"] %>"><%= movie["Title"] %></a></li>
+    <% end %>
+  </ul>
+<% when 'no results' %>
+
+  <div class="error">
+    <h3>Sorry your search <i>" <%= params[:search] %> "</i> didn't produce a result! </h3>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+<style>
+  html {
+        background-image: url('/images/butterfly-wallpaper-hd.jpg');
+        background-repeat: no-repeat;
+      }
+</style>      
+
+<div class="new">
+    <form action="/butterflies/create" method="post">
+      <p>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" class="name" placeholder="enter butterfly name" required>
+      </p>
+
+      <p>
+        <label for="family">Family: </label>
+        <input type="text" name="family" id="family" class="family" placeholder="enter butterfly family" required>
+      </p>
+
+      <p>
+        <label for="photo">Photo: </label>
+        <input type="url" name="photo" id="photo" class="photo" placeholder="paste link to a photo" required>
+      </p>
+  
+      <p>
+        <input type="submit" value="Create Butterfly!" class="button">
+      </p>
+
+    </form>
+</div
