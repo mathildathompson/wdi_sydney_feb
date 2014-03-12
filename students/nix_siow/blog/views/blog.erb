@@ -1,0 +1,25 @@
+<div class="navigate">
+    <details close="">
+        <summary>
+          <img src="/images/logo.png">
+        </summary>
+        <nav>
+          <ul>
+            <a href="/">Home</a>
+            <a href="/blog/new">Post Something New</a>
+            <a href="/blog">Latest Post</a>
+          </ul>
+        </nav>
+    </details>
+</div>
+
+<h1>Blog Archive</h1>
+
+<% @blog.each do |post| %>
+<hr>
+  <a href="/blog/<%= post.id %>">
+    <img class="thumb" src="<%= post.photo %>">
+    <%= post.title %>
+    <h3><%= post.content %></h3>
+  </a>
+<% end %>

@@ -1,0 +1,26 @@
+<div class="navigate">
+  <details close="">
+    <summary>
+      <img src="/images/logo.png">
+    </summary>
+    <nav>
+      <ul>
+        <a href="/">Home</a>
+        <a href="/blog/new">Post Something New</a>
+        <a href="/blog">Latest Post</a>
+      </ul>
+    </nav>
+    </details>
+</div>
+
+<section class="post">
+  <h2><%= @blog.title %></h2>
+  <img src="<%= @blog.photo %>">
+  <h2><%= @blog.content %></h2>
+  <h2>I am feeling <%= @blog.mood %></h2>
+  <aside class="controls">
+    <a href="/blog/<%= @blog.id %>/edit">Edit</a>
+    |
+    <a href="/blog/<%= @blog.id %>/delete">Delete</a>
+  </aside>
+</section>
