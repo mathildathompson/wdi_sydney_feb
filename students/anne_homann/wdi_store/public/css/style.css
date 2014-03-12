@@ -1,0 +1,103 @@
+html {
+  background-image: url("/images/back.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: right;
+  font-family: 'Helvetica', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+nav {
+  background-color: white;
+  padding: 1em;
+  margin-top: -10px;
+  font-family: 'Ubuntu Mono', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+nav a {
+  margin-right: 2em;
+}
+
+aside.controls {
+  text-align: right;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 4em;
+}
+
+.links li a {
+  color: white;
+}
+
+.links h1 {
+  margin-bottom: 100px;
+}
+
+.new_entry {
+  margin-bottom: 16em;
+}
+
+.style button {
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: white;
+}
+
+.edit_entry {
+  margin-bottom: 16em;
+}
+
+.style button {
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: white;
+}
+
+form p {
+  display: inline;
+}
+
+label {
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+}
+
+button {
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+.product img {
+  height: 50%;
+  width: 50%;
+  border-radius: 4em;
+}
+
+img.thumb {
+  width: 100px;
+  vertical-align: middle;
+  border: 2px solid white;
+  margin: 15px;
+}

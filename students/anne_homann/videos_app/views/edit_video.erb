@@ -1,0 +1,28 @@
+<div class="heading">
+  <h1>Edit a new fail video!</h1>
+</div>
+
+  <form action="/videos/update" method="post">
+    <input type="hidden" name="id" value="<%= @video['id'] %>">
+    <p>
+      <label for="title">Title: </label>
+      <input type="text" name="title" id="title" value="<%= @video['title'] %>" required>
+    </p>
+
+    <p>
+      <label for="description">Description: </label>
+      <input type="text" name="description" id="description" value="<%= @video['description'] %>" required>
+    </p>
+
+    <p>
+      <label for="url">Link: </label>
+      <input type="url" name="url" id="url" value="<%= @video['url'] %>" required>
+    </p>
+
+    <p>
+      <label for="genre">Genre: </label>
+      <input type="text" name="genre" id="genre" value="<%= @video['genre'] %>" required>
+    </p>
+
+    <button>Edit list!</button>
+  </form>

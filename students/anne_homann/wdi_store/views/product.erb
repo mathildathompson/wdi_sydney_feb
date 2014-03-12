@@ -1,0 +1,9 @@
+<section class="product">
+  <h2><%= @product['title'] %></h2>
+    <img src="<%= @product['photo'] %>">
+      <aside class="controls">
+          <a href="/products/<%= @product['id'] %>/edit">Edit</a>
+          |
+          <a href="/products/<%= @product['id'] %>/delete">Delete</a>
+      </aside>
+</section>
