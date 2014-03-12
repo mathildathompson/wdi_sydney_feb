@@ -1,0 +1,43 @@
+#container {
+  max-width: 960px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+#box {
+  margin: 0 auto;
+  background-color: black;
+  padding: 100 0 100 0;
+}
+
+body {
+  color: blue;
+  background-image: url("/images/patt.jpg");
+}
+
+nav {
+  background-color: black;
+  color: blue;  
+  padding: 2em;
+  border-radius: 0.3em;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px; 
+}
+
+nav a:hover {
+  color: rgb(88, 209, 206);
+  text-decoration: underline;
+}
+
+.heading {
+  padding-top: 30px;
+}
+
+#movies {
+  background-color: #FFA68E;
+}
+
+

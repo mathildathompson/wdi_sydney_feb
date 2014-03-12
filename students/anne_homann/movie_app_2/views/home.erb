@@ -1,0 +1,14 @@
+<div class="heading">
+
+  <form action="/" method="get">
+    <input name="search" type="text" placeholder="Type in your movie">
+    <input type="submit" value="Search!">
+  </form><br>
+
+</div>
+
+<% if @movies.present? %>
+  <% @movies.each do |movie| %>
+    <a href="/title/<%= movie["imdbID"] %>"><%= movie["Title"] %></a>
+  <% end %>
+<% end %>
