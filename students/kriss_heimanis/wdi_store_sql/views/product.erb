@@ -1,0 +1,17 @@
+<h1><%= @products['name'] %> <span>$<%= @products['price'] %></span></h1>
+<% if @products['salestatus'] == "on" %>
+  <h2>On Sale! - Limited Time Only</h2>
+<% end %>
+
+<img src="<%= @products['image'] %>" alt="@products['name']" >
+
+<aside class="controls">
+<%if @product_destroy_options %>
+  <p>Are you sure you wish to delete this product?</p>
+  <a href="/products/<%= @products['id'] %>">No - Keep Product</a>
+  <a href="/products/<%= @products['id'] %>/delete">Yes - Delete Product</a>
+<% else %>
+  <a href="/products/<%= @products['id'] %>/edit">Edit</a>
+  <a href="/products/<%= @products['id'] %>/destroy">Delete</a>
+<% end %>
+</aside>

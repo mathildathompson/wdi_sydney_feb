@@ -1,0 +1,24 @@
+<h1>Product - Add New</h1>
+<form action="/products/create" method="post">
+  <p>
+    <label for="name">name: </label>
+    <input type="text" name="name" id="name" required>
+  </p>
+
+  <p>
+    <label for="price">price: </label>
+    <input type="text" name="price" id="price" required>
+  </p>
+
+  <p>
+    <label for="salestatus">on sale? </label>
+    <input type="checkbox" name="salestatus" id="salestatus">
+  </p>
+
+  <p>
+    <label for="image">image: </label>
+    <input type="url" name="image" id="image" required>
+  </p>
+
+  <button>Add New Product</button>
+</form>
