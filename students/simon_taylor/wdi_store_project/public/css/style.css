@@ -1,0 +1,71 @@
+body {
+  background-image: url(http://b.vimeocdn.com/ps/270/341/2703411_300.jpg)
+}
+
+#container {
+  width: 960px;
+  margin: 20px auto;
+  background-color: rgba(255,255,255,0.9);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: red;
+  text-shadow: 0 0 3px red;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 20px 0;
+  text-align: center;
+  font-family: 'Actor', sans-serif;
+}
+
+#content {
+  padding: 0 40px 40px 40px;
+}
+
+p, a, li {
+  font-family: 'Bubbler One', sans-serif;
+  font-weight: bold;
+}
+
+/*Home Page*/
+
+img.computer {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid red;
+  outline: 6px solid gray;
+}
+
+p.welcome {
+  text-align: center;
+  font-size: 19px;
+}
+
+/*Forms*/
+
+input#name {
+  width: 222px;
+}
+
+input#price {
+  width: 73px;
+}
+
