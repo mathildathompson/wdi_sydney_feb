@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Butterflies</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Overlock:400,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <div id="container">
+    <nav class='navigator'>
+      <a href="/">Home</a>
+      <a href="/butterflies/new">Add new butterfly</a>
+      <a href="/butterflies">All butterflies</a>
+      <% @families.each do |family| %>
+        <a href="/butterflies/family/<%= family["family"].downcase %>"><%= family['family'] %></a>
+      <% end %>
+    </nav>
+
+    <%= yield %>
+  </div>
+
+</body>
+</html>
