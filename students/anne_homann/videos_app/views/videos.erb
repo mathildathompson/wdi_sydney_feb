@@ -1,0 +1,13 @@
+<h1>Index of fail compilations</h1>
+<ul>
+  <% @videos.each do |video| %>
+    <li>
+      <a href="/videos/<%= video['id'] %>">
+        <iframe width="560" height="315" src="//www.youtube.com/embed/<%= video['code'] %>" frameborder="0" allowfullscreen></iframe>
+          <p>
+            <em><%= video["title"] %><h6> (Click to edit / delete)</h6></em>
+          </p>
+      </a>
+    </li>
+  <% end %>
+</ul>

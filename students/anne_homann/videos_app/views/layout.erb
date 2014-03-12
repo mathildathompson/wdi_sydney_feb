@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Videos</title>
+  <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div id="container">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/videos">All videos</a>
+      <a href="/videos/new">Add new video</a>
+      <!-- <a href="videos/edit">Edit videos</a> -->
+      <% @genre.each do |genre| %>
+        <a href="/videos/<%= genre["genre"].downcase %>"><%= genre['genre'] %></a>
+      <% end %>
+    </nav>
+
+    <%= yield %>
+  </div>
+
+</body>
+</html>

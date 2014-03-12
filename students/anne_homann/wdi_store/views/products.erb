@@ -1,0 +1,13 @@
+<div class="links">
+<h1>Index of products</h1>
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <a href="/products/<%= product['id'] %>">
+        <img class="thumb" src="<%= product["photo"] %>">
+          <em><%= product["title"] %></em>
+          <em><%= product["price"] %></em>
+      </a>
+    </li>
+  <% end %>
+</ul>
