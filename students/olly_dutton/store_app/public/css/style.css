@@ -1,0 +1,177 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+html {
+  background-color: #fff;
+  color: #6d6d6d;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+  min-height: 440px; 
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+    margin-top: 80px;
+    color: #6d6d6d;
+    text-align: center;
+}
+
+/*** NAV MENU  ***/
+
+nav {
+    background-color: #4671D5;
+    padding-top: 40px;
+    color: #333;
+    height: 70px;
+    border-bottom: 10px solid #6C8CD5;
+}
+
+ul#menu, ul#menu ul.sub-menu {
+    padding:0;
+    margin: 0;
+}
+
+ul#menu li, ul#menu ul.sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+/*Link Appearance*/
+ul#menu li a, ul#menu li ul.sub-menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: #4671D5;
+    padding: 5px;
+    display:inline-block;
+    margin-left: 5em;
+    width: 100px;
+    text-align: center;
+}
+
+/*Make the parent of sub-menu relative*/
+ul#menu li {
+    position: relative;
+}
+
+/*sub menu*/
+ul#menu li ul.sub-menu {
+    display:none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100px;
+}
+
+ul#menu li:hover ul.sub-menu {
+    display:block;
+}
+
+ul#menu li a:hover, ul#menu li ul.sub-menu li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #06266F;
+}
+
+
+aside.controls {
+  text-align: right;
+  background-color: #DEE6F9;
+  padding: 1em;
+  margin-top: 1em;
+  color: #fff;
+}
+
+aside a {
+  text-decoration: none;
+  color: #fff;
+}
+
+aside a:hover {
+  color: #06266F;
+}
+
+
+label {
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 500px;
+  margin: 30px 30px 30px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#product-page-content {
+  max-width: 500px;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+span {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+#index-container {
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#index-description {
+  text-decoration: none;
+  color: #6d6d6d;
+  padding: 25px 0 0 60px;
+  max-width: 600px;
+}
+
+#thumb-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border: 10px solid #DEE6F9;
+  margin: 30px 20px 20px 0;
+  float: left;
+}
+
+img.thumb {
+  vertical-align: middle;
+  max-width: 178%;
+}
+
+footer {
+    background-color: #06266F;
+    padding-top: 40px;
+    height: 70px;
+    border-top: 10px solid #90ACED;
+    margin-top: 65px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #90ACED;
+    font-size: 0.8em;
+    margin-left: 8em;
+}
+
+footer a:hover {
+    color: #fff;
+  }
+

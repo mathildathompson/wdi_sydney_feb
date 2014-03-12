@@ -1,0 +1,21 @@
+<h1>Taxidermy Inventory Index</h1>
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <a href="/products/<%= product['id'] %>">
+        <div id="index-container">
+            
+            <div id="thumb-container">
+                <img class="thumb" src="<%= product["photo"] %>">
+            </div>
+            <div id="index-description">
+                <span><%= product["name"] %></span><br>
+                <p>Description:<br> <%= product["description"] %></p>
+                <p>Price: $<%= product["price"] %> </p> 
+            </div>  
+            <%= product["checkbox"] %>
+        </div>    
+      </a>
+    </li>
+  <% end %>
+</ul>

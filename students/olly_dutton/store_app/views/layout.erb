@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Store Database</title>
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/new">Add Product</a></li>
+        <li><a href="/products">All Products</a>
+          <% @categories.each do |category| %>
+          <ul class="sub-menu">
+            <li><a href="/products/category/<%= category["category"].downcase %>"><%= category['category'] %></a></li>
+          <% end %>
+          </ul>
+        </li>   
+    </ul>
+  </nav>
+    <div id="container">
+      <%= yield %>
+    </div>
+  <footer>
+      <a href="/">Home</a>
+      <a href="/products/new">Add Product</a>
+      <a href="/products">All Products</a>
+      <% @categories.each do |category| %>
+        <a href="/products/category/<%= category["category"].downcase %>"><%= category['category'] %></a>
+      <% end %>
+  </footer>
+</body>
+</html>
