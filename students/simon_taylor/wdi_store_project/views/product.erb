@@ -1,0 +1,7 @@
+<h2>Here is your product</h2>
+<ul>
+  <li>Name: <%= @product['name'] %></li>
+  <li>Price: <%= @product['price'] %></li>
+  <li>On Sale: <%= @product['sale'] %></li>
+  <li><a href="/products/<%= @product['id'] %>/edit">Edit</a> | <a href="/products/<%= @product['id'] %>/delete">Delete</a></li>
+</ul>

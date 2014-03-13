@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WDI Store</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <div id="container">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products">Our Products</a>
+      <a href="/products/new">Create Product</a>
+    </nav>
+    
+    <h1>WDI Store</h1>
+    
+    <div id="content">
+      <%= yield %>
+    </div> <!-- end of content -->
+  </div><!-- end of container -->
+</body>
+</html>

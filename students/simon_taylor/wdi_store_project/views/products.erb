@@ -1,0 +1,5 @@
+<ul>
+  <% @products.each do |product| %>
+    <li><a href="/products/<%= product['id'] %>"><%= product['name'] %></a></li>
+  <% end %>
+</ul>

@@ -1,0 +1,18 @@
+<h2>Edit your product below...</h2>
+
+<form action="/products/<%= params[:id] %>/update" method="post">
+  <p>
+    <label for="name">Name:</label>
+    <input id="name" type="text" name="name" required value="<%= @product['name'] %>">
+  </p>
+  <p>
+    <label for="price">Price:</label>
+    <input id="price" type="number" name="price" step="0.01" required value="<%= @product['price'] %>">
+  </p>
+  <p>
+    <label for="sale">On Sale:</label>
+    <input id="sale" type="checkbox" name="sale" value="1" <%= 'checked' if @product['sale'] == 1 %>>
+  </p>
+
+  <button>Update Product!</button>
+</form>
