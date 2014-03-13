@@ -1,0 +1,24 @@
+
+<form action="/" method="post">
+  <div class="dropdown">
+  <label for="start_stop">Start stop</label>
+    <select type="dropdown" name="start_stop" id="start_stop">
+      <% @line_stop.each do |x| %>
+  <!-- the line below creates a string with line, stop, and index, which is passed to main.rb through the value -->
+      <option value="<%= x[0] + "-" + x[1].to_s %>"><%= x.first %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="dropdown">
+    <label for="end_stop">End stop</label>
+    <select type="dropdown" name="end_stop" id="end_stop">
+      <% @line_stop.each do |x| %>
+      <option value="<%= x[0] + "-" + x[1].to_s %>"><%= x.first %></option>
+      <% end %>
+    </select>
+    </div>
+  <p>
+    <input type="submit" id="submit" value="Calculate stops!">
+  </p>
+</form>
+

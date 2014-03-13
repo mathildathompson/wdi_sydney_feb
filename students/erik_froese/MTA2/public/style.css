@@ -1,0 +1,42 @@
+
+html {
+  background-color: black;
+  font-family: "Helectiva"
+}
+select {
+
+}
+p a {
+  font-size: 50px;
+  text-decoration: none;
+  color: #347D9D;
+  padding: 15px 30px;
+  background-color: black;
+  border-radius: 20px;
+
+}
+body {
+  color: white;
+  background: url(http://i.imgur.com/QDuuc.jpg) no-repeat;
+  background-size: 100%;
+  min-height: 900px;
+}
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+#submit {
+  width: 200px;
+  font-size: 400%;
+}
+.dropdown {
+  font-size: 200%;
+  text-shadow: 0 0 10px black;
+}
+nav h1 {
+  text-align: center;
+  margin: 50px;
+  font-size: 250%;
+}
