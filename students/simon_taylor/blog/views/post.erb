@@ -1,0 +1,5 @@
+<h2><%= @post.title %></h2>
+<p><%= @post.copy %></p>
+<img src="<%= @post.photo %>" class="post">
+<p>Mood: <%= @post.mood %> | Author: <%= @post.author %></p>
+<p><a href="/posts/<%= @post.id %>/edit">Edit</a> | <a href="/posts/<%= @post.id %>/delete">Delete</a></p>

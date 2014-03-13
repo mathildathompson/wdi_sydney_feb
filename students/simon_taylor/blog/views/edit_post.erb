@@ -1,0 +1,25 @@
+<h2>Edit your Post</h2>
+
+<form action="/posts/<%= @post.id %>/update" method="post">
+  <p>
+    <label for="title">Title:</label>
+    <input id="title" name="title" type="text" required value="<%= @post.title %>">
+  </p>
+  <p>
+    <label for="copy">Body Text:</label>
+    <input id="copy" name="copy" type="text" required value="<%= @post.copy %>">
+  </p>
+  <p>
+    <label for="mood">Mood:</label>
+    <input id="mood" name="mood" type="text" value="<%= @post.mood %>">
+  </p>
+    <p>
+    <label for="author">Author:</label>
+    <input id="author" name="author" type="text" required value="<%= @post.author %>">
+  </p>
+    <p>
+    <label for="photo">Photo:</label>
+    <input id="photo" name="photo" type="url" value="<%= @post.photo %>">
+  </p>
+  <button>Submit Post</button>
+</form>
