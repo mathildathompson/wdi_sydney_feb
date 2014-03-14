@@ -1,0 +1,25 @@
+<form action="post/">
+  <p>Please select your <strong>start</strong> and <strong>end</strong> points from the drop down lists</p>
+  <label for="station_start">Start Station</label>
+  <select name="station_start" id="station_start">
+    <% @subway.keys.each do |key| %>
+      <optgroup label="<%= key %>">
+        <% @subway[key].each do |value| %>
+          <option value="<%= key %>_<%= value %>"><%= value %></option>
+        <% end %>   
+      </optgroup>
+    <% end %>
+  </select>
+  
+  <label for="station_end">End Station</label>
+  <select name="station_end" id="station_end">
+    <% @subway.keys.each do |key| %>
+      <optgroup label="<%= key %>">
+        <% @subway[key].each do |value| %>
+          <option value="<%= key %>_<%= value %>"><%= value %></option>
+        <% end %>   
+      </optgroup>
+    <% end %>
+  </select>
+  <button>Start Trip</button>
+</form>

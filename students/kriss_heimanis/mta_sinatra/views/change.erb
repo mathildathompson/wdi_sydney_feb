@@ -1,0 +1,14 @@
+<h2>Your Trip Requires a Line Change at Union Square</h2>
+<p>You will need to travel <strong><%= @first_leg.abs %></strong> stations, direction <%= (@first_leg < 0) ? "NORTH" : "SOUTH" %></p>
+<ul class="triplist">
+  <% @trip1.each do |station| %>
+    <li><%= station %></li>
+  <% end %>
+</ul>
+<p>Change at Union Square then travel <strong><%= @second_leg.abs %></strong> stations, direction <%= (@second_leg > 0) ? "NORTH" : "SOUTH" %></p>
+<ul class="triplist">
+  <% @trip2.each do |station| %>
+    <li><%= station %></li>
+  <% end %>
+</ul>
+<p><a href="/">Plan another trip</a></p>

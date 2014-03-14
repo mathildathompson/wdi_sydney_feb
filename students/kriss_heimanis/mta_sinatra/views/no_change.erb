@@ -1,0 +1,8 @@
+<h2>Your Trip Does NOT Require a Line Change</h2>
+<p>You will need to travel <strong><%= @stops_number.abs %></strong> stations, direction <%= (@stops_number > 0) ? "NORTH" : "SOUTH" %></p>
+<ul class="triplist">
+  <% @trip.each do |station| %>
+    <li><%= station %></li>
+  <% end %>
+</ul>
+<p><a href="/">Plan another trip</a></p>
