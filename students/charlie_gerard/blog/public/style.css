@@ -1,0 +1,118 @@
+/*----------------------BASICS-------------------------*/
+body{
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	background-color: rgb(166,167,171);
+}
+
+nav{
+	font-weight: 200;
+	display: block;
+	text-align: center;
+	background-color: white;
+	height: 40px;
+	padding-top: 10px;
+}
+
+nav a{
+	color: grey;
+	margin: 0 10px;
+}
+
+nav #social{
+	max-width: 300px;
+	margin-right: 20px;
+	margin-top: -20px;
+	display: block;
+	position: absolute;
+	right: 0;
+}
+
+nav #social img{
+	max-width: 30px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+h1{
+	font-size: 80px;
+	display: block;
+	text-align: center;
+	font-weight: 100;
+	margin-top: 170px;
+	color: white;
+}
+
+/*------------------CONTENT----------------------*/
+
+h2{
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	font-weight: 200;
+	color: white;
+}
+
+p{
+	border: 1px solid white;
+	font-size: 15px;
+	display: block;
+	padding: 5px;
+	margin: 0 auto;
+	color: white;
+	max-width: 100px;
+	text-align: center;
+	font-weight: 100;
+	text-decoration: none;
+}
+
+#container{
+	max-width: 860px;
+	background-color: white;
+	margin: 20px auto;
+	padding-bottom: 20px;
+}
+
+#container p{
+	color: rgb(106,158,135);
+	font-weight: 300;
+	display: block;
+	margin: 0 50px;
+	text-align: left;
+	max-width: 800px;
+}
+
+#container h3{
+	font-weight: 400;
+	color: rgb(106,158,135);
+	display: block;
+	margin: 20px 50px;
+	padding-top: 20px;
+}
+
+#container img{
+	max-width: 500px;
+	border: 1px solid grey;
+	margin: 20px auto;
+	display: block;
+}
+
+#container aside{
+	color: rgb(106,158,135);
+	text-decoration: none;
+}
+
+/*--------------FORM -------------------*/
+
+form, button{
+	max-width: 300px;
+	display: block;
+	margin: 0 auto;
+}
+
+form p{
+	border: none;
+}
+
+
+

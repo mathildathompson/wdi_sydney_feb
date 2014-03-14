@@ -1,0 +1,14 @@
+
+	<h2><%= @post.title%></h2>
+<div id="container">
+	<br>
+	<p><%= @post.copy%> </p>
+	<p>Author: <%= @post.author%> </p>
+
+	<img src='<%= @post.image%>'></img>
+
+	<aside>
+		<a href='/posts/<%= @post.id %>/edit'>Edit</a>
+		<a href='/posts/<%= @post.id %>/delete'>Delete</a>
+	</aside>
+</div>
