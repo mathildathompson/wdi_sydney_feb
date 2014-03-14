@@ -1,0 +1,147 @@
+body {
+  background: url(/images/newyork.jpg) center center fixed;
+  padding: 50px;
+} 
+
+div.title a {
+  max-height: 170px;
+  color: rgba(255,255,255,0.7);
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  text-decoration: none;
+  font-family: 'Poiret One', cursive;
+  font-size: 60px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.clock {
+  display: inline-block;
+  min-width: 30%;
+}
+
+.search_box {
+  display: inline-block;
+  min-width: 60%;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 2em;
+  margin: 60px auto;
+  border-radius: 20px;
+}
+
+.social img{
+    max-width: 4%;
+    max-height: 4%;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+select {
+  min-width: 300px;
+}
+
+h2 {
+  color: black;
+  font-family: 'Marcellus SC', serif;
+}
+
+details nav a, a{
+    margin-right: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+nav img {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+summary:after {
+  content: "+"; 
+  color: red; 
+  font-weight: bold;
+  font-size: 2em;
+}
+
+details[open] summary:after {
+  content: "-";
+}
+
+
+
+/*-----------------------------------------*/
+/* for UI button */
+
+.uibutton {
+    display:inline-block;
+    padding:5px 10px;
+    border-top:1px solid #96d1f8;
+    color:#fff;
+    border-radius:8px;
+    box-shadow:rgba(0,0,0,1) 0 1px 0;
+    text-shadow:rgba(0,0,0,.4) 0 1px 0;
+    text-decoration:none;
+    background:#65a9d7;
+    background-repeat:no-repeat;
+    background-image:-webkit-linear-gradient(
+        top left,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    -webkit-linear-gradient(
+        #3e779d, #65a9d7
+    );
+    background-image:-moz-linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    -moz-linear-gradient(
+        #3e779d, #65a9d7
+    );    
+    background-image:-o-linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    -o-linear-gradient(
+        #3e779d, #65a9d7
+    );
+    background-image:linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    linear-gradient(
+        #3e779d, #65a9d7
+    );
+    background-position:-100px -100px, 0 0;
+    -moz-background-size:250% 250%, 100% 100%;
+         background-size:250% 250%, 100% 100%;
+    -webkit-transition:background-position 0s ease;
+       -moz-transition:background-position 0s ease;       
+         -o-transition:background-position 0s ease;
+            transition:background-position 0s ease;
+}
+
+.uibutton:hover,
+.uibutton:focus {
+    color:#fff;
+    background-position:0 0, 0 0;
+    -webkit-transition-duration:0.5s;
+       -moz-transition-duration:0.5s;
+            transition-duration:0.5s;
+}
+
+.uibutton:active {
+    top:1px;   
+}
