@@ -1,0 +1,50 @@
+html {
+  background: url(http://www.wallchan.com/images/sandbox/30392-carl-sagan-science-space.png);
+  color: white;
+  background-size: cover;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+nav a {
+  margin-right: 2em;
+}
+
+aside.controls {
+  text-align: right;
+  background-color: #bbb;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+}
+
+.butterfly img {
+  width: 100%;
+}
+
+img.thumb {
+  width: 100px;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+ul {
+
+  list-style-type: none
+}

@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/style.css">
+
+<div id="container">
+
+  <h1>MTA route calculator </h1>
+  <%= yield %>
+
+  <form method="get" action="/result">
+    <p>Where are you?</p>
+    <select name="origin">
+      <optgroup label="N Line">
+        <option value="Times Square_N" selected="selected">Times Square</option>
+        <option value="34th_N">34th</option>
+        <option value="28th_N">28th</option>
+        <option value="23rd_N">23rd</option>
+        <option value="Union Square_N">Union Square</option>
+        <option value="8th_N">8th</option>
+      </optgroup>
+      <optgroup label="6 Line">
+        <option value="Grand Central_6">Grand Central</option>
+        <option value="33rd_6">33rd</option>
+        <option value="28th_6">28th</option>
+        <option value="23rd_6">23rd</option>
+        <option value="Union Square_6">Union Square</option>
+        <option value="Astor Place_6">Astor Place</option>
+      </optgroup>
+        <optgroup label="L Line">
+        <option value="8th_L">8th</option>
+        <option value="6th_L">6th</option>
+        <option value="Union Square_L">Union Square</option>
+        <option value="3rd_L">3rd</option>
+        <option value="1st_L">1st</option>
+    </select>
+   
+
+    <p>Where do you want to go? </p>
+    <select name="destination">
+      <optgroup label="N Line">
+        <option value="Times Square_N">Times Square</option>
+        <option value="34th_N">34th</option>
+        <option value="28th_N">28th</option>
+        <option value="23rd_N">23rd</option>
+        <option value="Union Square_N">Union Square</option>
+        <option value="8th_N">8th</option>
+      </optgroup>
+      <optgroup label="6 Line">
+        <option value="Grand Central_6" selected="selected">Grand Central</option>
+        <option value="33rd_6">33rd</option>
+        <option value="28th_6">28th</option>
+        <option value="23rd_6">23rd</option>
+        <option value="Union Square_6">Union Square</option>
+        <option value="Astor Place_6">Astor Place</option>
+      </optgroup>
+        <optgroup label="L Line">
+        <option value="8th_L">8th</option>
+        <option value="6th_L">6th</option>
+        <option value="Union Square_L">Union Square</option>
+        <option value="3rd_L">3rd</option>
+        <option value="1st_L">1st</option>
+      </optgroup>
+    </select>
+    <p><input type="submit" value="Submit"></input>
+  </form>
+</div>

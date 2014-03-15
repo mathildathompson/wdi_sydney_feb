@@ -1,0 +1,11 @@
+<h1>Index of posts</h1>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <a href="/posts/<%= post.id %>">
+        <p>Title: <%= post.title %></p>
+        <p>Content: <%= post.content %></p>
+      </a>
+    </li>
+  <% end %>
+</ul>
