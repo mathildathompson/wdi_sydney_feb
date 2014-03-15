@@ -1,0 +1,16 @@
+<h2>All posts</h2>
+
+<div id="container">
+
+	<% @posts.each do |post| %>
+		<a href="/posts/<%= post.id %>">
+			<h3><%= post.title %></h3>
+		</a>
+    	
+    	<p><%= post.copy %></p>
+ 
+    	<p>Author: <%= post.author %></p>
+    	<img class="thumb" src="<%= post.image %>">
+    
+	<% end %>
+</div>

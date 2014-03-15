@@ -1,0 +1,34 @@
+<div id="menu">
+	<a href='/movie'>Home</a>
+</div>
+
+<div id="search2">
+	<form action="/movie" method="get">
+		<input name="movie_title" type="text" placeholder="Enter a movie title">
+		<input type="submit" value="Search">
+	</form>
+</div>
+
+<div id="main">
+	
+	<% if @movie_details["Title"] %>
+		<div id="left">
+			<img src="<%= @movie_details["Poster"]%>">
+		</div>
+
+		<div id="right">
+			<h2> <%= @movie_details["Title"]%></h2>
+			<p>Plot: <%= @movie_details["Plot"]%></p>
+			<p>Director: <%= @movie_details["Director"]%></p>
+			<p>Actors: <%= @movie_details["Actors"] %></p>
+			<p>Year: <%= @movie_details["Runtime"] %></p>
+			<p>Genre: <%= @movie_details["Genre"] %></p>
+			<p>Awards: <%= @movie_details["Awards"] %> </p> 
+		</div>
+
+	<%end %>
+</div>
+
+
+
+

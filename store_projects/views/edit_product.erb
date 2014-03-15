@@ -1,0 +1,23 @@
+<h1>Edit a product</h2>
+
+	<form action="/products/update" method="post">
+	<input type="hidden" name="id" value="<%= @product['id'] %>">
+
+	<p>
+		<label name="name">Name: </label>
+		<input type="text" name="name" id="name" value="<%= @product['name']%>">
+	</p>
+
+	<p>
+		<label name="price">Price: $ </label>
+		<input type="number" name="price" id="price">
+	</p>
+
+	<p>
+		<label name="sale">On sale: </label>
+		<input type="checkbox" name="sale" id="sale">
+	</p>
+
+	<button>Edit a product</button>
+	
+</form>
