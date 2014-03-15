@@ -1,0 +1,11 @@
+<h1>Straws</h1>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <a href="/posts/<%= post.id %>">
+        <img class="thumb" src="<%= post.photo %>">
+        <%= post.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>

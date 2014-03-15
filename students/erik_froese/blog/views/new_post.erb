@@ -1,0 +1,26 @@
+<form action="/posts/create" method="post">
+  <p>
+    <label for="title">What's the name of this straw? </label>
+    <input type="text" name="title" id="title" required>
+  </p>
+
+  <p>
+    <textarea style="width: 840px; height: 400px;" class="copy" type="text" name="copy" id="copy" placeholder="Do your biz" required></textarea>
+  </p>
+
+  <p>
+    <label for="photo">Photo? (url only) </label>
+    <input type="url" name="photo" id="photo">
+  </p>
+  <p>
+    <label for="mood">Your mood</label>
+    <select type="dropdown" name="mood" id="mood">
+      <option value="enraged">Enraged</option>
+      <option value="apathetic">Apathetic</option>
+      <option value="high">High</option>
+      <option value="low" >Low</option>
+      <option value="beerinated">Beer-inated</option>
+    </select>
+  </p>
+  <button>Break the camel's back!</button>
+</form>

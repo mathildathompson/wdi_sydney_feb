@@ -1,0 +1,29 @@
+<form action="/posts/update" method="post">
+  <input type="hidden" name="id" value="<%= @post.id %>">
+
+  <p>
+    <label for="title">What's the name of this straw? </label>
+    <input type="text" name="title" id="title" required value="<%= @post.title %>">
+  </p>
+
+  <p>
+    <textarea style="width: 840px; height: 400px;" class="copy" type="text" name="copy" id="copy" required value="<%= @post.copy %>"><%= @post.copy %></textarea>
+  </p>
+
+  <p>
+    <label for="photo">Photo? (url only) </label>
+    <input type="url" name="photo" id="photo" value="<%= @post.photo %>">
+  </p>
+  
+<!-- This part needs updating to include a default value-->
+  <p>
+    <label for="mood">Your mood</label>
+    <select type="dropdown" name="mood" id="mood">
+      <option value="enraged" <% if @post.mood == "enraged" %> selected <% end %> >Enraged</option>
+      <option value="apathetic" <% if @post.mood == "apathetic" %> selected <% end %>>Apathetic</option>
+      <option value="high" <% if @post.mood == "high" %> selected <% end %>>High</option>
+      <option value="low" <% if @post.mood == "low" %> selected <% end %>>Low</option>
+      <option value="beerinated" <% if @post.mood == "beerinated" %> selected <% end %>>Beer-inated</option>
+    </select>
+  </p>
+  <button>Break the camel's back!</button></form>
