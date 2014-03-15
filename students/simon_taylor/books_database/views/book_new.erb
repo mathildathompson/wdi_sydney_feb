@@ -1,0 +1,30 @@
+<h1>Create a new book!</h1>
+
+<form action="/books/create" method="post">
+  <p>
+    <label for="title">Title:</label>
+    <input id="title" name="title" type="text" placeholder="Enter a title for the book..." required>
+  </p>
+  <p>
+    <label for="cover">Cover:</label>
+    <input id="cover" name="cover" type="url" placeholder="Input a url for the books cover..." required>
+  </p>
+  <p>
+    <label for="author">Author:</label>
+    <select name="author" id="author">
+      <% @authors.each do |author| %>
+        <option value="<%= author.id %>"><%= author.name %></option>
+      <% end %>
+    </select>
+  </p>
+  <p>
+    <label for="co_author">Co-Author:</label>
+    <select name="co_author" id="co_author">
+      <option value="None">None</option>
+      <% @authors.each do |author| %>
+        <option value="<%= author.id %>"><%= author.name %></option>
+      <% end %>
+    </select>
+  </p>
+  <button>Create Book</button>
+</form>

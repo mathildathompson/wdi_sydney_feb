@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books Database</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/books">List Books</a>
+    <a href="/books/new">Add a Book</a>
+    <a href="/authors">List Authors</a>
+    <a href="/authors/new">Add an Author</a>
+  </nav>
+
+  <div id="container">
+    <h1>Book Database</h1>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

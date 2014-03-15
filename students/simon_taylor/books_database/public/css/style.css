@@ -1,0 +1,21 @@
+body {
+  background-image: url(http://bonvoyagelauren.com/wp-content/uploads/2013/07/IMG_8717.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav {
+  background-color: black;
+}
+
+nav a {
+  color: white;
+}
+
+#container {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.8);
+}
