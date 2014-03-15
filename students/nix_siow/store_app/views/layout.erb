@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>the Store</title>
+  <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div id="container">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/store/new">Add New Product</a>
+      <a href="/store">All types of Product</a>
+      <% @store.each do |type| %>
+        <a href="/store/type/<%= type["type"].downcase %>"><%= type['type'].capitalize %></a>
+      <% end %>
+    </nav>
+
+    <div class="yield_container">
+      <%= yield %>
+    </div>
+
+  </div>
+
+</body>
+</html>

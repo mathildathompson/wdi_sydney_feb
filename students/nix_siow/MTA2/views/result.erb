@@ -1,0 +1,87 @@
+<h2>Thank you!</h2>
+
+<% if @same_line_result %>
+  <h2>Hey, your destination <%= @des_station %> is <%= @same_line_result %> stations away from <%= @origin_station %>. <br>Enjoy your trip!</h2>
+
+<% else @diff_line_result %>
+  <h2>Hey, <%= @des_station %> is <%= @diff_line_result %> stations away from <%= @origin_station %>.
+  Keep that in mind, you got to change your train to <%= @des_line %> when you arrive on Union Square Station.<br>Wish you good journey!</h2>
+
+<% end %>
+
+
+<form action="/search" method="post">
+  <p>
+    <select name="origin_line" id="origin_line" autofocus required>
+      <option value="" disabled>Origin Line</option> 
+      <option value="n_line">N Line</option> 
+      <option value="l_line">L Line</option>
+      <option value="six_line">6 Line</option>
+    </select>
+  </p>
+
+  <p>
+    <select name="origin_station" id="origin_station" autofocus required>
+      <option value="" disabled>Origin Station</option>
+      <option value="" disabled>N Line : ------------------------</option>
+      <% @subway['n_line'].each do |x| %>
+        <option value="<%= x %>"><%= x.upcase %></option>
+      <% end %>
+      <option value="" disabled>L Line : ------------------------</option>
+      <% @subway['l_line'].each do |x| %>
+        <option value="<%= x %>"><%= x.upcase %></option>
+      <% end %>
+      <option value="" disabled>6 Line : ------------------------</option>
+      <% @subway['six_line'].each do |x| %>
+        <option value="<%= x %>"><%= x.upcase %></option>
+      <% end %>
+    </select>
+  </p>
+
+  <p>
+    <select name="des_line" id="des_line" required>
+      <option value="" disabled>Destination Line</option> 
+      <option value="n_line">N Line</option> 
+      <option value="l_line">L Line</option>
+      <option value="six_line">6 Line</option>
+    </select>
+  </p>
+
+  <p>
+    <select name="des_station" id="des_station" autofocus required>
+      <option value="" disabled>Destination Station</option>
+      <option value="" disabled>N Line : ------------------------</option>
+      <% @subway['n_line'].each do |x| %>
+        <option value="<%= x %>"><%= x.upcase %></option>
+      <% end %>
+      <option value="" disabled>L Line : ------------------------</option>
+      <% @subway['l_line'].each do |x| %>
+        <option value="<%= x %>"><%= x.upcase %></option>
+      <% end %>
+      <option value="" disabled>6 Line : ------------------------</option>
+      <% @subway['six_line'].each do |x| %>
+        <option value="<%= x %>"><%= x.upcase %></option>
+      <% end %>
+    </select>
+  </p>
+
+  <input class="uibutton" type="submit" value="Search!">
+</form>
+
+
+<!-- For the Subway map -->
+<div class="navigate">
+    <details close="">
+        <summary>
+          <h2>Click for Subway Map</h2>
+          <h4><em>N Line, L Line, 6 Line</em></h4>
+        </summary>
+        <nav>
+          <ul>
+            <img src="/images/N_line.jpg">
+            <img src="/images/L_line.jpg">
+            <img src="/images/6_line.jpg">
+          </ul>
+        </nav>
+    </details>
+</div>
