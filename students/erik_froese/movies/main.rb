@@ -23,27 +23,11 @@ end
 get '/titles/:title' do
 
   db = SQLite3::Database.open('movies.db')
-  binding.pry
-  @movie = db("SELECT * FROM movies WHERE movie_title='#{params[:title]}';")
-  #the below is what's returned for "Alien". Somehow, I have to manipulate it into useable variables.
-  #2|Won 1 Oscar. Another 12 wins & 18 nominations.|Director: Ridley Scott|Alien|The commercial vessel Nostromo receives a distress call from an unexplored planet. After searching for survivors, the crew heads home only to realize that a deadly bioform has joined them.|http://ia.media-imdb.com/images/M/MV5BMTk3NzkwMjA3OV5BMl5BanBnXkFtZTYwMTIwOTk2._V1_SX300.jpg|was released on 22 Jun 1979.|Writers: Dan O Bannon (story), Ronald Shusett (story), Dan O Bannon (screenplay)
-  @movie.split("|") do |x|
-      movies = []
-      movies.push(x)
-
-      @awards = movies(1)
-      @director = movies(2)
-      @movie_title = movies(3)
-      @plot_header = movies(4)
-      @plot = movies(5)
-      @poster = movies(6)
-      @released = movies(7)
-      @writer = movies(8)
-    end
-  
+  @movie = query_db("SELECT * FROM movies WHERE movie_title='#{params[:title]}';")
+  @movies = @movie[0]
 
 
-   @movie = @movies[ params[:title].downcase ]
+   # @movie = @movies[ params[:title].downcase ]
 
    # this code only runs if it @movie = nil... in otherwords, it's not in file
    if @movie == nil
@@ -79,5 +63,10 @@ get '/useless' do
 end
 
 
-
+def query_db(sql)
+  db = SQLite3::Database.open('movies.db')
+  db.results_as_hash = true
+  puts "SQL: #{ sql }"
+  db.execute(sql)
+end
 
