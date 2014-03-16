@@ -1,0 +1,13 @@
+<h1>Search results</h1>
+
+<% if @results != [] %>
+    <% if @book_query != [] %>
+        <a href="/books/<%= @results[0].id %>"><%= @results[0].title %></a>
+    <% elsif @author_query != [] %>
+        <a href="/authors/<%= @results[0].id %>"><%= @results[0].name %></a>
+    <% else @isbn_query != [] %>
+        <a href="/books/<%= @results[0].id %>"><%= @isbn_query[0].title %> : <%= @isbn_query[0].isbn %></a>
+    <% end %>
+<% else %>
+    <h1>No matched result. Please <a href="/">try again</a></h1>
+<% end %>

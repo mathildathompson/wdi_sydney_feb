@@ -1,0 +1,35 @@
+<form action="/books/create" method="post">
+  <p id="newbook_margin">
+    <label for="title">Title: </label>
+    <input type="text" name="title" id="title" required>
+  </p>
+
+  <p>
+    <label for="photo">Photo: </label>
+    <input type="url" name="photo" id="photo" required>
+  </p>
+
+  <p>
+    <label for="isbn">ISBN: </label>
+    <input type="text" name="isbn" id="isbn" required>
+  </p>
+
+  <p>
+    <label for="author_id">Author: </label>
+    <% @authors.each do |author| %>
+      <input class="checkbox" type="checkbox" name="<%= author.name %>" value="<%= author.id %>"><%= author.name %></input>
+    <% end %>
+  </p>
+
+  
+  <button>Create Book!</button>
+</form>
+
+<hr>
+<h3>Not sure the book details?</h3>
+
+<form target=”new” method="get" action="http://www.amazon.com/s/">
+  <input type="hidden" name="url" value="search-alias=aps">
+  Search Amazon: <input type="text" name="field-keywords"> 
+  <input type="submit" name="Go" value="Go">
+</form>

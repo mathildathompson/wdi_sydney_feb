@@ -1,0 +1,9 @@
+<h1>All the Books</h1>
+
+<% @books.each do |title| %>
+    <hr>
+    <a href="/books/<%= title.id %>">
+    <img class="thumb" src="<%= title.photo %>">
+    <%= title.title %>
+    </a>
+<% end %>
