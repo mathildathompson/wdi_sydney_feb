@@ -1,0 +1,193 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+ 
+body {
+  font-family: Open Sans;
+  background-color: #2c3e50;
+  background-image: url('');
+  color: #b4c7da;
+}
+
+a {
+  color: #b4c7da;
+  text-decoration: none;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+  min-height: 440px; 
+}
+
+#container ul {
+ padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #b4c7da;
+}
+
+li a:hover {
+  color: #e67e22;
+}
+
+h1 {
+    margin-top: 80px;
+    color: #b4c7da;
+    text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  margin: 40px 0 40px 0;
+}
+
+input {
+  display: block;
+  width: 250px;
+}
+
+/*** NAV MENU  ***/
+
+nav {
+    background-color: #292c38;
+    padding-top: 40px;
+    color: #333;
+    height: 80px;
+    border-bottom: 5px solid #e67e22;
+}
+
+ul#menu, ul#menu ul.sub-menu {
+    padding:0;
+    margin: 0;
+}
+
+ul#menu li, ul#menu ul.sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+/*Link Appearance*/
+ul#menu li a, ul#menu li ul.sub-menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: #292c38;
+    padding: 4px;
+    display:inline-block;
+    margin-left: 5em;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/*Make the parent of sub-menu relative*/
+ul#menu li {
+    position: relative;
+}
+
+/*sub menu*/
+ul#menu li ul.sub-menu {
+    display:none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100px;
+}
+
+ul#menu li:hover ul.sub-menu {
+    display:block;
+}
+
+ul#menu li a:hover, ul#menu li ul.sub-menu li a:hover {
+    text-decoration: none;
+    color: #292c38;
+    background: #e67e22;
+}
+
+/*** SEARCH BAR ***/
+
+.search {
+    position: relative;
+    margin: 100px auto;
+    width: 300px;
+}
+
+.search-input {
+    border: 2px solid #e67e22;
+    outline: none;
+    background: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.search-submit  {
+    width: 60px;
+    height: 29px;
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: -3px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-submit:hover {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+aside.controls {
+  text-align: right;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  min-width: 85px;
+  text-align: center;
+}
+
+.book img {
+  max-width: 500px%;
+  margin: 40px;
+  display: block;
+}
+
+img.thumb {
+  width: 100px;
+  vertical-align: middle;
+  margin: 20px 40px 20px 0;
+}
+
+footer {
+    background-color: #292c38;
+    padding-top: 40px;
+    height: 70px;
+    border-top: 5px solid #ffe2bc;
+    margin-top: 65px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #e67e22;
+    font-size: 0.8em;
+    margin-left: 8em;
+}
+
+footer a:hover {
+    color: #fff;
+  }
+
+
+

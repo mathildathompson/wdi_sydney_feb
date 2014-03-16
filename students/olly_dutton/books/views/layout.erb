@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books</title>
+  <link rel="shortcut icon" href="/favicon.ico"> 
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+      <nav>
+        <ul id="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/books/new">Add Book</a></li>
+          <li><a href="/authors/new">Add Author</a></li>
+          <li><a href="/authors">Authors</a></li>
+          <li><a href="/books">Books</a>
+            <% @genres.each do |genre| %>
+              <ul class="sub-menu"> 
+                <li><a href="/books/genre/<%= genre %>"><%= genre %></a></li>
+              <% end %>
+            </ul>
+          </li>          
+      </ul>
+      </nav>
+  <div id="container">
+    <%= yield %>
+  </div>
+   <footer>
+      <a href="/">Home</a>
+      <a href="/books/new">Add Book</a>
+      <a href="/books">Books</a>
+      <a href="/authors/new">Add Author</a>
+      <a href="/authors">Authors</a>
+        <% @genres.each do |genre| %>
+            <a href="/books/genre/<%= genre %>"><%= genre %></a>
+        <% end %>  
+    </footer>
+</body>
+</html>
+
+ 
+   

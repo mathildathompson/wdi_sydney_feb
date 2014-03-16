@@ -1,0 +1,15 @@
+<form action="/authors/update" method="post">
+  <input type="hidden" name="id" value="<%= @author.id %>">
+
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" value="<%= @author.name %>">
+  </p>
+
+  <p>
+    <label for="photo">Photo: </label>
+    <input type="url" name="photo" id="photo" value="<%= @author.photo %>">
+  </p>
+
+  <button>Update Author</button>
+</form>
