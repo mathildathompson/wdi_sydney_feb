@@ -1,0 +1,25 @@
+<div class="edit_author">
+  <h1>Add an author</h1>
+</div>
+
+<form action="/authors/<%= @author.id %>/update" method="post">
+  <input type="hidden" name="id" value="<%= @author.id %>">
+
+  <p>
+    <label for="first_name">First Name: </label>
+    <input type="text" name="first_name" id="first_name" required value="<%= @author.first_name %>">
+  </p>
+
+  <p>
+    <label for="last_name">Last Name: </label>
+    <input type="text" name="last_name" id="last_name" required value="<%= @author.last_name %>">
+  </p>
+
+  <p>
+    <label for="photo">Photo: </label>
+    <input type="url" name="photo" id="photo" required value="<%= @author.photo %>">
+  </p>
+
+
+  <button>Update Author</button>
+</form>

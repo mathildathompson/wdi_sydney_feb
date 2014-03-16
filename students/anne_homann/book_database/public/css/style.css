@@ -1,0 +1,222 @@
+html {
+  background-image: url("/images/sand-blossom.gif"); 
+  -webkit-background-repeat: repeat;
+  -moz-background-repeat: repeat;
+  -o-background-repeat: repeat;
+  background-repeat: repeat;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+/*Index page*/
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+h1 {
+  text-align: right;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  color: black;
+  text-shadow: 2px 3px 2px white;
+}
+
+nav {
+  background-color: white;
+  padding: 1em;
+  margin-top: 1em;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+nav a {
+  margin-right: 2em;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: rgb(246, 60, 62);
+}
+
+/*Search Area*/
+.heading {
+  padding-top: 4em;
+  margin-top: 1em;
+  margin-left: 770px;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  font-size: 14px;
+}
+
+/*Author Profile*/  
+aside.controls {
+  text-align: right;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  color: black;
+  background-color: white;
+  padding: 1em;
+  margin-top: 4em;
+}
+
+aside.controls a {
+  text-decoration: none;
+  color: black;
+}
+
+aside.controls a:hover {
+  text-decoration: none;
+  color: rgb(246, 60, 62);
+}
+
+.new_book {
+  margin-top: 60px;
+}
+
+label {
+  display: inline-block;
+  min-width: 80px;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -56px;
+}
+
+.checkboxes {
+  margin-top: 60px;
+}
+
+.checkboxes input {
+  width:20px;
+  position:relative;
+  vertical-align:middle; 
+}
+
+.checkboxes label {
+  width:200px;       
+  position:relative;
+  left: 15px;   
+  vertical-align:middle; 
+  text-align: left;
+  line-height: 1.5em;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+}
+
+.new_author {
+  margin-top: 60px;
+}
+
+.new_author label {
+  width: 200px;       
+  position:relative; 
+  vertical-align:middle; 
+  text-align: left;
+  line-height: 1.5em;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+}
+
+.new_author input {
+  margin-left: -80px;
+}
+
+button {
+  padding: 0.5em;
+  border-radius: 1em;
+  margin-top: 40px;
+  margin-left: 850px;
+  background-color: rgb(251, 83, 83);
+  border-color: rgb(204, 50, 50);
+  color: white;
+  text-shadow: 1px 2px 2px black;
+  width: 100px;
+}
+
+/*Books page*/
+.books {
+  margin-top: 60px;
+}
+
+.books img {
+  width: 10%;
+  height: 10%;
+  vertical-align: middle;
+  border: 2px solid white;
+  margin: 15px;
+}
+
+.books a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 2px 2px black;
+  font-size: 20px;
+}
+
+.books a:hover {
+  text-decoration: none;
+  color: rgb(246, 60, 62);
+  text-shadow: 1px 2px 2px black;
+  font-size: 20px;
+}
+
+/* "All authors" page */
+.authors {
+  margin-top: 60px;
+}
+
+.authors img {
+  width: 10%;
+  height: 10%;
+  vertical-align: middle;
+  border: 2px solid white;
+  margin: 15px;
+}
+
+.authors a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 2px 2px black;
+  font-size: 20px;
+}
+
+.authors a:hover {
+  text-decoration: none;
+  color: rgb(246, 60, 62);
+  text-shadow: 1px 2px 2px black;
+  font-size: 20px;
+}
+
+/* Authors profile page */
+.author {
+  margin-top: 60px;
+}
+
+.auth a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 2px 2px black;
+  font-size: 20px;
+  line-height: 1.7em;
+  padding-left: 15em;
+}
+
+.auth a:hover {
+  text-decoration: none;
+  color: rgb(246, 60, 62);
+  text-shadow: 1px 2px 2px black;
+  font-size: 20px;
+}
+
+.auth img {
+  width: 253px;
+  height: 370px;
+}
