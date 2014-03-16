@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books Database</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+</head>
+<body>
+  <nav>
+    <a href="/"><i class="fa fa-home"></i> Home</a>
+    <a href="/search"><i class="fa fa-search"></i> Search</a>
+    <a href="/books"><i class="fa fa-bars"></i> List Books</a>
+    <a href="/books/new"><i class="fa fa-book"></i> Add a Book</a>
+    <a href="/authors"><i class="fa fa-users"></i> List Authors</a>
+    <a href="/authors/new"><i class="fa fa-user"></i> Add an Author</a>
+  </nav>
+
+  <div id="container">
+    <h1>Book Database</h1>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

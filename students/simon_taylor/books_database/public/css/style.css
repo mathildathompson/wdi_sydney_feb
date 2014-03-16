@@ -1,0 +1,48 @@
+/*#FE521C*/
+
+body {
+  background-image: url(http://bonvoyagelauren.com/wp-content/uploads/2013/07/IMG_8717.jpg);
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  margin: 0;
+}
+
+nav {
+  background-color: black;
+  padding: 0 10px;
+  text-align: right;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  
+}
+
+nav a:hover {
+  color: rgb(254,83,28);
+}
+
+#container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.8);
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+}
+
+img.pic {
+  max-height: 300px;
+  border: 5px solid #06743C;
+}

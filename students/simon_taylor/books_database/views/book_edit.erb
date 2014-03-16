@@ -1,0 +1,21 @@
+<h1>Edit the book!</h1>
+
+<form action="/books/<%= @book.id %>/update" method="post">
+  <p>
+    <label for="title">Title:</label>
+    <input id="title" name="title" type="text" placeholder="Enter a title for the book..." required value="<%= @book.title %>">
+  </p>
+  <p>
+    <label for="cover">Cover:</label>
+    <input id="cover" name="cover" type="url" placeholder="Input a url for the books cover..." required value="<%= @book.cover %>">
+  </p>
+  <p>
+    <label for="author">Author(s):</label>
+    <select multiple name="authors[]" id="author" required>
+      <% @authors.each do |author| %>
+        <option value="<%= author.id %>" <%= 'selected' if @book.authors.ids.include? author.id %>><%= author.name %></option>
+      <% end %>
+    </select>
+  </p>
+  <button>Update Book</button>
+</form>

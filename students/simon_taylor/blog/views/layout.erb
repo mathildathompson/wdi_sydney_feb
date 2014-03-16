@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Mi Silly</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/posts">View Posts</a>
+      <a href="/posts/new">Create Post</a>
+    </nav>
+    <div id="content">
+      <%= yield %>
+    </div> <!-- end of content -->
+  </div> <!-- end of container -->
+</body>
+</html>

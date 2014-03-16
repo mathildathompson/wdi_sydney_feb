@@ -1,0 +1,25 @@
+<h2>Create a New Post</h2>
+
+<form action="/posts/create" method="post">
+  <p>
+    <label for="title">Title:</label>
+    <input id="title" name="title" type="text" placeholder="input a title for your post" required>
+  </p>
+  <p>
+    <label for="copy">Body Text:</label>
+    <textarea id="copy" name="copy" type="textarea" placeholder="input content for your post (the body)" required></textarea>
+  </p>
+  <p>
+    <label for="mood">Mood:</label>
+    <input id="mood" name="mood" type="text" placeholder="input your current mood (happy, sad etc...)">
+  </p>
+    <p>
+    <label for="author">Author:</label>
+    <input id="author" name="author" type="text" placeholder="input your name" required>
+  </p>
+  <p>
+    <label for="photo">Photo:</label>
+    <input id="photo" name="photo" type="url" placeholder="input a photo url for post">
+  </p>
+  <button>Submit Post</button>
+</form>

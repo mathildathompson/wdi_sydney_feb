@@ -1,0 +1,15 @@
+<h2>Here is your Author</h2>
+<p><%= @author.name %></p>
+<p><img class="pic" src="<%= @author.photo %>"></p>
+<p><a href="/authors/<%= @author.id %>/edit"><i class="fa fa-edit"></i> Edit</a>
+ | <a href="/authors/<%= @author.id %>/delete"><i class="fa fa-trash-o"></i> Delete</a></p>
+<% if @books.any? %>
+  <h3>This author wrote these books</h3>
+  <ul>
+    <% @books.each do |b| %>
+      <li><a href="/books/<%= b.id %>"><%= b.title %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3><%= @author.name %> has not written any books</h3>
+<% end %>
