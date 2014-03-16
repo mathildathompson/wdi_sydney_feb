@@ -1,7 +1,8 @@
 <h2>Here is your Author</h2>
 <p><%= @author.name %></p>
-<p><img src="<%= @author.photo %>"></p>
-<p><a href="/authors/<%= @author.id %>/edit">Edit</a> | <a href="/authors/<%= @author.id %>/delete">Delete</a></p>
+<p><img class="pic" src="<%= @author.photo %>"></p>
+<p><a href="/authors/<%= @author.id %>/edit"><i class="fa fa-edit"></i> Edit</a>
+ | <a href="/authors/<%= @author.id %>/delete"><i class="fa fa-trash-o"></i> Delete</a></p>
 <% if @books.any? %>
   <h3>This author wrote these books</h3>
   <ul>

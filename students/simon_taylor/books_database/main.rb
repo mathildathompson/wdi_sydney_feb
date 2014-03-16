@@ -24,10 +24,21 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 after { ActiveRecord::Base.connection.close }
 
-#NEED TO USE .CREATE AND NOT .NEW!!!!!!
-
 get '/' do
   erb :home
+end
+
+get '/search' do
+  erb :search
+end
+
+get '/results' do
+
+  @authors = Author.where('name like ?',"%#{ params[:search] }%")
+
+  @books = Book.where('title like ?',"%#{ params[:search] }%")
+
+  erb :results
 end
 
 # ----- BOOKS ROUTES -----
@@ -44,31 +55,48 @@ get '/books/new' do
   erb :book_new
 end
 
-get '/books/:id/edit' do
-  @book = Book.find params[:id]
-
-  #how to reset the authors on the form?
-  @authors = Author.all
-
-  erb :book_edit
-end
-
 post '/books/create' do
-  author = Author.find(params[:author])
 
-  book = author.books.create
+  book = Book.new
 
-  #add the co-author
-  if params[:co_author] != "None"
-    co_author = Author.find(params[:co_author])
-    book.authors << co_author
+  #add all authors to the book
+  params[:authors].each do |author_id|
+    author = Author.find author_id
+    book.authors << author
   end
 
   book.title = params[:title]
   book.cover = params[:cover]
   book.save
 
-  redirect to('/books')
+  redirect to("/books/#{book.id}")
+end
+
+get '/books/:id/edit' do
+  @book = Book.find params[:id]
+
+  @authors = Author.all
+
+  erb :book_edit
+end
+
+post '/books/:id/update' do
+  book = Book.find params[:id]
+
+  #remove any existing associations
+  book.authors.delete_all
+
+  #add all authors to the book
+  params[:authors].each do |author_id|
+    author = Author.find author_id
+    book.authors << author
+  end
+
+  book.title = params[:title]
+  book.cover = params[:cover]
+  book.save
+
+  redirect to("/books/#{book.id}")
 end
 
 get '/books/:id/delete' do

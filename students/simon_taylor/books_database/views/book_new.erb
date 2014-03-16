@@ -1,4 +1,4 @@
-<h1>Create a new book!</h1>
+<h2>Create a new book!</h2>
 
 <form action="/books/create" method="post">
   <p>
@@ -10,17 +10,8 @@
     <input id="cover" name="cover" type="url" placeholder="Input a url for the books cover..." required>
   </p>
   <p>
-    <label for="author">Author:</label>
-    <select name="author" id="author">
-      <% @authors.each do |author| %>
-        <option value="<%= author.id %>"><%= author.name %></option>
-      <% end %>
-    </select>
-  </p>
-  <p>
-    <label for="co_author">Co-Author:</label>
-    <select name="co_author" id="co_author">
-      <option value="None">None</option>
+    <label for="author">Author(s):</label>
+    <select multiple name="authors[]" id="author" required>
       <% @authors.each do |author| %>
         <option value="<%= author.id %>"><%= author.name %></option>
       <% end %>

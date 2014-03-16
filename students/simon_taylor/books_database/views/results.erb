@@ -1,0 +1,25 @@
+<% if @books.any? || @authors.any? %>
+  <h2>Results Matching your search for <%= params[:search] %>...</h2>
+  <!-- Authors -->
+  <% if @authors.any? %>
+    <h3>Authors</h3>
+    <ul>
+      <% @authors.each do |author| %>
+        <li><a href="/authors/<%= author.id %>"><%= author.name %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <!-- Books -->
+  <% if @books.any? %>
+    <h3>Books</h3>
+    <ul>
+      <% @books.each do |book| %>
+        <li><a href="/books/<%= book.id %>"><%= book.title %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% else %>
+  <!-- No Results -->
+  <h3>There are no results matching <%= params[:search] %></h3>
+<% end %>
+
