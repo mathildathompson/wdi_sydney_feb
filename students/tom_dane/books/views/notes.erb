@@ -1,0 +1,47 @@
+
+
+get '/books/:id' do
+  @book = Book.find params[:id]
+  @authors = @book.authors.all
+  erb :book
+end
+
+
+class Author
+  has_and_belongs_to_many :books
+end
+
+and
+
+class Book
+  has_and_belongs_to_many :authors
+end
+
+AND you have an authors_books table with book_id and author_id columns
+
+THEN you should be able to try
+book.authors
+in pry
+
+alkjfl < > class.New 
+
+<select multiple name="authors[]" id="author" required>
+
+  book = author.books.create
+
+books.authors.delete_all
+
+books.authors << author
+
+params.each do |p|
+    author_id = p.to_i
+    if author_id != 0 
+          author = Author.find author_id
+          book.authors << author
+     end
+end
+
+params[:authors].each do |author_id|
+    author = Author.find author_id
+    book.authors << author
+  end -->

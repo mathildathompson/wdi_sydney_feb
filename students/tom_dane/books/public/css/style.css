@@ -1,0 +1,33 @@
+* {
+
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+
+    background: url('http://2.bp.blogspot.com/-DrmDqpNCAZA/UMkn0FFTsUI/AAAAAAAABkI/RGJGxIP83YE/s1600/prof_richard_marksey_library.jpg');
+    background-size:cover;
+}
+
+#container {
+
+    max-width: 600px;
+    min-height:400px;
+    text-align: center;
+    margin:auto;
+    background: rgba(255,255,255,0.8);
+    margin-top:100px;
+    padding-top:40px;
+}
+
+
+nav li {
+
+    display:inline-block;
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+}
