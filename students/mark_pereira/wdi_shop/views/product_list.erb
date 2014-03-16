@@ -1,0 +1,19 @@
+<style class="new_product_page">
+  html {
+      background-image: url('/images/home-fashion-girl-blur.jpg');
+      background-repeat: no-repeat;
+      }
+  </style>
+
+<h1>List of Products</h1>
+<% if @product_list != nil || @product_list != [] %>
+<ul>
+  <% @product_list.each do |product| %>
+    <li>
+      <a href="/product_list/<%= product.id %>">
+           <img class="thumb" src="<%= product.photo %>">
+      	<%= product.product %><%= product.name %></a>
+    </li>
+  <% end %>
+</ul>
+ <% end %>

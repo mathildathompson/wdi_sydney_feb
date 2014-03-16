@@ -1,0 +1,41 @@
+<style class="new_product_page">
+  html {
+      background-image: url('/images/women-clothes.jpg');
+      background-repeat: no-repeat;
+      }
+  </style>
+
+<div class="new">
+<form action="/product_list/create" method="post">
+  <p>
+    <label for="name">Product Name : </label>
+    <input type="text" name="name" id="name" placeholder="add name for new product" required>
+  </p>
+
+  <p>
+    <label for="price">Price : </label>
+    <input type="text" name="price" class="price"  placeholder="add a price "required>
+  </p>
+
+  <p>
+    <label for="description">Description : </label>
+    <input type="text" name="description" class="description"  placeholder="add a description of the product "required>
+  </p>
+
+
+  <p>
+    <label for="price_type">Discounted or full price : </label>
+    <select id="price_type" name="price_type" class="price_type" required/>
+      <option>Full Retail Price</option>
+      <option>On Sale</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="photo">Product photo : </label>
+    <input type="url" name="photo" id="photo" placeholder="add a photo of the product " required>
+  </p>
+
+  <input type="submit" value="Add product" class="button">
+</form>
+</div>

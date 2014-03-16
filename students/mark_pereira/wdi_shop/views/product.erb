@@ -1,0 +1,13 @@
+<section class="post">
+  <h2><%= @product.product %></h2>
+  <p><p1 id="item_posted">Name: </p1><%= @product.name %></p>
+  <p><p1 id="item_posted">Price: </p1><%= @product.price %></p>
+  <p><p1 id="item_posted">Description: </p1><%= @product.description %></p>
+  <p><p1 id="item_posted">Photo: </p1><%= @product.photo%></p>
+  <p><img class="thumb" src="<%= @product.photo %>">	</p>
+  <aside class="controls">
+    <a href="/product_list/<%= @product.id %>/edit">Edit</a>
+    |
+    <a href="/product_list/<%= @product.id %>/delete">Delete</a>
+  </aside>
+</section>

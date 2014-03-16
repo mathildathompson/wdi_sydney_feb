@@ -1,0 +1,37 @@
+<form action="/product_list/update" method="post">
+<input type="hidden" name="id" value="<%= @product.id %>">
+
+
+  <p>
+    <label for="name">Product Name : </label>
+    <input type="text" name="name" id="name" value="<%= @product.name %>">
+  </p>
+
+  <p>
+    <label for="price">Price : </label>
+    <input type="text" name="price" class="price" value="<%= @product.price %>">
+  </p>
+
+  <p>
+    <label for="description">Description : </label>
+    <input type="text" name="description" class="description" value="<%= @product.description %>">
+  </p>
+
+
+  <p>
+    <label for="price_type">Discounted or full price : </label>
+    <select id="price_type" name="price_type" class="price_type" value="<%= @product.price_type %>">
+      <option <%= "selected" if @product.price_type == "Full Retail Price" %>>Full Retail Price</option>
+      <option <%= "selected" if @product.price_type == "On Sale" %>>On Sale</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="photo">Product photo : </label>
+    <input type="text" name="photo" id="photo" placeholder="add a photo of the product " value="<%= @product.photo%>">
+  </p>
+
+  <p><img class="thumb" src="<%= @product.photo %>">  </p>
+
+  <input type="submit" value="Edit product" class="button">
+</form>
