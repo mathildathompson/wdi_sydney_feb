@@ -1,0 +1,12 @@
+<section class="post">
+  <h2><%= @post.title %></h2>
+  <p><p1 id="item_posted">Mood: </p1><%= @post.mood %></p>
+  <p><p1 id="item_posted">Copy: </p1><%= @post.copy %></p>
+  <p><p1 id="item_posted">Currently listening to: </p1><%= @post.currently_playing%></p>
+  <p><p1 id="item_posted">Currently reading: </p1><%= @post.author%></p>	
+  <aside class="controls">
+    <a href="/post_list/<%= @post.id %>/edit">Edit</a>
+    |
+    <a href="/post_list/<%= @post.id %>/delete">Delete</a>
+  </aside>
+</section>
