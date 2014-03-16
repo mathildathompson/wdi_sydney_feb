@@ -1,0 +1,17 @@
+<section class="book">
+  <h2><%= @book.title %></h2>
+  <p>
+    <img src="<%= @book.photo %>">
+  </p>
+  <h3>Authors:</h3>
+  <ul>
+    <% @authors.each do |author| %>
+    <li><a href="/authors/<%= author.id %>"><%= author.first_name %> <%= author.last_name %></a></li>
+      <% end %>
+  </ul>
+  <aside class="controls">
+    <a href="/books/<%= @book.id %>/edit">Edit</a>
+    |
+    <a href="/books/<%= @book.id %>/delete">Delete</a>
+  </aside>
+</section>

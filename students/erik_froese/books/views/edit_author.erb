@@ -1,0 +1,22 @@
+
+<form action="/authors/update" method="post">
+  <input type="hidden" name="id" value="<%= @author.id %>">
+
+  <p>
+    <label for="first_name">First name: </label>
+    <input type="text" name="first_name" id="first_name" required value="<%= @author.first_name %>">
+  </p>
+
+  <p>
+    <label for="last_name">Last name: </label>
+    <input type="text" name="last_name" id="last_name" required value="<%= @author.last_name %>">
+  </p>
+
+  <p>
+    <label for="photo">Photo: </label>
+    <input type="url" name="photo" id="photo" required value="<%= @author.photo %>">
+  </p>
+
+  <button>Update author!</button>
+</form>
+<p>Wanting to add a book to instead? <a href="/books/new">No prob, Bob</a></p>

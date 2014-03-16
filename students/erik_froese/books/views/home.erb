@@ -1,0 +1,14 @@
+<div id="home">
+  <h1>Latest books</h1>
+  <ul>
+    <% @books.each do |book| %>
+      <li>
+        <a href="/books/<%= book.id %>">
+          <h3><%= book.title %></h3>
+          <img class="thumb" src="<%= book.photo %>">
+          
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
