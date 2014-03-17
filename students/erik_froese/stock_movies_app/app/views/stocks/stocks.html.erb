@@ -1,0 +1,17 @@
+<form action='/stocks' method="get"> 
+    <input name="stock_code" type="text" placeholder="Enter stock code">
+    <input type="submit" value="Find stock price">
+</form>
+
+<h2><%= @blank_page %></h2>
+  
+</h2>
+  <% if @stock_code %> 
+    <h1>
+      <%= @stock_code %>
+    </h1>
+    <h1>
+      <%= number_to_currency(@price) %>
+    </h1>
+  <% end %>
+</div>

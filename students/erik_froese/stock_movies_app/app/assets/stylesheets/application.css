@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial Black"
+}
+
+div #faq {
+  text-align: left;
+  padding: 0 50px 0 50px;
+}
+
+#container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 10px 30px 10px;
+}
+
+nav {
+  color: #FFDE40;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(#200772, #FFDE40);
+  height: 50px;
+
+}
+nav a {
+  color: #FFDE40;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+nav a:hover {
+  color: #FFAA00;
+  }
+h1 {
+  color: #200772;
+}
+h2 {
+  color: #200772;
+}
+li {
+  list-style-type: none;
+}
