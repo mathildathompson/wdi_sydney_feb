@@ -1,6 +1,8 @@
-require 'pry'
 require 'sinatra'
-require 'sinatra/reloader'
+if development?
+  require 'pry'
+  # require 'sinatra/reloader'
+end
 
 # hash of all stations and lines
 before do 
@@ -33,6 +35,7 @@ get '/post/' do
   if @line_start == @line_end 
     # calculate number of stops
     @stops_number = @subway[@line_start.to_sym].index(@station_start) - @subway[@line_end.to_sym].index(@station_end)
+    # maybe next time at this poitn i could create a new array at this point so i get the list ot stations, and just use the length of the array
     
     # create new array of stations - FUCK needs to put the bigger value first!
     if @stops_number > 0

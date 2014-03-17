@@ -1,0 +1,29 @@
+<h2>All Books in Alphabetical Order:</h2>
+<table cellpadding="5" border="0">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Year</th>
+    <th>Blurb</th>
+    <th>Rating</th>
+    <th>Price</th>
+    <th>Image</th>
+  </tr>
+  <% @books.each do |book| %>
+    <tr>
+      <td><h3><a href="/books/<%= book.id %>"><%= book.name %></a></h3></td>
+      <td>
+        <ul>
+          <% book.authors.each do |author| %>
+            <li><a href="authors/<%= author.id %>"><%= author.last_name.upcase %>, <%= author.first_name %></a></li>
+          <% end %>
+        </ul>
+      </td>
+      <td><p><%= book.year %></p></td>
+      <td><p><%= book.blurb %></p></td>
+      <td><p><%= book.rating %></p></td>
+      <td><p><%= book.price %></p></td>
+      <td><img class="thumb" src="<%= book.image %>"></td>
+    </tr>
+  <% end %>
+</table>

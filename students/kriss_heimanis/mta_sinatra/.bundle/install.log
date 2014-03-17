@@ -1,0 +1,10 @@
+# Logfile created on 2014-03-14 14:29:45 +1100 by logger.rb/41954
+I, [2014-03-14T14:29:45.267833 #34173]  INFO -- : 0:  coderay (1.1.0) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/coderay-1.1.0.gemspec
+I, [2014-03-14T14:29:45.268378 #34173]  INFO -- : 0:  method_source (0.8.2) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/method_source-0.8.2.gemspec
+I, [2014-03-14T14:29:45.268732 #34173]  INFO -- : 0:  slop (3.4.7) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/slop-3.4.7.gemspec
+I, [2014-03-14T14:29:45.269060 #34173]  INFO -- : 0:  pry (0.9.12.6) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/pry-0.9.12.6.gemspec
+I, [2014-03-14T14:29:45.269378 #34173]  INFO -- : 0:  rack (1.5.2) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/rack-1.5.2.gemspec
+I, [2014-03-14T14:29:45.269686 #34173]  INFO -- : 0:  rack-protection (1.5.2) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/rack-protection-1.5.2.gemspec
+I, [2014-03-14T14:29:45.269992 #34173]  INFO -- : 0:  tilt (1.4.1) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/tilt-1.4.1.gemspec
+I, [2014-03-14T14:29:45.270295 #34173]  INFO -- : 0:  sinatra (1.4.4) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353/specifications/sinatra-1.4.4.gemspec
+I, [2014-03-14T14:29:45.270659 #34173]  INFO -- : 0:  bundler (1.5.1) from /Users/kriss/.rvm/gems/ruby-2.0.0-p353@global/specifications/bundler-1.5.1.gemspec

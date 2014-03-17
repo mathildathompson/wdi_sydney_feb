@@ -1,0 +1,27 @@
+<h2><%= @book.name %></h2>
+<img class="book-image" src="<%= @book.image %>">
+<p>Written by 
+  <% @book.authors.each do |author| %><a href="/authors/<%= author.id %>"><%= author.first_name %> <%= author.last_name %></a>, <% end %>
+  <%= @book.year %>
+</p>
+<p>Blurb: <%= @book.blurb %></p>
+
+<h3>Lend This Book Out</h3>
+<form action="/books/borrow" method="post">
+  <input type="hidden" name="id" value="<%= @book.id %>">
+  <label for="lend_to">Lend this book out to: </label>
+  <select name="lend_to" id="lend_to">
+    <option value="0">None</option>
+    <% @borrowers.each do |borrower| %>
+      <option value="<%= borrower.id %>" >
+        <%= borrower.last_name %>, <%= borrower.first_name %>
+      </option>
+    <% end %>
+  </select>
+  <button>lend book</button>
+</form>
+
+<aside class="controls">
+  <a href="/books/<%= @book.id %>/edit">Edit</a>
+  <a href="/books/<%= @book.id %>/delete">Delete</a>
+</aside>

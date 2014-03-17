@@ -1,0 +1,23 @@
+<h2>All Authors:</h2>
+<table cellpadding="5" border="0">
+  <tr>
+    <th>Name</th>
+    <th>Born</th>
+    <th>Books</th>
+  </tr>
+  <% @authors.each do |author| %>
+    <tr>
+      <td><h3><a href="/authors/<%= author.id %>"><%= author.last_name.upcase %>, <%= author.first_name %></a></h3></td>
+      <td><p><%= author.yob %></p></td>
+
+      <td>
+        <ul>
+          <% author.books.each do |book| %>
+            <li><a href="books/<%= book.id %>"><%= book.name %>, <%= book.year %></a></li>
+          <% end %>
+        </ul>
+      </td>
+
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,12 @@
+<h2><%= @author.last_name.upcase %>, <%= @author.first_name %></h2>
+<p>Born <%= @author.yob %></p>
+<h3>All books by <%= @author.first_name %> <%= @author.last_name %></h3>
+<ul>
+  <% @author.books.each do |book| %>
+    <li><a href="/books/<%= book.id %>"><%= book.name %>, <%= book.year %></a></li>
+  <% end %>
+</ul>
+<aside class="controls">
+  <a href="/authors/<%= @author.id %>/edit">Edit</a>
+  <a href="/authors/<%= @author.id %>/delete">Delete</a>
+</aside>
