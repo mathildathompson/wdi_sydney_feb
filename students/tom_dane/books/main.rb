@@ -83,3 +83,9 @@ post '/authors/create' do
   author.save
   redirect to("/authors/#{author.id}")
 end
+
+get '/books/:id/edit' do
+  @book = Book.find params[:id]
+  @authors = Author.all
+  erb :edit_book
+end
