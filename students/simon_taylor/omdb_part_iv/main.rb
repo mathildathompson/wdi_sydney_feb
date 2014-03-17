@@ -1,4 +1,5 @@
 # Features to add...
+# Fix bug where two apostrophe's are displayed on page (e.g. Carlito's Way)
 # Add 404 page
 # Pass the previous search to the title page to enable a proper back button
 # Add Creation Date to the movies table and use this to show last ten movies viewed
@@ -111,8 +112,8 @@ get '/title/:id' do
     movie_save = @movie.clone
 
     #swap out apostrophes with double apostrophe so SQL OK
-    movie_save.each_value do |v|
-      v.gsub!("'","''")
+    movie_save.each do |k,v|
+      movie_save[k] = v.gsub("'","''")
     end
 
     #generate the sql statement to insert this movie to the database

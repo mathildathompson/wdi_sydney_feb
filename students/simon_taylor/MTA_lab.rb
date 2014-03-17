@@ -106,6 +106,8 @@ dest_stop_no = dest_line.index(input_dest_stop)
 
 #----------------------------------------------
 
+#{"from_stop"=>"N-Times Square", "to_stop"=>"L-6th"}
+
 puts "-------------------------------------------------"
 
 #the current line and destination line are the same, so count how far apart the stations are

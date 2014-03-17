@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MoviesStocks</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!-- google font -->
+  <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <div id="container">
+    <!-- <div class="reel"></div> -->
+      <h1>Movies & Stocks App!</h1>
+    <!-- <div class="reel"></div> -->
+
+    <!-- navigation -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/movies">Movie Search</a></li>
+        <li><a href="/stocks">Stock Search</a></li>
+        <!-- <li><a href="/">Home</a></li> -->
+        <!-- <li><a href="/contact">Contact</a></li> -->
+        <li><a href="http://www.omdbapi.com/" target="_blank">OMDbAPI</a></li>
+        <li><a href="https://rubygems.org/gems/yahoofinance" target="_blank">YahooFinance GEM</a></li>
+      </ul>
+    </nav>
+
+    <%= yield %>
+    
+    <!-- <div class="reel"></div> -->
+  </div> <!-- end of container -->
+
+</body>
+</html>

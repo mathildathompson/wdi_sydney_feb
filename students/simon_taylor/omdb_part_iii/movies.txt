@@ -1,0 +1,33 @@
+imdb_id || tt0093773
+title || Predator
+genre || Action, Adventure, Sci-Fi
+imdb_rating || 7.9
+director || John McTiernan
+writer || Jim Thomas, John Thomas
+actors || Arnold Schwarzenegger, Carl Weathers, Elpidia Carrillo, Bill Duke
+plot || A team of commandos, on a mission in a Central American jungle, find themselves hunted by an extra-terrestrial warrior.
+awards || Nominated for 1 Oscar. Another 3 wins & 4 nominations.
+poster || http://ia.media-imdb.com/images/M/MV5BMTM1Njk0MjIwN15BMl5BanBnXkFtZTcwNzgwNzEyMQ@@._V1_SX300.jpg
+--end of movie--
+imdb_id || tt0088247
+title || The Terminator
+genre || Action, Sci-Fi
+imdb_rating || 8.1
+director || James Cameron
+writer || James Cameron, Gale Anne Hurd, William Wisher Jr. (additional dialogue)
+actors || Arnold Schwarzenegger, Michael Biehn, Linda Hamilton, Paul Winfield
+plot || A human-looking indestructible cyborg is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.
+awards || 5 wins & 6 nominations.
+poster || http://ia.media-imdb.com/images/M/MV5BODE1MDczNTUxOV5BMl5BanBnXkFtZTcwMTA0NDQyNA@@._V1_SX300.jpg
+--end of movie--
+imdb_id || tt0087363
+title || Gremlins
+genre || Comedy, Horror
+imdb_rating || 7.2
+director || Joe Dante
+writer || Chris Columbus
+actors || Hoyt Axton, John Louie, Keye Luke, Don Steele
+plot || A boy inadvertantly breaks 3 important rules concerning his new pet and unleashes a horde of malevolently mischievous monsters on a small town.
+awards || 7 wins & 5 nominations.
+poster || http://ia.media-imdb.com/images/M/MV5BNTQ4NDQyNTgxN15BMl5BanBnXkFtZTcwNTc2NTA0Mg@@._V1_SX300.jpg
+--end of movie--
