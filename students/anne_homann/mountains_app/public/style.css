@@ -1,0 +1,13 @@
+body {
+  background: url('images/back04.jpg');  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  color: white;
+  font-family: sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+}
