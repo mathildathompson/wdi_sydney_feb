@@ -1,0 +1,17 @@
+<h1>Welcome to the Books Database</h1>
+    <div id="search" class="search">
+        <form>
+            <input class="search-input" placeholder="Search..." type="search" value="" name="search_input" id="search_input">
+            <input class="search-submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+ <ul>
+      <% @search.each do |book| %>
+        <li>
+          <a href="/books/<%= book.id %>">
+            <%= book.title %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
