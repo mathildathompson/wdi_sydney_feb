@@ -1,0 +1,116 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+    background: url('/assets/landscape.jpg') center center fixed;
+    background-size: cover;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.container {
+    padding: 50px;
+    text-align: center;
+}
+
+.homepage_h1, h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 60px;
+    color: #dc3765;
+    text-shadow: 2px 1px 3px #cbcbcb;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 50px;
+    font-weight: bold;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+    text-decoration: underline;
+    color: #ed4285;
+    text-shadow: 0.3px 0.3px #010101;
+}
+
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative; 
+    top: -0.7em;  
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+    opacity: 0.5;
+}
+
+.yield_container {
+    background-color: rgba(255, 255, 255, .1);
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#searchbox {
+    border: 0 transparent;
+    padding: 4px 25px 5px 5px;
+    border-radius: 5px;
+    width: 90px;
+    border: 1px solid #E3DFC9;
+    background: rgba(0,0,0,0.5);
+    color: gold;
+    font-size: 15px;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+#searchbox:active , #searchbox:focus, #searchbox:hover{
+    color: gold;
+    width: 220px;
+}
+
+#button {
+    border: 1px solid black;
+    padding: 2px 5px;
+    border-radius: 5px;
+    width: 60px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    background: #4472b9;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;    
+}
+
+#button:hover, #button:focus, #button:active {
+    color: #4472b9;
+    background: white;
+}
+
+p {
+    color: #cdffd4;
+    line-height: 35px;
+    text-shadow: 1px 1px black;
+}
+

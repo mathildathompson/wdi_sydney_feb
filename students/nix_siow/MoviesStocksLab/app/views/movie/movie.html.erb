@@ -1,0 +1,18 @@
+<h1>Search Results</h1>
+
+<% if !@result.has_key? "Error" %>
+    <h2 id="movietitle"><%= @movie_title %></h2>
+    <img id="movie_poster" src="<%= @movie_poster %>">
+
+    <% unless @movie_plot.nil? || @movie_plot == "N/A" %>
+        <p id="plot"><%= @movie_plot %></p>
+    <% end %>
+
+    <% unless @movie_director.nil? || @movie_director == "N/A" %>
+        <p id="plot">Director : <%= @movie_director %></p>
+    <% end %>
+
+<% else %>
+    <h1>No Result Found. <a href="/movieapp">Please try again</a></h1>
+<% end %>
+
