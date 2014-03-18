@@ -1,0 +1,11 @@
+<div id="index">
+  <h1>Oceans of the world</h1>
+  <% @oceans.each do |ocean| %>
+    <div class="index_oceans">
+      <h2>
+        <%= link_to(ocean.name, ocean_path(ocean.id)) %>
+      </h2>
+      <img src="<%= ocean.image %>">
+    </div>
+  <% end %>
+</div>

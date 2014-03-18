@@ -1,0 +1,32 @@
+<div class="show">
+  <h1>
+    <%= @ocean.name %>
+  </h1>
+  <ul>
+    <li>
+      <%= @ocean.nickname %>
+    </li>
+     <% if @ocean.volume != "" %> 
+      <li>
+        The volume of <%= @ocean.name %> is <%= @ocean.volume %> cubic kilometers.
+      </li>
+    <% end %>
+    <% if @ocean.pirates != "" %>
+      <li>
+        Famous pirates on the indian ocean include:
+        <ul>
+          <li>
+            <%= @ocean.pirates %>
+          </li>
+        </ul>
+      </li>
+    <% end %>
+
+    <li><%= @ocean.description %></li>
+    <li>
+      <%= image_tag(@ocean.image) %>
+    </li>
+  </ul>
+  <%= link_to('Edit', ocean_edit_path(@ocean.id)) %>
+  <%= link_to('Delete', ocean_delete_path(@ocean.id)) %>
+</div>

@@ -1,0 +1,51 @@
+html,body {
+  padding:0; 
+  margin:0;
+}
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#index {
+  text-align: center;
+}
+.index_oceans {
+  min-width: 320px;
+  height: 420px;
+  display: inline-block;
+  text-align: center;
+  background: url(http://www.lifereadyphysio.com.au/blog/wp-content/uploads/2013/10/white-shark-061.jpg) no-repeat;
+  position: relative;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+nav {
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(#1437AD, #ffffff);
+  height: 50px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+  min-width: 50px;
+  background-color: #4869D6;
+}
+.show {
+  padding-left: 45px;
+}
+.show ul {
+    padding: 0;
+    list-style-type: none;
+}
+.show img {
+  max-width: 600px;
+}
+.index_oceans img {
+  max-width: 400px;
+  border: 5px solid white;
+}
+
