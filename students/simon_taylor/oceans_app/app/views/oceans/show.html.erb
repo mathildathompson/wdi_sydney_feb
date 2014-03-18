@@ -1,0 +1,9 @@
+<h1><%= @ocean.name %></h1>
+<p><b>Area:</b> <%= number_with_delimiter(@ocean.area, :delimiter => ',') %> sq. km</p>
+<p><b>Average Depth:</b> <%= number_with_delimiter(@ocean.avg_depth, :delimiter => ',') %> m</p>
+<p><b>Greatest Depth:</b> <%= number_with_delimiter(@ocean.greatest_depth, :delimiter => ',') %> m</p>
+<p><b>Where it is Deepest:</b> <%= @ocean.where_deepest %></p>
+<p><%= link_to 'Back', oceans_path,{:class => 'post-link'} %> - 
+  <%= link_to('Edit',edit_ocean_path(@ocean.id),{:class => 'post-link'}) %> - 
+  <%= link_to('Delete',ocean_path(@ocean.id), {:method => 'delete', :class => 'post-link', :confirm => 'Are you sure you wish to delete?'}) %></p>
+

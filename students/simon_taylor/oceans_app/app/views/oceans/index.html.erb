@@ -1,0 +1,6 @@
+<h1>Oceans of the World</h1>
+<ul>
+  <% @oceans.each_with_index do |o,i| %>
+    <li class="oceans <%= ('black' if i > 7) %>"><%= link_to(o.name, ocean_path(o.id)) %></li>
+  <% end %>
+</ul>
