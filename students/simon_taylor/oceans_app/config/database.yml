@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: oceans_app_development
+  pool: 5
+  username: Nizmox
+  password:
