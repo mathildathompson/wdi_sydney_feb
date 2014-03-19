@@ -1,0 +1,31 @@
+<form action="/books/update" method="post">
+  <input type="hidden" name="id" value="<%= @book.id %>">
+
+  <p>
+    <label for="title">Title: </label>
+    <input type="text" name="title" id="title" required value="<%= @book.title %>">
+  </p>
+
+  <p>
+    <label for="description">Description: </label>
+    <input type="text" name="description" id="description" required value="<%= @book.description %>">
+  </p>
+
+  <p>
+    <label for="cover">Cover: </label>
+    <input type="url" name="cover" id="cover" required value="<%= @book.cover %>">
+  </p>
+
+  <p>
+      <label for="author.id">Author(s): </label>
+        <option value="0">No author</option>
+          <% @authors.each do |author| %>
+            <label for="author.id"><%= author.first_name%> <%=author.last_name%></label>
+             <input type="checkbox" id="author.id" name="<%= author.id%>" value="<%= author.first_name %>" <%checked="checked" if @book.authors("#{params[:id]}") == author.id%> >
+          <%end%>
+
+    </p>
+
+
+  <button>Update book!</button>
+</form>
