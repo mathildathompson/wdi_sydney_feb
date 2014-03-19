@@ -1,0 +1,8 @@
+<h2>Our Works...</h2>
+
+<% @works.each do |work| %>
+  <ul>
+    <li><%= image_tag work.image, :width => '500px' %></li>
+    <li><%= link_to(work.title, work_path(work.id)) %></li>
+  </ul>
+<% end %>

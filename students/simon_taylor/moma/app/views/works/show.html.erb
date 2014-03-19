@@ -1,0 +1,10 @@
+<h2><%= @work.title %></h2>
+
+<%= image_tag @work.image, :width => '800px' %>
+
+<p>Year: <%= @work.year %></p>
+<p>Medium: <%= @work.medium %></p>
+<p>Style: <%= @work.style %></p>
+
+<%= link_to 'Edit Work', edit_work_path(@work.id) %>
+<%= link_to 'Delete Work', @work, :method => :delete, :confirm => 'Are you sure you wish to delete?' %>

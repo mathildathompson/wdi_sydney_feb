@@ -1,0 +1,27 @@
+<%= form_for @work do |f| %>
+  <div class="form-input">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-input">
+    <%= f.label :year %>
+    <%= f.number_field :year %>
+  </div>
+  <div class="form-input">
+    <%= f.label :medium %>
+    <%= f.text_field :medium %>
+  </div>
+  <div class="form-input">
+    <%= f.label :style %>
+    <%= f.text_field :style %>
+  </div>
+  <div class="form-input">
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </div>
+  <div class="form-input">
+    <%= f.label :artist_id %>
+    <%= f.select :artist_id, Artist.all.map { |artist| [artist.name,artist.id] }, :include_blank => true %>
+  </div>
+  <%= f.submit %>
+<% end %>
