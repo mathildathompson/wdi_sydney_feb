@@ -1,0 +1,11 @@
+<h1>EDIT</h1>
+
+<div id="edit">
+	<form action="<%= mountain_path(@mountain.id) %>" method="post">
+	  <p>Name: <input type="text" name="mountain[name]" autofocus value="<%= @mountain.name %>" required></p>
+	  <p>Image: <input type="text" name="mountain[image]" value="<%= @mountain.image %>" required></p>
+	  <p>Height: <input type="text" name="mountain[height]" value="<%= @mountain.height %>" required></p>
+	  <p>Bordering countries: <input type="text" name="mountain[bordering_countries]" value="<%= @mountain.bordering_countries %>" required></p>
+	  <button>Cool beans!</button>
+	</form>
+</div>

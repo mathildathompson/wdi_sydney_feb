@@ -1,0 +1,14 @@
+<h1><%= @mountain.name %></h1>
+
+<p>Elevation: <%= @mountain.height %> ft.</p>
+<p>Countries: <%= @mountain.bordering_countries %></p>
+
+<img src="<%= @mountain.image %>">
+
+<aside>
+	<!-- Links to the edit and delete page via the mountain paths -->
+	<%= link_to("Edit", mountain_edit_path(@mountain.id)) %>
+	<%= link_to("Delete", mountain_destroy_path(@mountain.id)) %>
+</aside>
+
+
