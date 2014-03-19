@@ -1,0 +1,11 @@
+<% @mountains.each do |mountain| %>
+    <div id="index-container">
+            <p>
+                <%= link_to(mountain.name, mountain_path(mountain.id)) %>
+                <%= image_tag mountain.image, :class => "thumb" %>
+                <%= link_to('Edit', mountain_edit_path(mountain.id)) %>
+                <%= button_to('Delete', mountain_delete_path(mountain.id))%> 
+            </p>
+    </div>     
+<% end %>
+       
