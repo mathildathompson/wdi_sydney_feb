@@ -1,0 +1,48 @@
+<style>
+  html {
+        background-image: url('/images/blog-home-bnw.jpg');
+        background-repeat: no-repeat;
+      }
+</style>  
+
+<form action="/post_list/update" method="post">
+  <input type="hidden" name="id" value="<%= @post.id %>">
+
+<p>
+    <label for="title">Title : </label>
+    <input type="text" name="title" id="title" value="<%= @post.title%>">
+  </p>
+
+  <p>
+    <label for="copy">Copy : </label>
+    <input type="text" name="copy" id="copy" value="<%= @post.copy%>">
+  </p>
+
+  <label for="mood_select">Mood : (Select your mood today) </label>
+  <select id="mood" name="mood">
+    <option <%= "selected" if @post.mood == "Awake" %>>Awake</option>
+    <option <%= "selected" if @post.mood == "Alone" %>>Alone</option>
+    <option <%= "selected" if @post.mood == "Blah" %>>Blah</option>
+    <option <%= "selected" if @post.mood == "Blissful" %>>Blissful</option>
+    <option <%= "selected" if @post.mood == "Devious" %>>Devious</option>
+    <option <%= "selected" if @post.mood == "Excited" %>>Excited</option>
+    <option <%= "selected" if @post.mood == "Exhausted" %>>Exhausted</option>
+    <option <%= "selected" if @post.mood == "Geeky" %>>Geeky</option>
+    <option <%= "selected" if @post.mood == "Lazy" %>>Lazy</option>
+    <option <%= "selected" if @post.mood == "Sleepy" %>>Sleepy</option>
+    <option <%= "selected" if @post.mood == "Refreshed" %>>Refreshed</option>
+
+  </select>
+
+  <p>
+    <label for="currently_playing">Currently listening to : </label>
+    <input type="text" name="currently_playing" id="currently_playing" value= "<%= @post.currently_playing%>">
+  </p>
+
+  <p>
+    <label for="currently_reading">Currently reading : </label>
+    <input type="text" name="currently_reading" id="currently_reading" value="<%= @post.author%>">
+  </p>
+
+  <button>Update Post!</button>
+</form>

@@ -1,0 +1,160 @@
+@import url(http://fonts.googleapis.com/css?family=Overlock:400,900);
+
+html {
+  background-color: grey;
+  background-size: cover;
+  color: white; 
+}
+
+.new_form p {
+  font-size: 12px;
+  font-family: 'Overlock', cursive;
+  margin-left: 20px;
+}
+
+
+.home img {
+  background: url(images/butterfly-wallpaper-hd.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-text {
+  font-size: 80px;
+  margin-left: 25px;
+  margin-top: 10px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px #A64E00 ;
+}
+
+.post h2 {
+  font-family: 'Overlock', cursive;
+  color: #FFB573;
+  font-size: 30px;
+  text-shadow: 5px 5px 10px black ;
+}
+
+.post p {
+  color:whitesmoke;
+  font-family: 'Overlock', cursive;
+}
+
+#item_posted {
+ font-family: 'Overlock', cursive;
+ color:#FFB573;
+ text-shadow: 5px 5px 5px black;
+}
+
+header {
+  font-family: 'Overlock', cursive;
+}
+
+h1 {
+  font-family: 'Overlock', cursive;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 5px 5px 5px #A64E00;
+  font-family: 'Overlock', cursive;
+  font-weight: bold;
+}
+
+div.new {
+  color: #FFB573;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
+  font-family: 'Overlock', cursive;
+  border-radius: 10px;
+  width: 90%;
+}
+
+div.new input {
+  font-size: 16px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+div.new .button {
+  background-color: #BF7330;
+  font-size: 20px;
+  font-family: 'Overlock', cursive;
+  color: white;
+  text-shadow: 10px 10px 10px black;
+  height: 185px;
+  width: 185px;
+  border-radius: 100%;
+  opacity: 0.7;
+  margin-top: 55px;
+  margin-left: 125px;
+}
+
+div.new .button:hover{
+  opacity: 1;
+}
+
+.copy {
+  height: 50px;
+  word-wrap: break-word;
+} 
+
+.mood {
+  height: 20px;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+#container ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#container ul {
+  list-style: none;
+}
+
+.navigator {
+  background: #FF9A40;
+  padding: 20px;
+  color: blue;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+nav a {
+  margin-right: 2em;
+}
+
+aside.controls {
+  text-align: right;
+  background-color: #bbb;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+}
+
+img.thumb {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px #fff;
+  opacity: 0.5;
+}
+
+.thumb:hover{
+  opacity: 1.0;
+}

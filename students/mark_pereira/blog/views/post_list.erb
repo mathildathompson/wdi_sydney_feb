@@ -1,0 +1,20 @@
+<style>
+  html {
+        background-image: url('/images/blog-home-bnw.jpg');
+        background-repeat: no-repeat;
+      }
+   img {
+   	-webkit-filter: blur(10px);
+   }   
+</style>  
+
+<h1>Post History</h1>
+<ul>
+  <% @post_list.each do |post| %>
+    <li>
+      <a href="/post_list/<%= post.id %>">
+      	<%= post.title %></a>
+    </li>
+  <% end %>
+</ul>
+
