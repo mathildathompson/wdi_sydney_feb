@@ -1,0 +1,176 @@
+
+body{
+  padding: 0;
+  margin: 0;
+  background: #EFEFEF;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+  background: url(http://theclimbingcyclist.com/wp-content/uploads/2011/01/alps1.jpg) no-repeat;
+  background-size: cover;
+}
+p{
+  margin: .5em 0 1em 0;
+}
+h1,h2,h3,h4,h5,h6{
+ margin: .5em 0 1em 0;
+ font-weight: normal;
+}
+h1{
+  font-weight: uppercase;
+}
+a{
+  color: #F60;
+}
+
+
+#container{
+  max-width: 960px;
+  padding: 0;
+  margin: 0 auto;
+  box-shadow: 0px 5px 2px 3px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.8);
+}
+
+header{
+  width: 100%;
+  background: #333 url(https://d3o09jpaxs6yh2.cloudfront.net/production/assets/ga-lockup-91b6faf530625d6c62c44ae5fae9aa46.png) 5px 5px no-repeat;
+  background-size: 140px;
+  box-shadow: 0px 1px 2px 3px rgba(0,0,0,0.4);
+  height: 25px;
+  z-index: 100;
+}
+header nav{
+  text-align: right;
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav ul,
+nav li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li{
+  display: inline-block;
+}
+nav a{
+  color: #F60;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.1);
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+nav a:hover{
+  color: #000;
+  background: rgba(255,255,255,0.9);
+}
+nav label,
+nav select,
+nav input,
+nav button{
+  display: inline-block !important;
+}
+nav label{
+  color: #FFF
+}
+#titles{
+  background: url(http://alpinecols.com/wp-content/uploads/2013/12/Climbing-hard.jpg) no-repeat;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+}
+#titles h1{
+  font-family: impact;
+  color: rgba(255,255,255,0.7);
+  text-shadow: 0 0 5px #F60;
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: bold;
+}
+#titles p{
+  margin: -70px auto 0 auto;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+
+footer{
+  padding: 5px 1em;
+  border-top: dotted 1px #FFF;
+  background: #666;
+  color: #CCC;
+  text-align: right;
+}
+
+form label{
+  display: block;
+  font-weight: bold;
+}
+form select{
+  display: block;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+form input{
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+}
+form textarea.styled{
+  height: 120px;
+}
+/* problem with using buttons as links is they look like buttons! */
+ul.listing{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.listing li{
+  padding: 10px;
+}
+ul.listing a{
+  text-decoration: none;
+}
+li.meta{
+  display: block;
+  text-align: right;
+}
+.button_to div{
+  padding: 0;
+  display: inline;
+  background: 0;
+  margin: 0;
+  width: auto;
+  text-align: right;
+}
+.button_to input{
+  padding: 0;
+  display: inline;
+  background: 0;
+  margin: 0;
+  border: none;
+  color: #F60;
+  text-align: right;
+  cursor: pointer;
+}
+
+#main{
+  padding: 1em ;
+  min-height: 500px;
+}
+
+ul.products{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.products li{
+  margin: .5em 0 1em 0;
+  padding: 1em;
+}
+img{
+  max-width: 100%;
+}

@@ -1,0 +1,16 @@
+<h1><%= @mountain.name %></h1>
+<p><strong><%= @mountain.surface %></strong></p>
+<p><%= @mountain.description %></p>
+<h3>Stats</h3>
+<ul>
+  <li>Full climb: <%= @mountain.height %> metres</li>
+  <li>Over distance of: <%= @mountain.distance %> km</li>
+  <li>Grade: <%= number_to_percentage(@mountain.grade) %></li>
+  <li>Record time: <%= @mountain.record %> mins</li>
+</ul>
+<style>
+  #titles{
+    background: url(<%= @mountain.image %>) no-repeat;
+    background-size: 100%;
+  }
+</style>

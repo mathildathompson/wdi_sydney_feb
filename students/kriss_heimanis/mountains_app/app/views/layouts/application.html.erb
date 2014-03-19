@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MountainsApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><%= link_to('Home', root_path) %></li>
+      <li><%= link_to('All Climbs', mountains_path) %></li>
+      <li><%= link_to('Add a Climb', mountains_new_path) %></li>
+    </ul>
+  </nav>
+</header>
+<div id="container">
+  <div id="main">
+    <section id="titles">
+      <h1>Climb That %$*!# Hill</h1>
+      <p>A directory of local climbs to warm your legs up</p>
+    </section>
+    <%= yield %>
+  </div>
+  <footer></footer>
+</div>
+</body>
+</html>
