@@ -1,0 +1,9 @@
+<form action="<%= ocean_path(@ocean.id) %>" method="post">
+  <p>Name: <input type="text" name="ocean[name]" autofocus value="<%= @ocean.name %>"></p>
+  <p>Image: <input type="text" name="ocean[image]" value="<%= @ocean.image %>"></p>
+  <p>Nickname: <input type="text" name="ocean[nickname]" value="<%= @ocean.nickname %>"></p>
+  <p>Volume: <input type="text" name="ocean[volume]" value="<%= @ocean.volume %>"></p>
+  <p>Famous pirates: <input type="text" name="ocean[pirates]" value="<%= @ocean.pirates %>"></p>
+  <p>Description: <input type="text" name="ocean[description]" value="<%= @ocean.description %>"></p>
+  <button>Update ocean!</button>
+</form>

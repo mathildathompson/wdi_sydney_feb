@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial Black"
+}
+#books {
+  display: inline-block;
+  max-width: 300px;
+}
+#books img {
+  width: 300px;
+}
+#author_checkboxes {
+  display: inline-block;
+  width: 150px;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+#home img {
+  width: 450px;
+}
+.author img {
+  width: 300px;
+}
+nav {
+  border-top: 50px solid gray;
+  border-bottom: 50px solid gray;
+  padding: 30px;
+  text-align: center;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
