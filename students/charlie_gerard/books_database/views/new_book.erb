@@ -1,0 +1,31 @@
+<h2>Add a book</h2>
+
+<div id="content">
+
+<form action="/books/create" method="post">
+	<p>
+		<label for="title">Title: </label>
+		<input type="text" name="title" id="title" required>
+	</p>
+
+	<p>
+		<label for="description">Description: </label>
+		<input type="text" name="description" id="description" required>
+	</p>
+
+	<p>
+		<label for="cover">Cover: </label>
+		<input type="url" name="cover" id="cover" required>
+	</p>
+	
+	<p>
+		<% @authors.each do |author| %>
+			<label for="author.id"><%= author.first_name%> <%=author.last_name%></label>
+
+			<input type="checkbox" id="author.id" name="<%= author.id%>" value="<%= author.first_name %>">
+		<%end%>
+	</p> 
+
+	<button>Create new book</button>
+</form>
+</div>

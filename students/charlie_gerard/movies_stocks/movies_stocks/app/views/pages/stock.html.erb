@@ -1,0 +1,23 @@
+<div id="stock">
+	<h1>Stock</h1>
+	<hr>
+	<h3>Enter a stock symbol below to see its current value on the stock market.</h3>
+
+		<form action="/stock" method="/post">
+			<label name="stock">
+			<input name="stock" id="stock">
+			<button>Search</button>	
+		</form>
+
+	<% @symbol = params[:stock] %>
+
+	<% if @symbol.present?%>
+		<% @symbol.upcase! %>
+		<% @price = YahooFinance::get_quotes(YahooFinance::StandardQuote, @symbol)[@symbol].lastTrade %>
+		<% if @price.present? && @price > 0 %>
+			<p><%= @symbol%> has a current value of $<%= @price %>.</p>
+		<%else%>
+			<p>This symbol does not exist.</p>
+		<%end%>
+	<%end%>
+</div>

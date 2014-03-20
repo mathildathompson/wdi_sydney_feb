@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body{
+	margin: 0;
+	font-family: "Titillium Web", sans-serif;
+	font-weight: 200;
+	background-color: rgb(40,56,77);
+	background-size: cover;
+}
+
+nav{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+nav a{
+	margin: 10px;
+	color: black;
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+}
+
+#home{
+	display: block;
+	max-width: 960px;
+	margin: 150px auto 0 auto;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+}
+
+#home h1{
+	display: inline-block;
+	font-weight: 400;
+	font-size: 40px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#home h2{
+	max-width: 50px;
+	display: inline-block;
+	padding: 0 30px;
+}
+
+#home_icons{
+	display: block;
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.fa-film, .fa-money{
+	font-size: 100px;
+	color: white;
+	display: inline-block;
+	width: 400px;
+	margin: 20px auto;
+}
+
+
+
+
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+
+#stock, #movie{
+	font-size: 20px;
+	display: block;
+	margin: 30px auto;
+	max-width: 680px;
+	text-align: center;
+}
+
+#stock h1, #movie h1{
+	font-weight: 600;
+	margin-top: 100px;
+	color: white;
+}
+
+#stock h3, p, #movie h3, p{
+	font-weight: 100;
+	color: white;
+}
+
+#stock button, #movie button{
+	font-size: 15px;
+	font-family: "Titillium Web", sans-serif;
+}
+
+#movie a{
+	color: white;
+}
+
+#movie_page{
+	display: block;
+	margin: 30px auto;
+	max-width: 680px;
+	text-align: center;
+}
+
+#movie_page input{
+	width: auto;
+	height: 20px;
+}
+
+#movie_page h1{
+	margin-top: 20px;
+	color: white;
+}
+
+#movie_page img{
+	box-shadow: 1px 1px 15px #bbb;
+}
+
+#about, #faq{
+	display: block;
+	max-width: 960px;
+	margin: 150px auto 0 auto;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+}
+
+

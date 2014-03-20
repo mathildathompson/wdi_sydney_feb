@@ -1,0 +1,18 @@
+<div id="content">
+	<h3><%= @author['first_name'] %> <%= @author['last_name'] %></h3>
+
+	<p>
+		<a href="/authors/<%=@author[:id]%>/">See <%= @author['first_name']%> <%=@author['last_name']%>'s books</a>
+	</p>
+
+	<aside class="controls">
+    	<a href="/authors/<%= @author.id %>/edit">Edit</a>
+    	|
+    	<a href="/authors/<%= @author.id %>/delete">Delete</a>
+ 	</aside>
+ 	
+</div>
+
+
+
+

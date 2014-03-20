@@ -1,0 +1,16 @@
+<h2>BOOKS INDEX</h2>
+
+<div id="content">
+		
+	<% @books.each do |book| %>
+		<div id="books">
+			<a href='/books/<%= book.id%>'>
+				<%= book['title']%>
+
+				<p><%= book['description']%></p>
+				<img src="<%= book['cover']%>">
+			</a>
+		</div>
+	<%end%>
+</div>
+

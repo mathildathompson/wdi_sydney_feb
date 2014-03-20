@@ -1,0 +1,22 @@
+<div id="content">
+
+	<h2>BOOK</h2>
+
+	<div id="book">
+
+		<h3><%= @book['title'] %></h3>
+		<p><%= @book['description'] %></p>
+
+		<% @book.authors.each do |author| %>
+			<a href="/authors/<%= author['id']%>"><%= author['first_name'] %> <%= author['last_name'] %></a>
+		<%end%>
+
+		<p><img src="<%= @book['cover']%>"></p>
+
+		<aside class="controls">
+    		<a href="/books/<%= @book.id %>/edit">Edit</a>
+    		|
+    		<a href="/books/<%= @book.id %>/delete">Delete</a>
+ 		 </aside>
+	</div>
+</div>

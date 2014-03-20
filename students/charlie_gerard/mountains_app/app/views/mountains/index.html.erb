@@ -1,0 +1,11 @@
+<h1>INDEX</h1>
+
+<div id="index">
+	<!-- For each mountain, display image and name -->
+	<% @mountains.each do |mountain| %>
+		<p><img src="<%= mountain.image %>"><br>
+		<a href="/mountains/<%= mountain.id %>"><%= mountain.name %></a></p>
+	<%end%>
+</div>
+
+<!-- <i class="fa fa-picture-o"></i> -->

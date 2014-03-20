@@ -1,0 +1,12 @@
+<h2>AUTHORS INDEX</h2>
+
+<div id="content">
+
+	<% @authors.each do |author| %>
+		<div id="authors">
+			<p>
+				<a href='/authors/<%=author[:id]%>'><%= author['first_name']%> <%= author['last_name']%></a>
+			</p>
+		</div>
+	<%end%>
+</div>
