@@ -1,0 +1,57 @@
+html {
+  font-family: 'Nosifer', cursive;
+  background-color: black;
+}
+nav {
+  color: red;
+  text-align: center;
+}
+nav a {
+  color: red;
+  text-decoration: none;
+}
+h3 {
+  color: red;
+}
+#container {
+  max-width: 960px;
+  color: white;
+  margin: 0 auto;
+}
+#home {
+  text-align: center;
+  text-shadow: 0 0 10px red;
+}
+#home img {
+  max-width: 400px;
+}
+#container h1 {
+  text-align: center;
+}
+#eightball {
+  text-align: center;
+  background: url(http://www.freakingnews.com/pictures/59500/Eight-Ball-Eclipse-59933.jpg) no-repeat;
+  display: cover;
+  min-height: 700px;
+  text-shadow: 0 0 10px black;
+}
+#eightball a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 10px red;
+}
+#paper_rocks {
+  text-align: center;
+  background: url(http://kuczala.com/images/office1312.jpg);
+  min-height: 700px;
+  text-shadow: 0 0 10px black;
+}
+#secret_num {
+  text-align: center;
+  background: url(http://images2.layoutsparks.com/1/111766/bloody-hand-red-print.jpg);
+  min-height: 700px;
+  text-shadow: 0 0 10px black;
+}
+.output {
+  color: red;
+}

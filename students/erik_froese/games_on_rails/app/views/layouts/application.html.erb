@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GamesOnRails</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      |
+      <a href="/games/eightball">Eightball</a>
+      |
+      <a href="/games/paper_rock_scissors">Paper, Rock, Scissors</a>
+      |
+      <a href="/games/secret_number">Secret Number</a>
+    </nav>
+    <div id="container">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>
