@@ -1,0 +1,17 @@
+<div id="paper_rocks">
+  <h1>Paper, Rock, Scissors!</h1>
+  <h2>Choose below.</h2>
+  <% if @answer %>
+    <h3>You chose: <%= @answer %>.</h3>
+    <h3>The computer chose: <%= @p_r_s %>.</h3>
+    <h3><%= @whowins %></h3>
+  <% end %>
+  <form action="paper_rock_scissors" method="get">
+    <select name="prs_id" id="prs_id">
+      <option value="paper" name="paper">Paper</option>
+      <option value="rock" name="rock">Rock</option>
+      <option value="scissors" name="scissors">Scissors</option>
+    </select>
+    <button>Go!</button>
+  </form>
+</div>
