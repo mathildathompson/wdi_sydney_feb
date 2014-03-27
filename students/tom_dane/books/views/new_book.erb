@@ -1,0 +1,21 @@
+<form action="/books/create" method="post">
+  <p>
+    <label for="title">Title: </label>
+    <input type="text" name="title" id="title" required>
+  </p>
+
+  <p>
+    <label for="author_id">Author: </label>
+    <select name="author_id" id="author_id">
+      <option value="0">None</option>
+      <% @authors = Author.all %>
+      <% @authors.each do |author| %>
+        <option value="<%= author.id %>"><%= author.name %></option>
+      <% end %>
+    </select>
+  </p>
+
+
+   <button>Create Book!</button>
+</form>
+
