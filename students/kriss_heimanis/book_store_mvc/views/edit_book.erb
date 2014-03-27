@@ -1,0 +1,49 @@
+<h2>Editing Book <em><%= @book.name %></em></h2>
+<form action="/books/update" method="post">
+  
+  <input type="hidden" name="id" value="<%= @book.id %>">
+
+  <p>
+    <label for="name">Title: </label>
+    <input type="text" name="name" id="name" value="<%= @book.name %>" required>
+  </p>
+
+  <p>
+    <label for="blurb">Blurb: </label>
+    <input type="textarea" rows="4" name="blurb" id="blurb" value="<%= @book.blurb %>" >
+  </p>
+
+  <p>
+    <label for="image">Cover Image: </label>
+    <input type="url" name="image" id="image" value="<%= @book.image %>" required>
+  </p>
+  
+  <p>
+    <label for="year">Year Published: </label>
+    <input type="text" name="year" id="year" value="<%= @book.year %>" >
+  </p>
+  
+  <p>
+    <label for="rating">Reader Rating: </label>
+    <input type="text" name="rating" id="rating" value="<%= @book.rating %>" >
+  </p>
+
+  <p>
+    <label for="price">Price: </label>
+    <input type="text" name="price" id="price" value="<%= @book.price %>" >
+  </p>
+  
+  <p>
+    <label for="author_id">Author: </label>
+    <select name="author_id[]" id="author_id" multiple>
+      <option value="0">None</option>
+      <% @authors.each do |author| %>
+        <option <%= "selected" if @book.authors.include? author %> value="<%= author.id %>" >
+          <%= author.last_name %>, <%= author.first_name %>
+        </option>
+      <% end %>
+    </select>
+  </p>
+
+  <button>update book</button>
+</form>

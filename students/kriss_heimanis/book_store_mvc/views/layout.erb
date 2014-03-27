@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>books</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/books">All books</a></li>
+        <li><a href="/authors">All authors</a></li>
+        <li>
+          <form action="/search">
+            <label for="search_type">Search in </label>
+            <select name="search_type" id="search_type" required>
+              <option value="books">Books</option>
+              <option value="authors">Authors</option>
+            </select>
+            <label for="search_terms"> for </label>
+            <input type="text" name="search_terms" id="search_terms">
+            <button>GO</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div id="container">
+    <div id="main">
+      <h1>GA WDI Book Repository - Our Books Are Your Headaches</h1>
+      <%= yield %>
+    </div>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="/books/new">Add new book</a></li>
+          <li><a href="/authors/new">Add author</a></li>
+          <li><a href="/borrowers/new">Add borrower</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+</body>
+</html>

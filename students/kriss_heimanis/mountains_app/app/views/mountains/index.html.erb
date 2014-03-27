@@ -1,0 +1,11 @@
+<h1>Find Your Next Climb</h1>
+
+<ul class="listing">
+<% @mountains.each do |mountain| %>
+  <li style="background-color: <%= cycle('#CCC', '#FFF') %>"><%= link_to(mountain.name, mountain_show_path(mountain.id)) %></li>
+  <li style="background-color: <%= cycle('#CCC', '#FFF') %>"class="meta">
+    <%= link_to('Edit', mountain_edit_path(mountain.id)) %>
+    <%= button_to('Delete', mountain_destroy_path(mountain.id)) %>
+  </li>
+<% end %>
+</ul>

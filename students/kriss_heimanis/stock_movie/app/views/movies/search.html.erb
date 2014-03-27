@@ -1,0 +1,15 @@
+<h2>Search results for <em><%= @title %></em></h2>
+
+  <ol>
+    <% @movie_list.each do |x| %>
+      <li><a href="title?id=<%= x["imdbID"] %>"><%= x["Title"] %></a> - <%= x["Year"] %></li>
+    <% end %>
+  </ol>
+
+  <p>trying different method</p>
+
+  <ol>
+    <% @movie_list.each do |x| %>
+      <li><a href="/movies/<%= x["Title"].gsub(" ","%20") %>"><%= x["Title"] %></a> - <%= x["Year"] %></li>
+    <% end %>
+  </ol>

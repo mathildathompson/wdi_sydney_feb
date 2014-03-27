@@ -1,0 +1,10 @@
+<h1>Check out these Peaks</h1>
+<ul>
+<% @mountains.each do |mountain| %>
+  <li><%= link_to(mountan.name, path) %></li>
+  <li class="meta">
+    <%= link_to('Edit', mountain_edit_path(mountain.id)) %>
+    <%= button_to('Delete', mountain_delete_path(mountain.id)) %>
+  </li>
+<% end %>
+</ul>

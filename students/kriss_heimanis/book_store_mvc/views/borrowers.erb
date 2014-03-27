@@ -1,0 +1,22 @@
+<h2>All Borrowers:</h2>
+<table cellpadding="5" border="0">
+  <tr>
+    <th>Name</th>
+    <th>Books on Loan</th>
+  </tr>
+  <% @borrowers.each do |borrower| %>
+    <tr>
+      <td><h3><a href="/borrowers/<%= borrower.id %>"><%= borrower.last_name.upcase %>, <%= borrower.first_name %></a></h3></td>
+
+
+      <td>
+        <ul>
+          <% borrower.books.each do |book| %>
+            <li><a href="books/<%= book.id %>"><%= book.name %></a></li>
+          <% end %>
+        </ul>
+      </td>
+
+    </tr>
+  <% end %>
+</table>

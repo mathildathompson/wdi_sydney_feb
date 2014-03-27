@@ -1,0 +1,29 @@
+The home page will have nav links for 
+home, about, FAQ, stock, movie. 
+Put the nav in your layout.html.erb file. Include some text on the about and FAQ pages.
+ 
+When you click on the stock page, there is a form to input a ticker symbol. 
+The next page shows the ticker symbol and its current trading price. 
+Hint: There is a function called number_to_currency(). 
+Google it and use it.
+ 
+When you click on the movie page, there is a form to input a movie title. 
+The next page shows the movie poster and some other info for the movie.
+ 
+You have to put any gem you want to use in your Gemfile. 
+You have to run bundle anytime you change your Gemfile. 
+Your rails server needs to be restarted after any changes to your Gemfile. 
+You don’t have to require the gems anywhere, but they do need to be in your Gemfile.
+
+
+<form action="/movies/search" method="get">
+    <label for="title">Search for movies</label>
+    <input name="title" class="input" type="text" placeholder="movie name">
+    <button>go</button>
+</form>
+
+<form action="/stocks/search" method="get">
+    <label for="title">Search for stocks</label>
+    <input name="title" class="input" type="text" placeholder="stock code">
+    <button>go</button>
+</form>

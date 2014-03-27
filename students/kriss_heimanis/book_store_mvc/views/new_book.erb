@@ -1,0 +1,43 @@
+<form action="/books/create" method="post">
+  <p>
+    <label for="name">Title: </label>
+    <input type="text" name="name" id="name" required>
+  </p>
+
+  <p>
+    <label for="blurb">Blurb: </label>
+    <input type="textarea" name="blurb" id="blurb">
+  </p>
+
+  <p>
+    <label for="image">Cover Image: </label>
+    <input type="url" name="image" id="image" required>
+  </p>
+  
+  <p>
+    <label for="year">Year Published: </label>
+    <input type="text" name="year" id="year">
+  </p>
+  
+  <p>
+    <label for="rating">Reader Rating: </label>
+    <input type="text" name="rating" id="rating">
+  </p>
+
+  <p>
+    <label for="price">Price: </label>
+    <input type="text" name="price" id="price">
+  </p>
+
+  <p>
+    <label for="author_id">Author: </label>
+    <select name="author_id[]" id="author_id" multiple>
+      <option value="0">None</option>
+      <% @authors.each do |author| %>
+        <option value="<%= author.id %>"><%= author.last_name %>, <%= author.first_name %></option>
+      <% end %>
+    </select>
+  </p>
+
+  <button>create book</button>
+</form>

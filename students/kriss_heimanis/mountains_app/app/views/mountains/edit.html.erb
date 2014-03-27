@@ -1,0 +1,37 @@
+<h2>Editing <%= @mountain.name %></h2>
+
+<form action="/mountains/<%= @mountain.id %>/update" method="post">
+  <p>
+    <label for="name">name: </label>
+    <input type="text" name="mountain[name]" id="name" value="<%= @mountain.name %>" autofocus>
+  </p>
+  <p>
+    <label for="image">image: </label>
+    <input type="text" name="mountain[image]" id="image" value="<%= @mountain.image %>">
+  </p>
+  <p>
+    <label for="description">description: </label>
+    <input type="textarea" class="styled" rows="5" name="mountain[description]" id="description" value="<%= @mountain.description %>">
+  </p>
+  <p>
+    <label for="surface">surface: </label>
+    <input type="text" name="mountain[surface]" id="surface" value="<%= @mountain.surface %>">
+  </p>
+  <p>
+    <label for="height">height: </label>
+    <input type="text" name="mountain[height]" id="height" value="<%= @mountain.height %>">
+  </p>
+  <p>
+    <label for="distance">distance: </label>
+    <input type="text" name="mountain[distance]" id="distance" value="<%= @mountain.distance %>">
+  </p>
+  <p>
+    <label for="grade">grade: </label>
+    <input type="text" name="mountain[grade]" id="grade" value="<%= @mountain.grade %>">
+  </p>
+  <p>
+    <label for="record">record: </label>
+    <input type="text" name="mountain[record]" id="record" value="<%= @mountain.record %>">
+  </p>
+  <button>update</button>
+</form>
