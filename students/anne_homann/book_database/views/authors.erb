@@ -1,0 +1,15 @@
+<h1>Index of authors</h1>
+
+<div class="authors">
+  <ul>
+    <% @authors.each do |author| %>
+      <li>
+        <a href="/authors/<%= author.id %>">
+          <img src="<%= author.photo %>">
+            <em><%= author.first_name %></em>
+            <em><%= author.last_name %></em>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

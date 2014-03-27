@@ -1,0 +1,10 @@
+<div id="black_box">
+  <form action="<%= mountain_path(@mountain.id) %>" method="post">
+    <p>Name: <input type="text" name="mountain[name]" autofocus value="<%= @mountain.name %>"></p>
+    <p>Range: <input type="text" name="mountain[range]" value="<%= @mountain.range %>"></p>
+    <p>Image: <input type="text" name="mountain[image]" value="<%= @mountain.image %>"></p>
+    <p>Elevation: <input type="text" name="mountain[elevation]" value="<%= @mountain.elevation %>"></p>
+    <button>Update</button>
+  </form>
+</div>
+

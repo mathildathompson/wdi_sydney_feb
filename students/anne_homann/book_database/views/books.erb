@@ -1,0 +1,14 @@
+<h1>Index of books</h1>
+
+<div class="books">
+  <ul>
+    <% @books.each do |book| %>
+      <li>
+        <a href="/books/<%= book.id %>">
+          <img src="<%= book.photo %>">
+            <em><%=book.title%></em>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

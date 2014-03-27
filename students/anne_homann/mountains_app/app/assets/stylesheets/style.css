@@ -1,0 +1,87 @@
+html {
+  background: url("/images/mount_back.jpg") no-repeat center center fixed;  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  color: white;
+  font-family: sans-serif;
+}
+
+
+#black_box {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 350px;
+  height: 250px;
+  margin: 0 auto 0 auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-top: 3em;
+  margin-right: 525px;
+}
+
+#results {
+  color: black;
+  text-align: center;
+  font-family: 'Alef', sans-serif;
+  font-weight: bolder;
+  line-height: 1.5em;
+  margin-top: 4em;
+}
+
+#results ul {
+  list-style-type: none;
+}
+
+#image {
+  margin-left: 37em;
+}
+
+body h1 {
+  color: black;
+  font-family: 'Alef', sans-serif;
+  text-align: center;
+  font-size: 104px;
+  margin-top: 0em;
+}
+
+nav {
+  text-align: center;
+  font-family: 'Alef', sans-serif;
+  margin-top: -4em;
+  color: black;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+form {
+  margin-top: -1em;
+  margin-left: 6.5em;
+  display: inline-block;
+}
+
+form input {
+  display: block;
+}
+
+#submit {
+  border-radius: 1em;
+  background-color: rgb(53, 64, 110);
+  border-color: rgb(14, 6, 52);
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  width: 90px;
+}
+
+

@@ -1,0 +1,86 @@
+html {
+  background: url("/images/back04.jpg") no-repeat center center fixed;  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  color: white;
+  font-family: sans-serif;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+
+nav a {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 1em;
+  margin-top: 1em;
+  font-weight: bold;
+
+}
+
+nav a:hover {
+  background-color: white;
+
+}
+
+#title {
+  font-size: 80pt;
+  color: #C3E4EB;
+  font-weight: bolder;
+  line-height: .8em;
+  margin-left: 0.2em;
+}
+
+h2 {
+  color: #C3E4EB;
+  margin-left: 1.6em;
+}
+
+h4 {
+  color: #C3E4EB;
+  margin-left: 1.6em;
+}
+
+form {
+  margin-top: -1em;
+  margin-left: 2.5em;
+}
+
+#submit {
+  border-radius: 1em;
+  background-color: rgb(53, 64, 110);
+  border-color: rgb(14, 6, 52);
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  width: 90px;
+}
+
+#search {
+  width: 200px;
+}
+
+#text {
+  font-size: 14px;
+  font-style: normal;
+  margin-left: 1em;
+}
+
+#text p {
+  margin-left: 2.5em;
+  color: white;
+}
+
+#poster {
+  margin-left: 25em;
+  margin-top: -5em;
+}
+
+.mov_title h2 {
+  color: #C3E4EB;
+  margin-left: 1.6em;
+}

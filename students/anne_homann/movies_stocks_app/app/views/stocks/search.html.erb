@@ -1,0 +1,3 @@
+<% if @symbol && @price.present? && @price > 0 %>
+  <h2><%= @symbol %> last traded at $<%= @price %></h2>
+<% end %>

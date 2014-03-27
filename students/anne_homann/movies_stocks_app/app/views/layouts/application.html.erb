@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MoviesStocksApp</title>
+  <%= stylesheet_link_tag    "style", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="container">
+  <nav>
+    <a href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/faq">FAQ</a>
+    <a href="/stock">Stocks</a>
+    <a href="/movie">Movies</a>
+  </nav>
+</div>
+
+<div id="title">
+  <p>MAKE MAD CASH<br>
+  THEN WATCH<br>
+  A MOVIE</p>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

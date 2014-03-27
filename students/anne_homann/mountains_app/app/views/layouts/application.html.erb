@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountains App</title>
+  <%= stylesheet_link_tag    "style", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>Sexy Mountains</h1>
+
+<nav>
+  <ul>
+    <li><a href="Mountains"><%= link_to('Mountains', mountains_path) %></a></li>
+    <li><a href="Add new mountain"><%= link_to('Add new mountain', mountains_new_path) %></a></li>
+  </ul>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
