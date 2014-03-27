@@ -1,0 +1,154 @@
+html {
+    font-family: 'Marcellus SC', serif;
+    padding: 60px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 50px;
+    font-weight: bold;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+    text-decoration: underline;
+    color: #ed4285;
+    text-shadow: 0.3px 0.3px #010101;
+}
+
+a {
+    text-decoration: none;
+    color: #5263ff;
+    margin-right: 30px;
+}
+
+.world_ocean {
+    display: inline-block;
+}
+
+.yield_container {
+    padding: 50px;
+    display: inline-block;
+    min-width: 500px;
+}
+
+.edit_class {
+    font-size: 15px;
+}
+
+.form {
+    border: 2px dashed black;
+    padding: 20px 0px 20px 20px;
+}
+
+p input {
+    min-width: 200px;
+}
+
+h3 {
+    word-wrap: break-word;
+}
+
+#mermaid {
+    width: 10%;
+    height: 10%;
+}
+
+#button {
+    border: 1px solid black;
+    padding: 2px 5px;
+    border-radius: 5px;
+    width: 60px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    background: #4472b9;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;    
+}
+
+#button:hover, #button:focus, #button:active {
+    color: #4472b9;
+    background: white;
+}
+
+/*-----------CSS Code for <hr>-------------------*/
+
+hr.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+/*-----CSS Code For Ribbon-------*/
+
+.ribbon-wrapper-blue {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon-blue {  
+  font: bold 15px Sans-Serif;
+  color: #fff;
+  text-align: center;
+  letter-spacing:1px;
+  text-shadow:1px -1px 3px rgba(0,0,0,0.5) ;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background: rgb(167,207,223);
+  background: -moz-linear-gradient(top, rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(167,207,223,1)), color-stop(100%,rgba(35,83,138,1)));
+  background: -webkit-linear-gradient(top, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+  background: -o-linear-gradient(top, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+  background: -ms-linear-gradient(top, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+  background: linear-gradient(top, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 );
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-blue:before, .ribbon-blue:after {
+  content: "";
+  border-top:   3px solid #23538a;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+.ribbon-blue:before {left: 0;}
+.ribbon-blue:after {right: 0;}

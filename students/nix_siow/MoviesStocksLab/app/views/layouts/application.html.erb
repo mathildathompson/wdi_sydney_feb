@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies Stocks Lab</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/faq">FAQ</a>
+            <a href="/movieapp">Search for Movie</a>
+            <a href="/stockapp">Search for Stock</a>
+        </nav>
+        <br>
+        <hr class="style-eight">
+
+        <div class="yield_container">
+            <%= yield %>
+        </div>
+    </div>
+    
+</body>
+</html>

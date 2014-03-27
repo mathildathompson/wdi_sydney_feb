@@ -1,0 +1,18 @@
+<section class="book">
+  <h2><%= @book.title %></h2>
+  <p>ISBN: <%= @book.isbn %></p>
+<!--   <p>Author: <%#= @book.authors.empty? ? "None" : @book.authors.each do |author| author.name end %></p>
+ -->  
+    <% if @book.authors != nil || @book.authors != [] %>
+        <% @book.authors.each do |author| %>
+           <a href="/authors/<%= author.id %>"><%= author.name %></a>
+        <% end %>
+    <% end %>
+
+ <img src="<%= @book.photo %>">
+  <aside class="controls">
+    <a href="/books/<%= @book.id %>/edit">Edit</a>
+    |
+    <a href="/books/<%= @book.id %>/delete">Delete</a>
+  </aside>
+</section>

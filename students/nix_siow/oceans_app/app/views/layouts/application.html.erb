@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>World Oceans</title>
+  <link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="ribbon-wrapper-blue">
+        <div class="ribbon-blue">OCEAN</div>
+    </div>
+
+    <nav class="navigation">
+        <a href="/"><img id="mermaid" src="/assets/mermaid.jpg"></a>
+        <a href="/">Home</a>
+        <a href="/oceans/new">New Ocean</a>
+    </nav>
+    
+    <hr class="style-two">
+
+    <div class="world_ocean">
+        <a href="/"><img src="/assets/world_ocean.gif"></a>
+    </div>
+
+    <div class="yield_container">
+        <%= yield %>
+    </div>
+
+
+</body>
+</html>

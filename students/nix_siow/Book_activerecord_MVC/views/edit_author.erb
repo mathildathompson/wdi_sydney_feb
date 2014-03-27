@@ -1,0 +1,10 @@
+<form action="/authors/update" method="post">
+  <input type="hidden" name="id" value="<%= @author.id %>">
+
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" value="<%= @author.name %>" required>
+  </p>
+
+  <button>Update Author!</button>
+</form>

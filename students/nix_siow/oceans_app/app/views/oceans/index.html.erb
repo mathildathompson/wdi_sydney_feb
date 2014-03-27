@@ -1,0 +1,10 @@
+
+
+<h1>
+    <% @oceans.each do |ocean| %>
+        <%= link_to(ocean.name, ocean_path(ocean.id)) %>
+        <%= link_to("Edit", ocean_edit_path(ocean.id),:class => 'edit_class') %>
+        <%= button_to("Delete", ocean_delete_path(ocean.id), :id => 'button') %>
+        <hr class="style-seven">
+    <% end %>
+</h1>

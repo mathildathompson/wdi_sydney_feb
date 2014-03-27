@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books Database</title>
+  <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/csspinner.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div id="container">
+    <div class="navigation">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/authors/new">Add new Author</a>
+        <a href="/redirect">Add new Book</a>
+        <a href="/authors">All Authors</a>
+        <a href="/books">All Boooks</a>
+      </nav>
+    </div>
+
+    <div class="yield_container">
+      <%= yield %>
+    </div>
+
+  </div>
+
+</body>
+</html>

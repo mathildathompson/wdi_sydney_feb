@@ -1,0 +1,9 @@
+<div class="ocean">
+  <h3>
+    <%= image_tag(@ocean.image) %>
+  </h3>
+  <h1><%= @ocean.name %></h1>
+  <h3>Volume : <%= number_to_human(@ocean.volume) %> Cubic Kilometers</h3>
+  <h3>Bordering Countries : <%= @ocean.bordering_countries %></h3>
+  <h3>Shipping Routes : <%= @ocean.shipping_routes %></h3>
+</div>
