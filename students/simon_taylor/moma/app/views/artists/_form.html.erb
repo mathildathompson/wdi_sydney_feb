@@ -1,0 +1,23 @@
+<%= form_for @artist do |f| %>
+  <div class="form-input">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-input">
+    <%= f.label :period %>
+    <%= f.text_field :period %>
+  </div>
+  <div class="form-input">
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="form-input">
+    <%= f.label :dob, 'Date of Birth (YYYY-MM-DD)' %>
+    <%= f.text_field :dob %>
+  </div>
+  <div class="form-input">
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </div>
+  <%= f.submit %>
+<% end %>

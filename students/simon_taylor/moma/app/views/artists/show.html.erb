@@ -1,0 +1,16 @@
+<h2><%= @artist.name %></h1>
+
+<p><%= image_tag @artist.image, :width => '500px' %></p>
+<p>Period: <%= @artist.period %></p>
+<p>Nationality: <%= @artist.nationality %></p>
+<p>Date of Birth: <%= @artist.dob.strftime('%-d %B %Y') %></p>
+
+<% @artist.works.each do |work| %>
+  <%= link_to(image_tag(work.image, :height => '100px') , work) %>
+<% end %><br>
+
+<%= link_to 'Edit Artist', edit_artist_path(@artist.id) %>
+<%= link_to 'Delete Artist', @artist, :method => :delete, :confirm => 'Are you sure you wish to delete?' %>
+
+
+

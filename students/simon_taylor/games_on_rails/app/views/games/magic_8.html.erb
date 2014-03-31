@@ -1,0 +1,12 @@
+<h2>Welcome to the Magic 8 Ball!</h2>
+
+<form action="/games/magic_8" method="get">
+  <label for="question">Question:</label>
+  <input id="question" name="question" type="text" placeholder="What question do you wish to ask?" required>
+  <button>Ask the Question?</button>
+</form>
+
+<% if params[:question] != nil %>
+  <p>Your Question: <%= params[:question] %>?</p>
+  <p>8-ball says: <%= @response %></p>
+<% end %>
