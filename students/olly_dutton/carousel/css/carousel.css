@@ -1,0 +1,48 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#carousel {
+  position: relative;
+  width: 612px;
+  height: 612px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#carousel ul {
+  position: absolute;
+  display: inline-block;
+  width: 1836px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#carousel ul li {
+  float: left;
+  width: 612px;
+  list-style: none;
+}
+
+.carousel-direction {
+  position: absolute;
+  top: 45%;
+  width: 50px;
+  height: 30px;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 33px;
+  text-align: center;
+  opacity: 0.5;
+  border-radius: 5px;
+  z-index: 5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#next {
+  right: 0;
+  left: auto;
+}
