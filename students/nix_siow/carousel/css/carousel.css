@@ -1,0 +1,91 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+html {
+  /*background-color: #253a5a;*/
+  background: url('../img/snow-light.jpg') right top fixed;
+  background-size: cover;
+}
+
+#window {
+  position: relative;
+  width: 612px;
+  height: 612px;
+  margin: 60px auto 10px auto;
+  overflow: hidden;
+}
+
+#carousel {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 1836px;
+  height: 100%;
+}
+
+#carousel img {
+  float: left;
+  border-radius: 30px;
+}
+
+.carousel-direction {
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  text-align: center;
+  background: #222222;
+  border: 3px solid #ffffff;
+  opacity: 0.5;
+  border-radius: 23px;
+  z-index: 5;
+  text-decoration: none;
+}
+
+#next {
+  right: 15px;
+  left: auto;
+}
+
+button {
+  padding: 5px 15px;
+  border-radius: 8px;
+  background-color: black;
+  color: #fe5979;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 2px black;
+}
+
+button:hover {
+  background-color: #fe5979;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Grow */
+
+.grow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}

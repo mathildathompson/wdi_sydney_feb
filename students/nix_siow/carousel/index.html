@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="css/carousel.css">
+  </head>
+  <body>
+    <div id="window">
+      <div id="carousel">
+        <img src="img/nyc.jpg" id="img1" alt="New York">
+        <img src="img/sf.jpg" id="img2" alt="San Francisco">
+        <img src="img/lon.jpg" id="img3" alt="London">
+      </div>
+      <a class="carousel-direction grow" id="previous">&lt;</a>
+      <a class="carousel-direction grow" id="next">&gt;</a>
+    </div>
+    <button class="grow" id="slideshow">Romantic mode</button>
+    <button class="grow" id="exit">exit</button>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/snowstorm.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/jquery.fullscreen.js"></script>
+
+    <script>
+      snowStorm.snowColor = '#99ccff';   // blue-ish snow!?
+      snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+      snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+    </script>
+  </body>
+</html>
