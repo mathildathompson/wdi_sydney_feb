@@ -1,0 +1,31 @@
+html {
+    background: url('../img/moonlight1.jpg') top center fixed no-repeat;
+    background-size: cover;
+}
+
+img {
+    bottom: -30px;
+    left: -30px; 
+}
+
+img:hover {
+    -moz-animation:.6s rotateRight infinite linear; 
+    -webkit-animation:.6s rotateRight infinite linear; 
+}
+
+@-moz-keyframes rotateRight{
+    0%{ -moz-transform:rotate(0deg); -moz-transform-origin:50% 50%; }
+    100%{ -moz-transform:rotate(360deg); }
+}
+
+@-webkit-keyframes rotateRight{
+    0%{ -webkit-transform:rotate(0deg); -webkit-transform-origin:50% 50%; }
+    100%{ -webkit-transform:rotate(360deg); }
+}
+
+.superman {
+    background: url('https://gs1.wac.edgecastcdn.net/8019B6/data.tumblr.com/9db3ebe93aa994353c9b8e1e4fd0151f/tumblr_mhb8xnGxPg1r0x97vo5_400.gif') no-repeat;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+}
