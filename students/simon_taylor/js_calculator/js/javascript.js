@@ -42,16 +42,15 @@ if(operator === "+") {
   output = Math.sqrt(num1);
 } else {
   output = "invalid operator selection";
-};
+}
 
 //CONSOLE PRINT
 if (operator !== 'sqrt') {
   console.log("Calculating " + num1 + " " + operator + " " + num2);
 } else {
   console.log("Calculating sqrt(" + num1 + ")");
-};
+}
 console.log(output);
 
 //USER ALERT
 alert(output);
-

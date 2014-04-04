@@ -25,16 +25,16 @@ var messageDisplay = document.getElementById("message");
 var updateBalances = function () {
   //set check account colour
   if (balances.checkBalance === 0) {
-    checkBal.className = "balance zero"
+    checkBal.className = "balance zero";
   } else {
-    checkBal.className = "balance"
+    checkBal.className = "balance";
   }
 
   //set savings account color
   if (balances.savingsBalance === 0) {
-    savingsBal.className = "balance zero"
+    savingsBal.className = "balance zero";
   } else {
-    savingsBal.className = "balance"
+    savingsBal.className = "balance";
   }
 
   //update $ value on screen
@@ -59,7 +59,7 @@ var message = function (message) {
 var validAmount = function (number) {
   isNumeric = /^[-+]?(\d+|\d+\.\d*|\d*\.\d+)$/;
   return isNumeric.test(number) && parseFloat(number) > 0;
-}
+};
 
 // ------------------------------------------
 // DEFINE OPENING BALANCES AND UPDATE SCREEN
@@ -83,7 +83,7 @@ document.getElementById("checkingDeposit").addEventListener('click', function (e
 
   if (validAmount(amount)) {
     //parse the amount for calculations
-    amount = parseFloat(amount)
+    amount = parseFloat(amount);
 
     balances.checkBalance = balances.checkBalance + amount;
     message([messageCount,": Deposited $",amount," from Check account"].join(''));
