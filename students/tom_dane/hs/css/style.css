@@ -1,0 +1,60 @@
+body {
+  background:url('http://i1.ytimg.com/vi/kOQZwNgTc9k/maxresdefault.jpg');
+  background-size: cover;
+  color: black;
+}
+
+#container > h1 {
+  text-align: center;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+  background:white;
+  opacity:0.8;
+}
+
+form > input {
+  font-size: 200%;
+  width: 95%;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+  margin: auto;
+  display: block;
+  color: purple;
+}
+
+form > button {
+  float: right;
+}
+
+.task {
+  background-color: #4aa;
+  border: 1px solid white;
+  border-radius: 1em;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.task h2 {
+  margin-top: 0;
+}
+
+button {
+  color: black;
+}
+
+#completed {
+  margin-top: 2em;
+}
+
+#completed .task {
+  opacity: 0.5;
+  transition: 0.2s linear all;
+}
+
+#completed .task:hover {
+  opacity: 1;
+}

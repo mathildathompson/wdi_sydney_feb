@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You forgot</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script src="js/todo.js"></script>
+</head>
+<body>
+  <div id="container">
+    <h1>You forgot to...</h1>
+    <form class="task_creator">
+      <input name="new_task" id="new_task" placeholder="Enter your task">
+    </form>
+    <section id="tasks">
+      <h2>Tasks Todo</h2>
+    </section>
+    <section id="completed">
+      <h2>Completed Tasks</h2>
+    </section>
+  </div>
+
+   <script type="text/underscore-template" id="task_template">
+    <div class="task" data-taskID="<%= id %>">
+      <h2><%= description %></h2>
+      <p>Created at:<%= createdAt %></p>
+      <% if (typeof(completedAt) != 'undefined') { %>
+        <p>Completed at:<%= completedAt %>
+      <% } %></p>
+      <button><%= typeof completedAt == 'undefined' ? 'Complete' : 'Incomplete' %></button>
+    </div>  
+   </script>
+
+</body>
+</html>
