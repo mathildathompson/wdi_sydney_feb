@@ -1,0 +1,98 @@
+body{
+	background-image: url('http://images.eurogamer.net/articles//a/1/1/9/8/3/9/5/limbo_noose.jpg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: absolute;
+	font-family: Century Gothic;
+}
+
+#container{
+	max-width: 800px;
+	margin: 30px auto;
+	background-color: white;
+	opacity: 0.8;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+h1{
+	text-align: center;
+}
+
+.guess{
+	display: block;
+	margin: 10px 0 10px 50px;
+	height: 30px;
+	width: 150px;
+}
+
+#button{
+	display: block;
+	margin: 0 auto;
+	max-width: 260px;
+}
+
+input#giveUp{
+	width: 80px;
+	padding: 5px;
+	font-size: 17px;
+	margin-right: 50px;
+	margin-left: 25px;
+	display: inline-block;
+	background-color: red;
+	border-radius: 0.5em;
+}
+
+input#reset{
+	width: 80px;
+	padding: 5px;
+	font-size: 17px;
+	display: inline-block;
+	background-color: green;
+	border-radius: 0.5em;
+}
+
+.guesses{
+	font-size: 20px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+#secretWord{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	text-align: center;
+	font-size: 40px;
+}
+/*
+#underscores{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	text-align: center;
+	font-size: 40px;
+}*/
+
+#wrongGuesses{
+	margin: 20px 0 20px 50px;
+	padding-top: 20px;
+}
+
+.HangmanBase{
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.hangman{
+	width: 300px;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+#hangman{
+	width: 320px;
+	margin: 0 auto 20px auto;
+	display: block;
+}
