@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type='text/javascript' src='js/jquery-1.11.0.min.js'></script>
+  <script type='text/javascript' src='js/underscore.js'></script>
+  <script type='text/javascript' src='js/hangman2.js'></script>
+  <link href='http://fonts.googleapis.com/css?family=Cutive+Mono|Novaa+Sqaure|Geo' rel='stylesheet' type='text/css'>
+</head>
+<body id="the-body">
+<div class="container">
+<header>
+  <h1>Hangman</h1>
+</header>
+
+  <div id="gamePlayArea">
+    <div id="hangmanArea">
+    <span id="guessesLeft"></span><br />
+      Guesses Left<br />
+      <input id="giveUpButton" class="button" type="submit" value="Give up"/>
+      <input id="resetButton" class="button" type="submit" value="Reset Game"/>
+    </div>
+    <div id="letterArea">
+      <div id="lettersUsed">
+        Letters You've Guessed:
+        <div id="guessedLetters"></div>
+      </div>
+      <div id="guessBox">
+        Guess a Letter:
+        <input id="letterField" maxlength="1" type="text" />
+        <div id="errors"></div>
+      </div>
+    </div>
+  </div>
+  <div id="wordString"></div>
+  </div>
+</body>
+</html>
