@@ -184,6 +184,8 @@ var reset = function () {
   stopTimer();
   //remove the timer text
   $timer.text("");
+  //remove the last card
+  $lastCard = undefined;
 };
 
 //------------------------------------------------------------------------------
