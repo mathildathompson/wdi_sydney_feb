@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="css/carousel.css">  
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+     <script src="js/carousel.js"></script>
+  </head>
+  <body>
+    <h1>NecroJesus</h1>
+    <div id="necrojesus" class="col">
+      
+      <img src="img/necro.jpg" id="necrojesus_img">
+    </div>
+
+    <div id="gameboard" class="col">      
+      <div id="messages">You're dead.<br> But guess this word and you will live forever.</div> 
+      <div>
+        <h3 id="board"></h3>
+      </div>
+      <p id="guesses"></p>      
+      <p id="prompt"></p>
+      <form class="guessBox">
+        <input type="text" name="guess">
+        <input type="submit" name="submit" value="Guess">
+      </form>     
+    </div>
+
+
+    <div class="col" id="player">
+      <div id="window">
+        <div id="carousel">
+          <img src="img/gravestone.jpg" class="img" alt="">
+          <img src="img/alive.jpeg" class="img" alt="">
+          <img src="img/dressed.jpg" class="img" alt="">
+          <img src="img/walking.gif" class="img flipped" alt="">
+          <img src="img/sad.jpg" class="img" alt="">
+          <img src="img/walking.gif" class="img flipped" alt="">
+          <img src="img/walking.gif" class="img flipped" alt="">
+          <img src="img/walking.gif" class="img flipped" alt="">
+          <img src="img/ball-cat-dance.gif" class="img" alt="">
+          <img src="img/ball-cat-dance.gif" class="img" alt="">
+        </div>
+      </div>
+  <!--     <a class="carousel-direction" id="no">No</a>
+      <a class="carousel-direction" id="yes">Yes</a>   -->   
+      <!-- <div id="messages">...</div> -->
+      <p id="chances"></p>       
+    </div>
+
+  
+    
+  
+  </body>
+</html>
