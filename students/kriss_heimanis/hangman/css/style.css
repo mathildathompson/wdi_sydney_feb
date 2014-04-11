@@ -1,0 +1,13 @@
+body{
+  color: #FFF;
+  background: #000;
+  text-align: center;
+}
+#box{
+  width: 30%;
+  padding :20px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  border: solid 1px #FFF;
+  margin: 100px auto;
+}
