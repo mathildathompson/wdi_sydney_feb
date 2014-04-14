@@ -1,15 +1,55 @@
-/*body {
+body {
   background-color: black;
 }
 
-h1, h2, h3, p, label {
+h1, h2, h3, p {
   color: white;
+  text-align: center;
 }
 
 button, input {
   color: black;
-}*/
+}
 
+#container {
+  width: 600px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+img.hangman {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  /* change image color to white */
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+form {
+  width: 198px;
+  margin: 0 auto;
+}
+
+label {
+  color: white;
+}
+
+input {
+  width: 20px;
+}
+
+button.reset-btn {
+  display: block;
+  width: 105px;
+  margin: 0 auto;
+}
+
+/* used to hide guess display when no guesses have yet been made */
 .hidden {
   display: none;
 }

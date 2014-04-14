@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hangman!</title>
+  <title>Hangman</title>
   <!-- Load Javascript -->
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
@@ -12,25 +12,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>.hangman.</h1>
-  <!-- displays the hangman image -->
-  <img src="img\Hangman-0.png" alt="hangman" class="hangman"><br>
+  <div id="container">
+    <h1>hangman.js</h1>
+    <!-- displays the hangman image -->
+    <img src="img\Hangman-0.png" alt="hangman" class="hangman">
 
-  <!-- displays guesses remaining -->
-  <p class="guesses-rem"></p>
-  <!-- displays the guesses the user has made so far -->
-  <p class="guesses hidden"></p>
-  <!-- input a guess (letter) -->
-  <label>Input a letter</label>
-  <input type='text' id="guess-input" placeholder='your guess here'>
-  <button class='guess-btn'>Guess</button>
-  
-  <!-- displays messages to the user -->
-  <p class="messages">Welcome to Hangman!</p>
+    <!-- displays guesses remaining -->
+    <p class="guesses-rem"></p>
+    <!-- displays the guesses the user has made so far -->
+    <p class="guesses hidden"></p>
+    <!-- input a guess (letter) -->
+    <form>
+      <label>Guess a letter:</label>
+      <input type='text' id="guess-input">
+      <button class='guess-btn'>Guess</button>
+    </form>
+    <!-- displays messages to the user -->
+    <p class="messages">Welcome to Hangman!</p>
 
-  <!-- displays the word as it has been revealed so far -->
-  <h2 class='display'></h2>
-  <!-- a button to reset the game incl. selecting a new word -->
-  <button class='reset-btn'>Reset Game</button>
+    <!-- displays the word as it has been revealed so far -->
+    <h2 class='display'></h2>
+    <!-- a button to reset the game incl. selecting a new word -->
+    <button class='reset-btn'>Reset Game</button>
+  </div>
 </body>
 </html>

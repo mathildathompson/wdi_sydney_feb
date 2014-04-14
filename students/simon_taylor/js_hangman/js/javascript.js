@@ -24,7 +24,9 @@ $(document).ready(function(){
 
   //setup our variables to store guesses and guesses remaining
   var letterGuesses = [];
+  //maximum guesses allowed before losing the game
   var guessesStart = 6;
+  //how many guesses the user has left
   var guessesRem;
 
   //setup our variables for the current word
@@ -45,15 +47,27 @@ $(document).ready(function(){
 
     //randomly select a new word
     newWord(_.sample(wordOptions));
+
     //reset the guesses
     letterGuesses = [];
     //reset guesses remaining
     guessesRem = guessesStart;
+
+    //hide the guesses display element
+    $guessDisplay.addClass('hidden');
+    //clear input box
+    $('#guess-input').val("");
+    //reset the welcome message
+    $messages.text("Welcome to Hangman!");
+
     //update the starting display
     display();
   };
   
   var guess = function (letter) {
+
+    //to store the eventual output message
+    var message;
 
     //convert the guess to lower case
     letter = letter.toLowerCase();
@@ -78,11 +92,12 @@ $(document).ready(function(){
       letterGuesses.push(letter);
     }
 
-    //arr 1 = word, arr2 = guesses
-    if (containsArray(letterArray,letterGuesses)) {
-      console.log("You win!");
+    //if their guesses contains all letters in the word they win
+    if (hasWon()) {
+      $messages.text("YOU WIN!");
+    //otherwise if they've run out of guesses they lose
     } else if (guessesRem === 0) {
-      console.log("You lose!");
+      $messages.text("YOU LOSE!" );
     }
 
     // update the display
@@ -90,20 +105,27 @@ $(document).ready(function(){
   };
 
   var display = function () {
+
     //create an empty array to store output
     var output = [];
 
-    //loop through each letter in the word
-    _.each(letterArray, function(letter){ 
-      //if it's not guessed replace it with an "_"
-      if (_.indexOf(letterGuesses,letter) === -1) {
-        output.push("_"); 
-      //if it is guessed, leave the letter
-      } else {
-        output.push(letter); 
-      }
-
-    });
+    //user run out of guesses or has won
+    if (guessesRem === 0 || hasWon()) {
+      //so just display the word
+      output = letterArray;
+    //user hasn't won or run out of guesses
+    } else {
+      //loop through each letter in the word
+      _.each(letterArray, function(letter){ 
+        //if it has not been guessed replace it with an "_"
+        if (_.indexOf(letterGuesses,letter) === -1) {
+          output.push("_"); 
+        //if it is guessed, leave the letter as it is
+        } else {
+          output.push(letter); 
+        }
+      });
+    }
 
     //update the display to show the word
     $displayWord.text(output.join(' '));
@@ -111,15 +133,11 @@ $(document).ready(function(){
     //update the guesses remaining
     $guessRem.text(["You have ",guessesRem," guesses remaining"].join(''));
 
-    //for debugging log the array to be displayed
-    console.log(output);
-
     //update the hangman image
     imgDisplay();
 
-    //unhide the guesses displayed
-    // if ()
-    $guessDisplay.removeClass('hidden');
+    //unhide the guesses displayed if more than one valid guess has happened
+    if (letterGuesses.length > 0) { $guessDisplay.removeClass('hidden'); }
 
     //update the guesses display
     $guessDisplay.text("You have guessed: " + letterGuesses.join(', '));
@@ -138,26 +156,29 @@ $(document).ready(function(){
   // EVENT HANDLERS
   //---------------------------------
 
-  $guessBtn.on('click', function (){
+  $guessBtn.on('click', function ( event ){
+    //prevent standard form submit behaviour
+    event.preventDefault();
     //grab the input box content
     var $guessInput = $('#guess-input').val();
 
     //out of guesses
-    if (guessesRem === 0) {
-      $messages.text("Sorry but you're out of guesses, press \"Reset Game\" to play again!");
+    if (hasWon()) {
+      $messages.text("You've already won idiot! Click \"Reset Game\" to play again!");
+    } else if (guessesRem === 0) {
+      $messages.text("Sorry but you're out of guesses, click \"Reset Game\" to play again!");
     //guess is valid
     } else if (isValidGuess($guessInput)) {
       //guess the letter
       guess($guessInput);
-      //clear the input box
-      $('#guess-input').val("");
     //guess is invalid
     } else {
       //set error message text
       $messages.text("You must input a single letter from A-Z");
-      //clear the input box
-      $('#guess-input').val("");
     }
+
+    //clear the input box
+    $('#guess-input').val("");
 
   });
 
@@ -179,9 +200,9 @@ $(document).ready(function(){
   //---------------------------------
 
   //function to check if array2 contains all of the elements in array1
-  var containsArray = function (arr1, arr2) {
+  var hasWon = function () {
     //get the delta between each array using underscore function
-    var deltaArr = _.difference(arr1, arr2);
+    var deltaArr = _.difference(letterArray, letterGuesses);
     //return true if there are no deltas
     return (deltaArr.length === 0);
   };
