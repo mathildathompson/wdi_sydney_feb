@@ -1,3 +1,5 @@
+//throttle didn't work for me, as there was no guarantee that the lastID would be updated before the next getCountries would run
+
 $(document).ready(function() {
 
   //element to append our countries to
@@ -11,6 +13,7 @@ $(document).ready(function() {
   //add countries to the page to start with
   countriesApp.getCountries(20);
 
+  //setup event listener on window scroll event
   $(window).scroll(function () {
     var $window = $(window);
     //if the user scrolls to the bottom of the window
@@ -18,6 +21,12 @@ $(document).ready(function() {
       //fetch the next 10 countries
       countriesApp.getCountries(10);
     }
+  });
+
+  //fetch all countries in one ajax request
+  $('#all-countries').on('click',function () {
+    //call get countries with NO limit
+    countriesApp.getCountries();
   });
 
 });
@@ -43,7 +52,7 @@ var countriesApp = {
       //set in progress to true
       self.inProgress = true;
       //for debugging
-      helper.log('fetching countries with id > ' + self.lastID)
+      helper.log(['fetching countries with id > ',self.lastID,", limit ",limit," records."].join(''));
       //perform ajax request to fetch the next 10 countries
       $.ajax({
         url: '/countries',
@@ -54,11 +63,13 @@ var countriesApp = {
           limit: limit
         }
       }).done(function (data) {
-        // console.log(data);
+        //log the countries retrieved
+        helper.log(data);
+        //add the countries to the page
         self.addToPage(data);
         //set in progress to false
         self.inProgress = false;
-        //if no data was retrieved, disable the event handler
+        //if no data was retrieved, disable the event handler as there is no more countries
         if (data.length === 0) { $(window).unbind('scroll'); }
       });
     } else {
@@ -85,7 +96,7 @@ var countriesApp = {
 //------------------------------------------------------
 var helper = {
   //setup logging of messages
-  logging: false,
+  logging: true,
 
   //log a message to console IF logging true (must pass an array!)
   log: function(text) {

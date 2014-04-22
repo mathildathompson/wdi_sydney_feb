@@ -1,6 +1,8 @@
 <div id="center-content">
   <h1>Countries of the world</h1>
 
+  <button id="all-countries">Fetch All Countries</button>
+
   <div id="content" class="f32">
     
   </div>
@@ -9,7 +11,7 @@
 
 <script id="country" type="text/x-handlebars-template">
   <div>
-    <p>
+    <p {{#if north_america }} class="na" {{/if}}>
       <span class="flag {{ abbreviation }}"></span> {{ name }} {{ abbreviation }}
     </p>
   </div>

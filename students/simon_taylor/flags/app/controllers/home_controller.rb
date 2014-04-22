@@ -10,7 +10,12 @@ class HomeController < ApplicationController
     #how many countries to fetch
     limit = params[:limit]
 
-    countries = Country.where("id > #{fromID}").limit(limit)
+    #if no limit was provided, fetch all countries
+    if limit
+      countries = Country.where("id > #{fromID}").limit(limit)
+    else
+      countries = Country.where("id > #{fromID}")
+    end
 
     respond_to do |format|
       format.json {render :json => countries}
