@@ -1,0 +1,29 @@
+<div id="navbar"></div>
+
+<h1>WELCOME TO MY CLONE OF TWITTER</h1>
+
+<!-- Prints the tweets on the page-->
+<div id="main">
+</div>
+
+<script id="appView" type="text/x-underscore-template">
+	<h2>Recent Tweets</h2>
+	<p id="tweets"></p>
+
+	<form>
+		<p>Tweet anything under 150 characters</p>
+		<textarea placeholder="Your tweet here" id="newtweet"></textarea>
+		<button>Send Tweet</button>
+	</form>
+</script>
+
+<script id="tweetListView" type="text/x-underscore-template">
+	<a href="#tweets/{{id}}">{{content}}</a>
+
+</script>
+
+
+<script id="tweetView" type="text/x-underscore-template">
+	<div class="content">{{content}}</div>
+</script>
+
