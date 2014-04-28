@@ -17,7 +17,7 @@ TwitterApp.Views.AppView = Backbone.View.extend({
 
 		newtweet.save();
 
-		var newtweetView = new TwitterApp.Views.TweetView({model: tweet})
+		var newtweetView = new TwitterApp.Views.TweetView({model: newtweet})
 		newtweetView.render();
 		console.log("Hello there")
 	},
