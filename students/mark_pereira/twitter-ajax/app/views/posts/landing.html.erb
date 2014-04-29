@@ -1,0 +1,55 @@
+	
+<div id="main">
+	<a class="brand" href="#">Twitter'ish</a>
+</div>
+
+<script id="appView" type="text/x-underscore-template">
+	<div>
+	<img src="http://2.bp.blogspot.com/-AMXnfyifN68/TlM8RJb9HcI/AAAAAAAABS8/BWvRXLI_aMI/s1600/Drawing-Twitter-Bird-007.jpg" class="tweet">
+	</div>
+	<div>
+	<h1>Twitter`ish</h1>
+	</div>
+	
+	<p>
+	<h2>Recent Posts</h2>
+	<ul id="posts"></ul>	
+	</p>
+</script>
+
+<script id="postListView" type="text/x-underscore-template">
+	<a href="#post/{{ id }}" class="list-group">{{ title }}</a>
+</script>
+
+<script id="postView" type="text/x-underscore-template">
+	<div class="post">
+	  <h1 class="title">{{ title }}</h1>
+	  <div class="content">
+	    {{ content }}
+	  </div>
+	  <hr>
+	  <form id="commentForm">
+		  <p>
+		    <textarea placeholder="Your insight goes here" id="comment" class="form-control"></textarea>
+		  </p>  
+		  <p>
+		  	<input placeholder="Your name" id="author" class="form-control">
+		  </p>
+		  <p>
+		  	<button class="btn btn-default">Submit comment</button>
+		  </p>
+	  </form>
+	  <div class="comments">
+	  </div>
+	</div>	  
+</script>
+
+<script id="commentView" type="text/x-underscore-template">
+  <hr>
+  <blockquote>
+  <p>
+  	{{ content }}
+  </p>
+  <cite>{{ author }}</cite>
+  </blockquote>
+</script>
