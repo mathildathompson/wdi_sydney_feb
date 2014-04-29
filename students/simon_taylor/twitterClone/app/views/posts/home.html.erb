@@ -1,0 +1,23 @@
+<h1>Welcome to the Awesome~!</h1>
+
+<!-- div to input our content into -->
+<div id="main">  
+</div>
+
+<script id="postListView" type="text/x-underscore-template">
+  <h2>Your Posts</h2>
+  <ul id="posts"></ul>
+</script>
+
+<script id="postView" type="text/x-underscore-template">
+  <li>
+    <p>{{ content }}</p>
+    <p>Author: {{ author }}</p>
+  </li>
+</script>
+
+<script id="singlePostView" type="text/x-underscore-template">
+  <p id="bigger">{{ content }}</p>
+  <p><b>Author:<b> {{ author }}</p>
+  <a href="#">Back Home</a>
+</script>
