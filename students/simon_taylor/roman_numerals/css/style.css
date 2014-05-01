@@ -1,0 +1,30 @@
+
+
+body {
+  background-color: gray;
+}
+
+h1, h2, h3, h4, p {
+  text-align: center;
+  color: white;
+  font-family: 'Rokkitt', serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+#container {
+  margin: 0 auto;
+  width: 214px;
+}
+
+form {
+  margin: 0 auto;
+  width: 188px;
+}
