@@ -61,9 +61,6 @@ $(document).ready(function () {
 
 //START EVENT HANDLERS FOR OUR CARDS
 var cardEventsInit = function () {
-  //find all the cards (columns)
-  var $cards = $('.column');
-
   //add a hover event handler to toggle the 'hover class'
   $cards.hover(function () {
     $(this).addClass('hover');
@@ -73,7 +70,7 @@ var cardEventsInit = function () {
 
   $cards.on('click',function () {
     //your code here (can use 'event' variable to target element)
-    card = $(this);
+    var card = $(this);
     //run the card click function
     cardClick(card);
   });
@@ -111,8 +108,10 @@ var startGame = function (gameSize) {
     // console.log(letter,index)
   });
 
+  //find all the cards (columns)
   $cards = $('.column');
 
+  //start the event handlers on the cards
   cardEventsInit();
   
 }
@@ -159,6 +158,7 @@ var checkMatch = function ($card, letter) {
 var checkWin = function () {
 
   //check if they have been revealed
+  //SIMPLIFY BY JUST FINDING .FOUND DIVS
   var foundCards = _.select($cards, function(card) { return $(card).hasClass('found'); });
   //check if found cards = 
   if (foundCards.length === letters.length) {
@@ -195,7 +195,7 @@ var reset = function () {
 //Start the timer
 var startTime = function () {
   $timer.text("Game Time: 0")
-  timerID = window.setInterval(updateTime, 1000);
+  timerID = setInterval(updateTime, 1000);
 }
 
 //Increment the timer and display the new time

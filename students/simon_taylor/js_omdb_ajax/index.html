@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OMDB Ajax App</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script src="js/omdb.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>OMDB.js</h1>
+
+    <form id="search-frm">
+      <label>Movie Title Search:</label>
+      <input id="search-text" type="text">
+      <button id="search-btn">Search!</button>
+    </form>
+
+    <div id="movie">
+    </div>
+  </div>
+
+  <script type="text/underscore-template" id="task_template">
+    <img class="poster" src="<%= Poster %>">
+    <div class="info">
+      <h2><%= Title %></h2>
+      <p>Year: <%= Year %></p>
+      <p>Genre: <%= Genre %></p>
+      <p>Director: <%= Director %></p>
+      <p>Writer: <%= Writer %></p>
+      <p>Plot: <%= Plot %></p>
+    </div>
+  </script>
+
+</body>
+</html>
