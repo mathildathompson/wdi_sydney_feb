@@ -1,0 +1,12 @@
+#container {
+    max-width: 960px;
+    margin: auto;
+}
+
+#rgb-solution {
+    padding-bottom: 30px;
+}
+
+input {
+    margin: 25px auto;
+}
