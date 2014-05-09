@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backbone Blog</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="js/blog.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<div id="main">
+  <!-- empty so we can append via js -->
+</div>
+
+
+
+
+
+
+<script id="appView" type="text/x-underscore-template">
+  <h1>Recent Posts</h1>
+  <ul id="posts"></ul>
+</script>
+
+<script id="postListView" type="text/x-underscore-template">
+  <a href="#posts/<%= slug %>"><%= title %></a>
+</script>
+
+<script id="postView" type="text/x-underscore-template">
+  <div class="post">
+    <h1 class="title"><%= title %></h1>
+    <div class="content">
+      <%= content %>
+    </div>
+  </div>
+</script>
+
+
+</body>
+</html>
